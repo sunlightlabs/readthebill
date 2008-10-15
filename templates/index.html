@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load rtb %}
+
+{% block content %}
+    <div id="main">
+        <div id="shoo">
+            <p>
+                Congress often passes laws without ever giving themselves or anyone else a chance to read the actual bill.
+                We're trying tog et congress to pass a law that makes it so that congress has to post a bill online for 72 hours before it can be considered.
+                Bills like the 700 Billion Dollar bailout package and the patriot act were passed within just hours of being released.
+                That's not democracy we can believe in.
+            </p>
+            <p>Read more about why <a href="#">here</a>, and learn what you can do to <a href="#">help</a>.</p>
+            <a href="#">Hide this.</a>
+        </div>
+    </div>
+    <div id="sidebar">
+        {% random_orgs 2 %}
+    </div>
+{% endblock %}
