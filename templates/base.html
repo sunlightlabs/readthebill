@@ -6,17 +6,123 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>{% block title %}{% endblock %}</title>
 	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/readthebill/" type="text/javascript"></script>
+	<script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8">
+	    /**
+	     * DO NOT USE THIS FOR PRODUCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         * http://plugins.jquery.com/files/jquery.cookie.js.txt
+         */
+        jQuery.cookie = function(name, value, options) {
+            if (typeof value != 'undefined') { // name and value given, set cookie
+                options = options || {};
+                if (value === null) {
+                    value = '';
+                    options.expires = -1;
+                }
+                var expires = '';
+                if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+                    var date;
+                    if (typeof options.expires == 'number') {
+                        date = new Date();
+                        date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+                    } else {
+                        date = options.expires;
+                    }
+                    expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+                }
+                // CAUTION: Needed to parenthesize options.path and options.domain
+                // in the following expressions, otherwise they evaluate to undefined
+                // in the packed version for some reason...
+                var path = options.path ? '; path=' + (options.path) : '';
+                var domain = options.domain ? '; domain=' + (options.domain) : '';
+                var secure = options.secure ? '; secure' : '';
+                document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+            } else { // only name given, get cookie
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        };
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	    var shooSpeed = 50;
+	    $(function() {
+	        
+	        var hideShoo = function() {
+	            $.cookie('shoo','false');
+	            $('#shoo').hide(shooSpeed);
+    	        $('#shoo_open').show();
+	        };
+	        var showShoo = function() {
+	            $('#shoo').show(shooSpeed);
+    	        $('#shoo_open').hide();
+	        };
+    	    $('#shoo_close').click(
+    	        function() {
+    	            hideShoo();
+        	        return false;
+    	        }    
+    	    );
+    	    $('#shoo_open').click(
+    	        function() {
+    	            showShoo();
+        	        return false;
+    	        }
+    	    );
+    	    $('#shoo_clear').click(
+    	        function() {
+    	            $.cookie('shoo',null);
+        	        return false;
+    	        }
+    	    );
+    	    var shoo = $.cookie('shoo');
+    	    if (shoo !== 'false') {
+    	        $('#shoo').show();
+    	    }
+    	    
+    	    $('#party-d').hide();
+    	    $('#party-r').hide();
+    	    $('#party-i').hide();
+    	    $('#party-x').hide();
+    	    
+	    });
+	</script>
 	<style type="text/css" media="screen">
-	    body { margin: 0; padding: 0; }
+	    body { margin: 0; padding: 0; text-align: center; }
+	    #shoo { display: none; }
+	    #container { margin: 0 auto; text-align: left; width: 900px; }
+	    #main { float: left; margin-top: 2em; width: 550px; }
+	    #sidebar { float: right; margin-top: 2em; width: 300px; }
+	    #sidebar ul { list-style: none; margin: 0; padding: 0; }
+	    #shoo_container {
+	        background-color: #dfd;
+	        border: 1px solid green;
+	        padding: 1em;
+	    }
+	    #shoo_open { display: none; text-align: right; width: 100%; }
 	</style>
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
-    <div id="header">
-    </div>
-    <div id="nav">
-    </div>
-    <div id="content">
-        {% block content %}{% endblock %}
+    <div id="container">
+        <div id="header">
+            <h1>Read The Bill!</h1>
+        </div>
+        <div id="nav">
+            <a href="#">About</a>
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
 </body>
 </html>
