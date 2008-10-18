@@ -2,3 +2,4 @@ Created using Django r1.0-final-SVN-8961
 
 Requirements:
 django-feedinator
+django-sunlightcore

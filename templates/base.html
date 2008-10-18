@@ -90,10 +90,11 @@
     	        $('#shoo').show();
     	    }
     	    
-    	    $('#party-d').hide();
-    	    $('#party-r').hide();
-    	    $('#party-i').hide();
-    	    $('#party-x').hide();
+    	    $('ul.checkboxes input').hide();
+			$('ul.checkboxes label').click(function() {
+    	    	$('ul.checkboxes li.checked').removeClass('checked');
+				$('#' + $(this).attr('htmlFor')).attr('checked', true).parent().addClass('checked');
+			});
     	    
 	    });
 	</script>
@@ -113,6 +114,8 @@
 		li.dparty { background-color: #99f; }
 		li.rparty { background-color: #f99; }
 		li.nparty { background-color: #ff9; }
+		ul.checkboxes input { display: block; }
+		ul.checkboxes li.checked { background-color: green; }
 	</style>
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
@@ -120,9 +123,11 @@
         <div id="header">
             <h1>Read The Bill!</h1>
         </div>
-        <div id="nav">
-            <a href="#">About</a>
-        </div>
+		<ul id="nav">
+			<li><a href="{% url index %}">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="{% url partners %}">Partners</a></li>
+        </ul>
         <div id="content">
             {% block content %}{% endblock %}
         </div>

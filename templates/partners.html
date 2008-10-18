@@ -1,36 +1,22 @@
 {% extends "base.html" %}
-{% load rtb %}
 
 {% block content %}
     <div id="main">
-        <div id="shoo_container">
-            <div id="shoo">
-                <p>
-                    Congress often passes laws without ever giving themselves or anyone else a chance to read the actual bill.
-                    We're trying tog et congress to pass a law that makes it so that congress has to post a bill online for 72 hours before it can be considered.
-                    Bills like the 700 Billion Dollar bailout package and the patriot act were passed within just hours of being released.
-                    That's not democracy we can believe in.
-                </p>
-                <p>Read more about why <a href="#">here</a>, and learn what you can do to <a href="#">help</a>.</p>
-                <a href="#" id="shoo_close">Hide this.</a>
-            </div>
-            <a href="#" id="shoo_open">Show shoo</a>
-            <a href="#" id="shoo_clear">Clear cookie</a>
-        </div>
-        <ul class="hfeed">
-            {% for entry in entries %}
-            <li class="hentry {{ entry.feed.organization.affiliation }}party">
-                <a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
-                <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ entry.date_published|date:"F j, Y" }}</abbr>
-                <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-            </li>
-            {% endfor %}
-        </ul>
+        <ol>
+			{% for partner in partners %}
+			<li>
+				<h3>{{ partner.name }}</h3>
+				<a href="{{ partner.url }}">
+					<img src="{{ partner.logo }}" alt="{{ partner.name }}">
+				</a>
+			</li>
+			{% endfor %}
+		</ol>
     </div>
     <div id="sidebar">
         <h3>Tell your member to RTB</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <form action="/signup/" method="post" id="signupform">
+        <form action="/signup/" method="post">
             <ul>
                 <li>
                     <label for="email">Email</label>
@@ -46,7 +32,7 @@
                 </li>
                 <li>
                     <p>Party Affiliation</p>
-                    <ul class="checkboxes">
+                    <ul>
                         <li id="party-d-container">
                             <input type="radio" name="party" value="d" id="party-d">
                             <label for="party-d">Democratic</label>
@@ -59,7 +45,7 @@
                             <input type="radio" name="party" value="i" id="party-i">
                             <label for="party-i">Independent</label>
                         </li>
-                        <li id="party-x-container" class="checked">
+                        <li id="party-x-container">
                             <input type="radio" name="party" value="x" id="party-x" checked="checked">
                             <label for="party-x">Prefer to not answer</label>
                         </li>
@@ -68,7 +54,5 @@
                 <li><input type="submit" value="Submit"></li>
             </ul>
         </form>
-        {% random_orgs 2 %}
-		<a href="{% url partners %}">View all partners</a>
     </div>
 {% endblock %}
