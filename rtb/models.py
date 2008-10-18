@@ -16,7 +16,7 @@ class Organization(models.Model):
     logo = models.URLField(verify_exists=False, blank=True, null=True)
     affiliation = models.CharField(max_length=1, choices=AFFILIATION_CHOICES)
     
-    #feed = models.OneToOneField(Feed)
+    feed = models.OneToOneField(Feed)
     
     def __unicode__(self):
         return self.name
