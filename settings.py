@@ -63,6 +63,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'gatekeeper',
     'feedinator',
     'sunlightcore',
     'readthebill.rtb',
