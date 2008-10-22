@@ -53,6 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'gatekeeper.middleware.GatekeeperMiddleware',
 )
 
 ROOT_URLCONF = 'readthebill.urls'
@@ -63,17 +64,16 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'sunlightcore',
     'gatekeeper',
     'feedinator',
-    'sunlightcore',
     'readthebill.rtb',
 )
 
+GATEKEEPER_ENABLE_AUTOMODERATION = True
+GATEKEEPER_DEFAULT_STATUS = 0
 
-#
-# Place custom project and application settings here
-#
-
+RTB_TAG = "#rtb"
 
 try:
     from local_settings import *

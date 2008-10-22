@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.db import models
-from feedinator.models import Feed
+from feedinator.models import Feed, FeedEntry
+import gatekeeper
 
 AFFILIATION_CHOICES = (
     ('d', 'Democrat'),
@@ -20,3 +22,8 @@ class Organization(models.Model):
     
     def __unicode__(self):
         return self.name
+
+def mod(mo):
+    entry = mo.content_object
+    return settings.RTB_TAG in entry.content.upper()
+gatekeeper.register(FeedEntry, auto_moderator=mod)    
