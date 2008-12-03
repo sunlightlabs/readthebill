@@ -5,7 +5,114 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>{% block title %}{% endblock %}</title>
-	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/readthebill/" type="text/javascript"></script>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/screen.css" type="text/css" media="screen, projection" />
+   	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/print.css" type="text/css" media="print" /> 
+		
+	<!--[if IE]>
+		<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" />
+	<![endif]-->
+	
+   	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/style.css" type="text/css" media="screen, projection" />
+
+	<style>
+	body {background-image:url("http://media.sunlightprojects.org/readthebill/images/rtb_bg.png"); background-repeat:repeat-x; margin-top:0; padding-top:0;}
+	.subhead { font-size:14px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif;}
+	h1.headline {font-size:28px; font-family:Georgia, Times, Serif; color:#092545; padding-bottom:10px; margin-top:10px;}
+	.intro { font-size:18px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px;}
+	.intro_close { font-size:20px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px; color:#2f4867;}
+	
+	
+	em { font-style:italics;}
+	
+	#alertbox { border:1px solid #d1b85b; background-color:#fffdd7; padding:1em; margin-bottom:2em; }
+	#alertbox p { color:#bf5004; padding:0; margin:0; font-weight:bold;}
+	
+	h2.blog_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px;}
+	.blogroll_explanation {color:#4c4f54;}
+	
+	#instructions { padding-top:80px; width:250px; margin-left:30px; color:#9ca991;}
+	
+	.blogroll_blogtitle { font-weight:bold;}
+	
+/*
+	#blogroll {margin:0; padding:0;}
+	#blogroll li { padding-top:1em; border-bottom:1px solid #e6e6e6; padding-bottom:1em; padding-left:10px; margin-left:0;}
+	#blogroll li.alt { background-color:#f4f4f4; padding-left:10px;}
+	
+	#blogroll a:link { text-decoration:none; color:#000000;}
+	#blogroll a:visited { text-decoration:none; color:#000000;}
+	#blogroll a:hover { text-decoration:none; color:#000000;}
+	#blogroll a:active {  text-decoration:none; color:#000000;}	
+*/	
+	ul.blog_roll { margin:0; padding:0; }
+	ul.blog_roll li a:link 
+	{color:#000000; display:block;  text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	
+	ul.blog_roll li a:visited 
+	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	
+	ul.blog_roll li a:hover 
+	{color:#000000; display:block; text-decoration:none; background-color:#fffdd7; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	
+	ul.blog_roll li a:active 
+	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	
+	ul.blog_roll li.alt { background-color:#fff;  }
+	ul.blog_roll li.plain { background-color:#ffffff; }
+
+	input.groovybutton
+	{
+	   font-size:12px;
+	   font-family:Arial,sans-serif;
+	   font-weight:bold;
+	   color:#548330;
+	   width:250px;
+	   height:30px;
+	   background-color:#eff5e6;
+	   border-style:solid;
+	   border-color:#9ca991;
+	   border-width:1px;
+	}
+
+
+
+	/* External links */
+	a[href^="http:"]          { background:none; } 
+	a[href^="mailto:"]        { background:none; }
+	a[href^="http:"]:visited  { background:none; }
+
+
+#hideme { text-align:right; display:block; margin:0; padding:0; float:right;}
+#hideme a:link { text-decoration:none; color:#bf5004;}
+#hideme a:visited { text-decoration:none; color:#bf5004;}
+#hideme a:hover { text-decoration:none; color:#bf5004;}
+#hideme a:active { text-decoration:none; color:#bf5004;}
+
+.affiliation_block { margin-right:1em;}
+
+	</style>
+	
+	<script language="javascript">
+
+	function goLite(FRM,BTN)
+	{
+	   window.document.forms[FRM].elements[BTN].style.color = "#eff5e6";
+	   window.document.forms[FRM].elements[BTN].style.backgroundColor = "#9ca991";
+	   window.document.forms[FRM].elements[BTN].style.borderColor = "#548330";
+	}
+
+	function goDim(FRM,BTN)
+	{
+	   window.document.forms[FRM].elements[BTN].style.color = "#548330";
+	   window.document.forms[FRM].elements[BTN].style.backgroundColor = "#eff5e6";
+	   window.document.forms[FRM].elements[BTN].style.borderColor = "#9ca991";
+	}
+
+	</script>
+
+
+
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
 	<script type="text/javascript" charset="utf-8">
 	    /**
@@ -99,38 +206,30 @@
 	    });
 	</script>
 	<style type="text/css" media="screen">
-	    body { margin: 0; padding: 0; text-align: center; }
-	    #shoo { display: none; }
-	    #container { margin: 0 auto; text-align: left; width: 900px; }
-	    #main { float: left; margin-top: 2em; width: 550px; }
-	    #sidebar { float: right; margin-top: 2em; width: 300px; }
-	    #sidebar ul { list-style: none; margin: 0; padding: 0; }
-	    #shoo_container {
-	        background-color: #dfd;
-	        border: 1px solid green;
-	        padding: 1em;
-	    }
-	    #shoo_open { display: none; text-align: right; width: 100%; }
-		li.dparty { background-color: #99f; }
-		li.rparty { background-color: #f99; }
-		li.nparty { background-color: #ff9; }
+	    #shoo { display: none; border:1px solid #d1b85b; background-color:#fffdd7; padding:0 3px 1em 1em; margin-bottom:2em;}
+	   	#shoo_container { }
+		#shoo_container p { color:#bf5004; padding:0; margin:1em 2em 0 0 ; font-weight:bold;}
+		#shoo_open { display: none; text-align: right; width: 100%; }
+		
+		
+		li.dparty { background-color: #fff; }
+		li.rparty { background-color: #fff; }
+		li.nparty { background-color: #fff; }
 		ul.checkboxes input { display: block; }
 		ul.checkboxes li.checked { background-color: green; }
 	</style>
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
-    <div id="container">
-        <div id="header">
-            <h1>Read The Bill!</h1>
-        </div>
-		<ul id="nav">
-			<li><a href="{% url index %}">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="{% url partners %}">Partners</a></li>
-        </ul>
-        <div id="content">
-            {% block content %}{% endblock %}
-        </div>
-    </div>
+    <div class="container">
+		<img src="http://media.sunlightprojects.org/readthebill/images/rtb_head.png">
+		<p class="subhead">Encouraging the 111th Congress to share legislation online and wait at least 72 hours before bringing any legislation to consideration</p>
+		
+		
+		            {% block content %}{% endblock %}
+		
+		
+	</div>
+
+
 </body>
 </html>

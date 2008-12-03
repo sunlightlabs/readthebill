@@ -2,73 +2,162 @@
 {% load rtb %}
 
 {% block content %}
-    <div id="main">
-        <div id="shoo_container">
-            <div id="shoo">
-                <p>
-                    Congress often passes laws without ever giving themselves or anyone else a chance to read the actual bill.
-                    We're trying tog et congress to pass a law that makes it so that congress has to post a bill online for 72 hours before it can be considered.
-                    Bills like the 700 Billion Dollar bailout package and the patriot act were passed within just hours of being released.
-                    That's not democracy we can believe in.
-                </p>
-                <p>Read more about why <a href="#">here</a>, and learn what you can do to <a href="#">help</a>.</p>
-                <a href="#" id="shoo_close">Hide this.</a>
-            </div>
-            <a href="#" id="shoo_open">Show shoo</a>
-            <a href="#" id="shoo_clear">Clear cookie</a>
-        </div>
-        <ul class="hfeed">
-            {% for entry in entries %}
-            <li class="hentry {{ entry.feed.organization.affiliation }}party">
-                <a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
-                <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ entry.date_published|date:"F j, Y" }}</abbr>
-                <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div id="sidebar">
-        <h3>Tell your member to RTB</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <form action="/signup/" method="post" id="signupform">
-            <ul>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email">
-                </li>
-                <li>
-                    <label for="zip">Zipcode</label>
-                    <input type="text" name="zip" id="zip">
-                </li>
-                <li>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
-                </li>
-                <li>
-                    <p>Party Affiliation</p>
-                    <ul class="checkboxes">
-                        <li id="party-d-container">
-                            <input type="radio" name="party" value="d" id="party-d">
-                            <label for="party-d">Democratic</label>
-                        </li>
-                        <li id="party-r-container">
-                            <input type="radio" name="party" value="r" id="party-r">
-                            <label for="party-r">Republican</label>
-                        </li>
-                        <li id="party-i-container">
-                            <input type="radio" name="party" value="i" id="party-i">
-                            <label for="party-i">Independent</label>
-                        </li>
-                        <li id="party-x-container" class="checked">
-                            <input type="radio" name="party" value="x" id="party-x" checked="checked">
-                            <label for="party-x">Prefer to not answer</label>
-                        </li>
-                    </ul>
-                </li>
-                <li><input type="submit" value="Submit"></li>
-            </ul>
-        </form>
-        {% random_orgs 2 %}
-		<a href="{% url partners %}">View all partners</a>
-    </div>
+
+<div class="span-24">
+	
+		<div class="span-12">
+			<h1 class="headline">What's Your Hurry, Congress?</h1>
+			<p class="intro">Posting bills online for 72 hours before consideration 
+			would give lawmakers and citizens alike an opportunity 
+			to consider and debate bills with full knowledge and
+			consideration of the implications of the legislation 
+			with considered feedback from the public.
+			</p>
+			<p class="intro_close">
+			We think it's time for Congress <em>to take their time</em>.
+			</p>
+		<!--<div id="alertbox">	
+			<p>This is the alert box.  Messages might go here.  It isn't always displayed.</p>
+		</div>	
+	-->
+		<div id="shoo_container">
+	        <div id="shoo">
+				<div id="hideme"><a href="#" id="shoo_close">X</a></div>
+	            <p>This is the alert box.  Messages might go here.  It isn't always displayed.  It can be turned off.  I'm not sure what the original idea for it was.</p>
+	            
+	        </div>
+	        <!--<a href="#" id="shoo_open">Show shoo</a>-->
+	        <a href="#" id="shoo_clear">Clear cookie</a>
+	    </div>		
+		
+		
+		
+		
+		
+			
+		</div>
+		<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>		
+	
+</div>
+
+	<div class="span-12">
+		
+		
+		<h2 class="blog_head">Read The Bill, A Blog Campaign for Change</h2>
+		
+		<p class="blogroll_explanation">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
+		consequat augue posuere elementum. Phasellus quam. Curabitur luctus diam eu 
+		neque. In blandit tempus felis. Nulla facilisi. Vivamus luctus. Donec euismod nulla 
+		sit amet mi.</p>
+		
+		<ul class="blog_roll noicon">
+			 {% for entry in entries %}
+			<li class="{% cycle 'plain' 'alt' %}"><a href="{{ entry.link }}" class="hentry"><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="20" class="affiliation_block"><span class="blogroll_blogtitle">{{ entry.feed.organization }}:</span> <span class="blogroll_headline">{{ entry.title|safe }}</span><br />
+				</a>
+			</li>
+			{% endfor %}
+			</ul>
+			<!--
+				PRE-integration
+			<li><a href="#"><img src="http://media.sunlightprojects.org/readthebill/images/roll_blue.png"><span class="blogroll_blogtitle">OpenLeft:</span> <span class="blogroll_headline">Something about something and something else.</span></a>
+			</li>
+		-->
+		
+		
+		
+	<!--
+		Jeremy's original code.
+			<ul class="hfeed">
+	        {% for entry in entries %}
+	        <li class="hentry {{ entry.feed.organization.affiliation }}party">
+	            <a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
+	            <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ entry.date_published|date:"F j, Y" }}</abbr>
+	            <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+	        </li>
+	        {% endfor %}
+	    </ul>
+	-->
+		
+		
+		</div>
+	<div class="span-1">&nbsp;</div>
+		
+	<div class="span-11 last">
+		
+		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep.png); background-repeat:no-repeat; background-color:#eff5e6; height:400px; width:360px; margin-top:20px;">
+			<div id="instructions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
+			consequat augue posuere elementum. Phasellus quam.</div>
+				<form name="groovyform" action="/signup/" method="post" id="signupform">
+
+				        <ul>
+				            <li>
+				                <label for="email">Email</label>
+				                <input type="text" name="email" id="email">
+				            </li>
+				            <li>
+				                <label for="zip">Zipcode</label>
+				                <input type="text" name="zip" id="zip">
+				            </li>
+				            <li>
+				                <label for="message">Message</label>
+				                <textarea name="message" id="message"></textarea>
+				            </li>
+				            <li>
+				                <p>Party Affiliation</p>
+				                <ul class="checkboxes">
+				                    <li id="party-d-container">
+				                        <input type="radio" name="party" value="d" id="party-d">
+				                        <label for="party-d">Democratic</label>
+				                    </li>
+				                    <li id="party-r-container">
+				                        <input type="radio" name="party" value="r" id="party-r">
+				                        <label for="party-r">Republican</label>
+				                    </li>
+				                    <li id="party-i-container">
+				                        <input type="radio" name="party" value="i" id="party-i">
+				                        <label for="party-i">Independent</label>
+				                    </li>
+				                    <li id="party-x-container" class="checked">
+				                        <input type="radio" name="party" value="x" id="party-x" checked="checked">
+				                        <label for="party-x">Prefer to not answer</label>
+				                    </li>
+				                </ul>
+				            </li>
+				            
+				        </ul>
+				   
+			
+			
+			
+		</div>
+		
+		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; height:75px; padding-left:50px; padding-top:20px;">
+			
+		
+				
+				
+				
+			<input
+			   type="button"
+			   name="groovybtn1"
+			   class="groovybutton"
+			   value="Send My Message"
+			   title=""
+			   onMouseOver="goLite(this.form.name,this.name)"
+			   onMouseOut="goDim(this.form.name,this.name)">
+			</form>
+			
+		
+		
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
 {% endblock %}
