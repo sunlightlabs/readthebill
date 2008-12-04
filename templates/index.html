@@ -43,16 +43,34 @@
 	<div class="span-12">
 		
 		
-		<h2 class="blog_head">Read The Bill, A Blog Campaign for Change</h2>
+		<h2 class="blog_head">Read The Bill, A Blog Campaign</h2>
 		
 		<p class="blogroll_explanation">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
 		consequat augue posuere elementum. Phasellus quam. Curabitur luctus diam eu 
 		neque. In blandit tempus felis. Nulla facilisi. Vivamus luctus. Donec euismod nulla 
 		sit amet mi.</p>
 		
+		
+		<div style="margin-bottom:2em;">
+		<fieldset>	
+			<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
+			<ul class="key">
+				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">Conservative</li>
+				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Liberal</li>
+				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Independent</li>
+				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Non-Partisan</li>
+				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_x.png" class="key_code">Unknown</li>
+			</ul>
+		</fieldset>	
+		</div>
+		
+		
 		<ul class="blog_roll noicon">
 			 {% for entry in entries %}
-			<li class="{% cycle 'plain' 'alt' %}"><a href="{{ entry.link }}" class="hentry"><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="20" class="affiliation_block"><span class="blogroll_blogtitle">{{ entry.feed.organization }}:</span> <span class="blogroll_headline">{{ entry.title|safe }}</span><br />
+			<li class="{% cycle 'plain' 'alt' %}">
+				<!--<div style="height:20px; margin:2px; float:left;"><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="20" class="affiliation_block"></div>-->
+				<a href="{{ entry.link }}" class="hentry"><span class="blogroll_headline">{{ entry.title|safe }}</span>
+					<br /><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="7" class="affiliation_block"><span class="blogroll_blogtitle">Published on <span class="bold">{{ entry.feed.organization }}</span> - Posted by {{ entry.author_name }} on {{ entry.date_published|date:"F j, Y" }}</span> 
 				</a>
 			</li>
 			{% endfor %}
@@ -79,73 +97,69 @@
 	-->
 		
 		
+		
+		
+		
+		
 		</div>
 	<div class="span-1">&nbsp;</div>
 		
 	<div class="span-11 last">
 		
-		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep.png); background-repeat:no-repeat; background-color:#eff5e6; height:400px; width:360px; margin-top:20px;">
+		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep.png); background-repeat:no-repeat; background-color:#eff5e6;  width:360px; margin-top:20px; height:162px;">
+	
 			<div id="instructions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
 			consequat augue posuere elementum. Phasellus quam.</div>
-				<form name="groovyform" action="/signup/" method="post" id="signupform">
-
+			
+				<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; background-position:bottom; background-color:#eff5e6;  width:359px;">
+			
+				<form action="/signup/" method="post" id="signupform" class="signupform">
+					<fieldset>
+					  <legend>Contact Your Representatives Today!</legend>
 				        <ul>
 				            <li>
-				                <label for="email">Email</label>
+				                <label for="email">Your Email</label>
 				                <input type="text" name="email" id="email">
 				            </li>
 				            <li>
-				                <label for="zip">Zipcode</label>
+				                <label for="zip">Your Zipcode</label>
 				                <input type="text" name="zip" id="zip">
 				            </li>
 				            <li>
-				                <label for="message">Message</label>
+				                <label for="message">Your Message</label>
 				                <textarea name="message" id="message"></textarea>
 				            </li>
-				            <li>
-				                <p>Party Affiliation</p>
-				                <ul class="checkboxes">
-				                    <li id="party-d-container">
-				                        <input type="radio" name="party" value="d" id="party-d">
-				                        <label for="party-d">Democratic</label>
-				                    </li>
-				                    <li id="party-r-container">
-				                        <input type="radio" name="party" value="r" id="party-r">
-				                        <label for="party-r">Republican</label>
-				                    </li>
-				                    <li id="party-i-container">
-				                        <input type="radio" name="party" value="i" id="party-i">
-				                        <label for="party-i">Independent</label>
-				                    </li>
-				                    <li id="party-x-container" class="checked">
-				                        <input type="radio" name="party" value="x" id="party-x" checked="checked">
-				                        <label for="party-x">Prefer to not answer</label>
-				                    </li>
-				                </ul>
-				            </li>
-				            
-				        </ul>
-				   
-			
-			
-			
+				
+				           <li><input type="submit" value="Send My Message!" class="button"></li>
+						</ul>
+					</fieldset>
+					</form>
+				
+
 		</div>
+
+
+<div style="margin-top:5em; margin-left:2em;">
+<h5>Brought to you by the following:</h5>
+
+<ul class="partners">
+	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Sunlight Foundation</li>
+	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Open Left</li>
+	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">The Next Right</li>
+	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Firedoglake</li>
+	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Open Congress</li>
+</ul>
+
+
+
+
+
+	</div>	
 		
-		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; height:75px; padding-left:50px; padding-top:20px;">
+			
 			
 		
-				
-				
-				
-			<input
-			   type="button"
-			   name="groovybtn1"
-			   class="groovybutton"
-			   value="Send My Message"
-			   title=""
-			   onMouseOver="goLite(this.form.name,this.name)"
-			   onMouseOut="goDim(this.form.name,this.name)">
-			</form>
+
 			
 		
 		

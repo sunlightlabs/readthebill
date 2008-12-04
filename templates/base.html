@@ -17,7 +17,7 @@
 
 	<style>
 	body {background-image:url("http://media.sunlightprojects.org/readthebill/images/rtb_bg.png"); background-repeat:repeat-x; margin-top:0; padding-top:0;}
-	.subhead { font-size:14px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif;}
+	.subhead { font-size:15px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif;}
 	h1.headline {font-size:28px; font-family:Georgia, Times, Serif; color:#092545; padding-bottom:10px; margin-top:10px;}
 	.intro { font-size:18px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px;}
 	.intro_close { font-size:20px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px; color:#2f4867;}
@@ -33,8 +33,9 @@
 	
 	#instructions { padding-top:80px; width:250px; margin-left:30px; color:#9ca991;}
 	
-	.blogroll_blogtitle { font-weight:bold;}
-	
+	.blogroll_blogtitle { font-weight:normal; font-size:10px; color:#a5a5a5;}
+	.blogroll_headline { font-weight:bold; font-size:14px; text-decoration:underline; color:#4c4f54;}
+	.bold {font-weight:bold;}
 /*
 	#blogroll {margin:0; padding:0;}
 	#blogroll li { padding-top:1em; border-bottom:1px solid #e6e6e6; padding-bottom:1em; padding-left:10px; margin-left:0;}
@@ -46,6 +47,7 @@
 	#blogroll a:active {  text-decoration:none; color:#000000;}	
 */	
 	ul.blog_roll { margin:0; padding:0; }
+	ul.blog_roll li {margin:0; padding:0;}
 	ul.blog_roll li a:link 
 	{color:#000000; display:block;  text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
 	
@@ -53,7 +55,7 @@
 	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
 	
 	ul.blog_roll li a:hover 
-	{color:#000000; display:block; text-decoration:none; background-color:#fffdd7; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	{color:#000000; display:block; text-decoration:none; background-color:#f4f4f4; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
 	
 	ul.blog_roll li a:active 
 	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
@@ -61,21 +63,14 @@
 	ul.blog_roll li.alt { background-color:#fff;  }
 	ul.blog_roll li.plain { background-color:#ffffff; }
 
-	input.groovybutton
-	{
-	   font-size:12px;
-	   font-family:Arial,sans-serif;
-	   font-weight:bold;
-	   color:#548330;
-	   width:250px;
-	   height:30px;
-	   background-color:#eff5e6;
-	   border-style:solid;
-	   border-color:#9ca991;
-	   border-width:1px;
-	}
+ul.key {margin:5px 0 0 0; padding:0;}
+ul.key li {display: inline; list-style-type: none;	padding-right: 18px;	margin:0; font-size:10px;}
+.key_code { margin-right:3px; height:8px;}
+.key_legend {font-size:1em; color:#a5a5a5;}
 
 
+ul.partners {}
+ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
 
 	/* External links */
 	a[href^="http:"]          { background:none; } 
@@ -89,27 +84,66 @@
 #hideme a:hover { text-decoration:none; color:#bf5004;}
 #hideme a:active { text-decoration:none; color:#bf5004;}
 
-.affiliation_block { margin-right:1em;}
+.affiliation_block { margin-right:5px; margin-left:3px;}
+/* The form styling */
+form.signupform fieldset {
+margin-left:20px;
+border:0px solid ;
+}
+form.signupform legend {
+  padding: 0 2px;
+  font-weight: bold;
+color:#336600;
+}
+form.signupform label {
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+text-align:right;
+color:#548330;
+}
+form.signupform fieldset ol {
+  margin: 0;
+  padding: 0;
+}
+form.signupform fieldset li {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+form.signupform fieldset fieldset {
+  border: none;
+  margin: 3px 0 0;
+}
+form.signupform fieldset fieldset legend {
+  padding: 0 0 0;
+  font-weight: normal;
+}
+form.signupform fieldset fieldset label {
+  display: block;
+  width: auto;
+}
+form.signupform em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+form.signupform label {
+  width: 90px; /* Width of labels */
+}
+form.signupform fieldset fieldset label {
+  margin-left: 123px; /* Width plus 3 (html space) */
+}
+
+form.signupform input { width:160px;}
+form.signupform textarea { width:160px; height:100px; margin-bottom:10px;}
+form.signupform input.button { border:1px solid #9ca991; background-image:url(http://media.sunlightprojects.org/readthebill/images/submit_bg.png); background-color:#eff5e6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
+
+form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
 
 	</style>
 	
-	<script language="javascript">
-
-	function goLite(FRM,BTN)
-	{
-	   window.document.forms[FRM].elements[BTN].style.color = "#eff5e6";
-	   window.document.forms[FRM].elements[BTN].style.backgroundColor = "#9ca991";
-	   window.document.forms[FRM].elements[BTN].style.borderColor = "#548330";
-	}
-
-	function goDim(FRM,BTN)
-	{
-	   window.document.forms[FRM].elements[BTN].style.color = "#548330";
-	   window.document.forms[FRM].elements[BTN].style.backgroundColor = "#eff5e6";
-	   window.document.forms[FRM].elements[BTN].style.borderColor = "#9ca991";
-	}
-
-	</script>
+	
 
 
 
