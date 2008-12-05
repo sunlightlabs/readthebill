@@ -5,7 +5,7 @@
 
 <div class="span-24">
 	
-		<div class="span-12">
+	<div class="span-12">
 			<h1 class="headline">What's Your Hurry, Congress?</h1>
 			<p class="intro">Posting bills online for 72 hours before consideration 
 			would give lawmakers and citizens alike an opportunity 
@@ -14,31 +14,20 @@
 			with considered feedback from the public.
 			</p>
 			<p class="intro_close">
-			We think it's time for Congress <em>to take their time</em>.
+			We* think it's time for Congress <em>to take their time</em>.
 			</p>
-		<!--<div id="alertbox">	
-			<p>This is the alert box.  Messages might go here.  It isn't always displayed.</p>
-		</div>	
-	-->
+			
 		<div id="shoo_container">
 	        <div id="shoo">
-				<div id="hideme"><a href="#" id="shoo_close">X</a></div>
-	            <p>This is the alert box.  Messages might go here.  It isn't always displayed.  It can be turned off.  I'm not sure what the original idea for it was.</p>
-	            
+ 			<p>This is the alert box.  Messages might go here.  It isn't always displayed.  It can be turned off.  I'm not sure what the original idea for it was.</p>  
+			<p style="text-align:right"><a href="#" id="shoo_close">Dismiss this message</a></p>
 	        </div>
 	        <!--<a href="#" id="shoo_open">Show shoo</a>-->
 	        <a href="#" id="shoo_clear">Clear cookie</a>
-	    </div>		
-		
-		
-		
-		
-		
-			
+	    </div>			
 		</div>
-		<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>		
-	
-</div>
+		<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
+	</div>
 
 	<div class="span-12">
 		
@@ -51,67 +40,50 @@
 		sit amet mi.</p>
 		
 		
-		<div style="margin-bottom:2em;">
-		<fieldset>	
-			<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
-			<ul class="key">
+		<div id="affiliation">
+			<fieldset>	
+				<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
+				<ul class="key">
 				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">Conservative</li>
 				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Liberal</li>
 				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Independent</li>
 				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Non-Partisan</li>
 				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_x.png" class="key_code">Unknown</li>
-			</ul>
-		</fieldset>	
+				</ul>
+			</fieldset>	
 		</div>
 		
 		
-		<ul class="blog_roll noicon">
+		<ul class="blog_roll_new noicon">
 			 {% for entry in entries %}
+			
 			<li class="{% cycle 'plain' 'alt' %}">
-				<!--<div style="height:20px; margin:2px; float:left;"><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="20" class="affiliation_block"></div>-->
-				<a href="{{ entry.link }}" class="hentry"><span class="blogroll_headline">{{ entry.title|safe }}</span>
-					<br /><img src="http://media.sunlightprojects.org/readthebill/images/roll_{{ entry.feed.organization.affiliation }}.png" height="7" class="affiliation_block"><span class="blogroll_blogtitle">Published on <span class="bold">{{ entry.feed.organization }}</span> - Posted by {{ entry.author_name }} on {{ entry.date_published|date:"F j, Y" }}</span> 
-				</a>
+				<div>
+					<div id="bubble">
+						<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_{{ entry.feed.organization.affiliation }}.png">
+					</div>
+				
+					<div id="blogroll_details">
+					<a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
+					<br />
+<span class="blogroll_blogtitle">Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a> - Posted by  <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span> on {{ entry.date_published|date:"F j, Y" }}</span> 
+					</div>
+				
+				</div>
 			</li>
 			{% endfor %}
 			</ul>
-			<!--
-				PRE-integration
-			<li><a href="#"><img src="http://media.sunlightprojects.org/readthebill/images/roll_blue.png"><span class="blogroll_blogtitle">OpenLeft:</span> <span class="blogroll_headline">Something about something and something else.</span></a>
-			</li>
-		-->
-		
-		
-		
-	<!--
-		Jeremy's original code.
-			<ul class="hfeed">
-	        {% for entry in entries %}
-	        <li class="hentry {{ entry.feed.organization.affiliation }}party">
-	            <a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
-	            <abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ entry.date_published|date:"F j, Y" }}</abbr>
-	            <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-	        </li>
-	        {% endfor %}
-	    </ul>
-	-->
-		
-		
-		
-		
-		
-		
-		</div>
+	</div>
 	<div class="span-1">&nbsp;</div>
 		
 	<div class="span-11 last">
 		
-		<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep.png); background-repeat:no-repeat; background-color:#eff5e6;  width:360px; margin-top:20px; height:162px;">
+		<div id="contact_box">
 	
 			<div id="instructions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
 			consequat augue posuere elementum. Phasellus quam.</div>
 			
-				<div style="background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; background-position:bottom; background-color:#eff5e6;  width:359px;">
+				<div id="contact_box_bottom">
 			
 				<form action="/signup/" method="post" id="signupform" class="signupform">
 					<fieldset>
@@ -125,10 +97,24 @@
 				                <label for="zip">Your Zipcode</label>
 				                <input type="text" name="zip" id="zip">
 				            </li>
+							<li>
+				                <label for="message">Your Affiliation</label>
+								<select>
+				                <option Selected>Select one</option>
+								<option>Conservative</option>
+								<option>Liberal</option>
+								<option>Independent</option>
+								<option>Private</option>
+								</select>
+				
+				            </li>
+				
 				            <li>
 				                <label for="message">Your Message</label>
 				                <textarea name="message" id="message"></textarea>
 				            </li>
+				
+					
 				
 				           <li><input type="submit" value="Send My Message!" class="button"></li>
 						</ul>
@@ -139,32 +125,8 @@
 		</div>
 
 
-<div style="margin-top:5em; margin-left:2em;">
-<h5>Brought to you by the following:</h5>
-
-<ul class="partners">
-	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Sunlight Foundation</li>
-	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Open Left</li>
-	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">The Next Right</li>
-	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Firedoglake</li>
-	<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Open Congress</li>
-</ul>
-
-
-
-
-
-	</div>	
-		
-			
-			
-		
-
-			
-		
-		
+	
 	</div>
-
 </div>
 
 

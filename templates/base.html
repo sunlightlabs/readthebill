@@ -17,6 +17,7 @@
 
 	<style>
 	body {background-image:url("http://media.sunlightprojects.org/readthebill/images/rtb_bg.png"); background-repeat:repeat-x; margin-top:0; padding-top:0;}
+	
 	.subhead { font-size:15px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif;}
 	h1.headline {font-size:28px; font-family:Georgia, Times, Serif; color:#092545; padding-bottom:10px; margin-top:10px;}
 	.intro { font-size:18px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px;}
@@ -24,53 +25,51 @@
 	
 	
 	em { font-style:italics;}
+	.bold {font-weight:bold;}
 	
 	#alertbox { border:1px solid #d1b85b; background-color:#fffdd7; padding:1em; margin-bottom:2em; }
 	#alertbox p { color:#bf5004; padding:0; margin:0; font-weight:bold;}
 	
-	h2.blog_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px;}
+	h2.blog_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px; background-image:url(http://media.sunlightprojects.org/readthebill/images/roll_bubble_g.png); background-repeat:no-repeat; padding-left:45px; padding-top:5px;}
 	.blogroll_explanation {color:#4c4f54;}
 	
 	#instructions { padding-top:80px; width:250px; margin-left:30px; color:#9ca991;}
 	
-	.blogroll_blogtitle { font-weight:normal; font-size:10px; color:#a5a5a5;}
-	.blogroll_headline { font-weight:bold; font-size:14px; text-decoration:underline; color:#4c4f54;}
-	.bold {font-weight:bold;}
-/*
-	#blogroll {margin:0; padding:0;}
-	#blogroll li { padding-top:1em; border-bottom:1px solid #e6e6e6; padding-bottom:1em; padding-left:10px; margin-left:0;}
-	#blogroll li.alt { background-color:#f4f4f4; padding-left:10px;}
+	.blogroll_blogtitle { font-weight:normal; font-size:10px; color:#a5a5a5; }
+	.blogroll_headline { font-weight:bold; font-size:14px; text-decoration:underline; color:#4c4f54; }
 	
-	#blogroll a:link { text-decoration:none; color:#000000;}
-	#blogroll a:visited { text-decoration:none; color:#000000;}
-	#blogroll a:hover { text-decoration:none; color:#000000;}
-	#blogroll a:active {  text-decoration:none; color:#000000;}	
-*/	
-	ul.blog_roll { margin:0; padding:0; }
-	ul.blog_roll li {margin:0; padding:0;}
-	ul.blog_roll li a:link 
-	{color:#000000; display:block;  text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	#blogroll_details a:link { color:#000000; }
+	#blogroll_details a:visited { color:#c7c7c7; }
+	#blogroll_details a:hover { color:#666666; }
+	#blogroll_details a:active { color:#000000; }
 	
-	ul.blog_roll li a:visited 
-	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
+	.blogroll_org a:link { color:#000000;}
 	
-	ul.blog_roll li a:hover 
-	{color:#000000; display:block; text-decoration:none; background-color:#f4f4f4; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
-	
-	ul.blog_roll li a:active 
-	{color:#000000; display:block; text-decoration:none; padding-bottom:1em; padding-top:1em; padding-left:10px; border-bottom:1px solid #e6e6e6;}
-	
-	ul.blog_roll li.alt { background-color:#fff;  }
-	ul.blog_roll li.plain { background-color:#ffffff; }
+	#affiliation {margin-bottom:2em;}
+	#bubble { float:left; margin-bottom:10px;}
+	#contact_box {background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep.png); background-repeat:no-repeat; 			background-color:#eff5e6;  width:360px; margin-top:20px; height:162px;}
+	#contact_box_bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; background-position:bottom; background-color:#eff5e6;  width:359px;}
+	#partner_box {margin-top:5em; margin-left:2em;}
 
-ul.key {margin:5px 0 0 0; padding:0;}
-ul.key li {display: inline; list-style-type: none;	padding-right: 18px;	margin:0; font-size:10px;}
-.key_code { margin-right:3px; height:8px;}
-.key_legend {font-size:1em; color:#a5a5a5;}
+	ul.blog_roll_new { margin:0 0 10px 0; padding:0; }
+	ul.blog_roll_new li {margin:10px 0 10px 0; padding:0px 0 10px 0; border-bottom:1px solid #f4f4f4;}
+	ul.blog_roll_new li.alt { background-color:#fffffff;  }
+	ul.blog_roll_new li.plain { background-color:#ffffff; }
+
+	.blogroll_blogtitle a:link { text-decoration:none; padding:0; margin:0;}
+	.blogroll_blogtitle a:visited { text-decoration:none; padding:0; margin:0;}
+	.blogroll_blogtitle a:hover { text-decoration:none; padding:0; margin:0;}
+	.blogroll_blogtitle a:active { text-decoration:none; padding:0; margin:0;}
 
 
-ul.partners {}
-ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
+	ul.key {margin:5px 0 0 0; padding:0;}
+	ul.key li {display: inline; list-style-type: none;	padding-right: 18px;	margin:0; font-size:10px;}
+	.key_code { margin-right:3px; height:8px;}
+	.key_legend {font-size:1em; color:#a5a5a5;}
+
+
+	ul.partners {}
+	ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
 
 	/* External links */
 	a[href^="http:"]          { background:none; } 
@@ -78,75 +77,39 @@ ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
 	a[href^="http:"]:visited  { background:none; }
 
 
-#hideme { text-align:right; display:block; margin:0; padding:0; float:right;}
-#hideme a:link { text-decoration:none; color:#bf5004;}
-#hideme a:visited { text-decoration:none; color:#bf5004;}
-#hideme a:hover { text-decoration:none; color:#bf5004;}
-#hideme a:active { text-decoration:none; color:#bf5004;}
+	#hideme { text-align:right; display:block; margin:0; padding:0; float:right;}
+	#hideme a:link { text-decoration:none; color:#bf5004;}
+	#hideme a:visited { text-decoration:none; color:#bf5004;}
+	#hideme a:hover { text-decoration:none; color:#bf5004;}
+	#hideme a:active { text-decoration:none; color:#bf5004;}
 
-.affiliation_block { margin-right:5px; margin-left:3px;}
+	.affiliation_block { margin-right:5px; margin-left:3px;}
+
 /* The form styling */
-form.signupform fieldset {
-margin-left:20px;
-border:0px solid ;
-}
-form.signupform legend {
-  padding: 0 2px;
-  font-weight: bold;
-color:#336600;
-}
-form.signupform label {
-  display: inline-block;
-  line-height: 1.8;
-  vertical-align: top;
-text-align:right;
-color:#548330;
-}
-form.signupform fieldset ol {
-  margin: 0;
-  padding: 0;
-}
-form.signupform fieldset li {
-  list-style: none;
-  padding: 5px;
-  margin: 0;
-}
-form.signupform fieldset fieldset {
-  border: none;
-  margin: 3px 0 0;
-}
-form.signupform fieldset fieldset legend {
-  padding: 0 0 0;
-  font-weight: normal;
-}
-form.signupform fieldset fieldset label {
-  display: block;
-  width: auto;
-}
-form.signupform em {
-  font-weight: bold;
-  font-style: normal;
-  color: #f00;
-}
-form.signupform label {
-  width: 90px; /* Width of labels */
-}
-form.signupform fieldset fieldset label {
-  margin-left: 123px; /* Width plus 3 (html space) */
-}
+	form.signupform fieldset { margin-left:20px;	border:0px solid ;	}
+	form.signupform legend { padding: 0 2px;  font-weight: bold; color:#336600; }
+	form.signupform label { display: inline-block;  line-height: 1.8;  vertical-align: top; text-align:right; color:#548330; }
+	form.signupform fieldset ol { margin: 0;  padding: 0; }
+	form.signupform fieldset li { list-style: none;  padding: 5px;  margin: 0; }
+	form.signupform fieldset fieldset { border: none;  margin: 3px 0 0;	}
+	form.signupform fieldset fieldset legend { padding: 0 0 0;  font-weight: normal; }
+	form.signupform fieldset fieldset label { display: block;  width: auto; }
+	form.signupform em { font-weight: bold;  font-style: normal;  color: #f00; }
+	form.signupform label { width: 90px; /* Width of labels */ }
+	form.signupform fieldset fieldset label { margin-left: 123px; /* Width plus 3 (html space) */ }
+	form.signupform input { width:160px;}
+	form.signupform textarea { width:160px; height:100px; margin-bottom:10px;}
+	form.signupform input.button { border:1px solid #9ca991; background-image:url(http://media.sunlightprojects.org/readthebill/images/submit_bg.png); background-color:#eff5e6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
 
-form.signupform input { width:160px;}
-form.signupform textarea { width:160px; height:100px; margin-bottom:10px;}
-form.signupform input.button { border:1px solid #9ca991; background-image:url(http://media.sunlightprojects.org/readthebill/images/submit_bg.png); background-color:#eff5e6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
+	form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
 
-form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
+.footer {margin-top:40px;}
+.bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px;}
 
-	</style>
+ul.brought_by { margin:0; padding:0;}
+ul.brought_by li {display:inline; padding-right:20px;}
+		</style>
 	
-	
-
-
-
 	<script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
 	<script type="text/javascript" charset="utf-8">
 	    /**
@@ -245,25 +208,36 @@ form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid 
 		#shoo_container p { color:#bf5004; padding:0; margin:1em 2em 0 0 ; font-weight:bold;}
 		#shoo_open { display: none; text-align: right; width: 100%; }
 		
-		
+		/*	
 		li.dparty { background-color: #fff; }
 		li.rparty { background-color: #fff; }
 		li.nparty { background-color: #fff; }
 		ul.checkboxes input { display: block; }
 		ul.checkboxes li.checked { background-color: green; }
+		*/
 	</style>
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
-    <div class="container">
+    <div class="container noicon">
 		<img src="http://media.sunlightprojects.org/readthebill/images/rtb_head.png">
 		<p class="subhead">Encouraging the 111th Congress to share legislation online and wait at least 72 hours before bringing any legislation to consideration</p>
 		
 		
 		            {% block content %}{% endblock %}
 		
+	<div class="span-24 footer"><h4 class="thin" style="color:#a5a5a5;">Read The Bill is brought to you by the following organizations:</h4>
 		
+		<ul class="brought_by">
+		<li><a href="http://www.sunlightfoundation.com"><img src="http://media.sunlightprojects.org/readthebill/images/logo_sf.png"></a></li>
+		<li><a href="http://www.openleft.com"><img src="http://media.sunlightprojects.org/readthebill/images/logo_ol.png"></a></li>
+		<li><a href="http://www.thenextright.com"><img src="http://media.sunlightprojects.org/readthebill/images/logo_nr.png"></a></li>
+		<li><a href="http://www.firedoglake.com"><img src="http://media.sunlightprojects.org/readthebill/images/logo_fdl.png"></a></li>
+		</ul>
+		
+		</div>
+	
 	</div>
-
+<div class="bottom">&nbsp</div>	
 
 </body>
 </html>
