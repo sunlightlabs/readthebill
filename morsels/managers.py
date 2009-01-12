@@ -9,6 +9,7 @@ else:
 
 class MorselManager(models.Manager):
     def get_for_current(self, context, name, inherit=False):
+
         if not context.has_key('request'):
             return None
 

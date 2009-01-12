@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load morsel_tags %}
 {% load rtb %}
 
 {% block content %}
@@ -6,38 +7,32 @@
 <div class="span-24">
 	
 	<div class="span-12">
-			<h1 class="headline">What's Your Hurry, Congress?</h1>
-			<p class="intro">Posting bills online for 72 hours before consideration 
-			would give lawmakers and citizens alike an opportunity 
-			to consider and debate bills with full knowledge and
-			consideration of the implications of the legislation 
-			with considered feedback from the public.
-			</p>
-			<p class="intro_close">
-			We* think it's time for Congress <em>to take their time</em>.
-			</p>
-			
-		<div id="shoo_container">
-	        <div id="shoo">
- 			<p>This is the alert box.  Messages might go here.  It isn't always displayed.  It can be turned off.  I'm not sure what the original idea for it was.</p>  
-			<p style="text-align:right"><a href="#" id="shoo_close">Dismiss this message</a></p>
-	        </div>
-	        <!--<a href="#" id="shoo_open">Show shoo</a>-->
-	        <a href="#" id="shoo_clear">Clear cookie</a>
-	    </div>			
-		</div>
-		<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
-	</div>
+		<h1 class="headline">What's Your Hurry, Congress?</h1>
+		<p class="intro">{% morsel intro %}</p>
+		<p class="intro_close">
+		    We* think it's time for Congress <em>to take their time</em>.
+		</p>
+		{% withmorsel shoo %}
+		    {% if morsel.content %}
+        		<div id="shoo_container">
+        	        <div id="shoo">
+         			    <p>{{ morsel.content }}</p>  
+        			    <p style="text-align:right"><a href="#" id="shoo_close">Dismiss this message</a></p>
+        	        </div>
+        	        {% if user.is_staff %}<a href="#" id="shoo_clear">Clear cookie</a>{% endif %}
+        	    </div>
+    	    {% endif %}
+        {% endwithmorsel %}
+    </div>
+	<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
+</div>
 
 	<div class="span-12">
 		
 		
 		<h2 class="blog_head">Read The Bill, A Blog Campaign</h2>
 		
-		<p class="blogroll_explanation">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
-		consequat augue posuere elementum. Phasellus quam. Curabitur luctus diam eu 
-		neque. In blandit tempus felis. Nulla facilisi. Vivamus luctus. Donec euismod nulla 
-		sit amet mi.</p>
+		<p class="blogroll_explanation">{% morsel blogroll %}</p>
 		
 		
 		<div id="affiliation">
@@ -64,10 +59,15 @@
 					</div>
 				
 					<div id="blogroll_details">
-					<a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
-					<br />
-<span class="blogroll_blogtitle">Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a> - Posted by  <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span> on {{ entry.date_published|date:"F j, Y" }}</span> 
-					</div>
+					    <a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
+    					<br />
+                        <span class="blogroll_blogtitle">
+                            Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
+                            -
+                            Posted by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+                            on {{ entry.date_published|date:"F j, Y" }}
+                        </span> 
+				    </div>
 				
 				</div>
 			</li>
@@ -80,8 +80,7 @@
 		
 		<div id="contact_box">
 	
-			<div id="instructions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam nec lectus 
-			consequat augue posuere elementum. Phasellus quam.</div>
+			<div id="instructions">{% morsel signup %}</div>
 			
 				<div id="contact_box_bottom">
 			
