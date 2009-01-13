@@ -72,67 +72,29 @@
 				</div>
 			</li>
 			{% endfor %}
-			</ul>
+		</ul>
 	</div>
+	
 	<div class="span-1">&nbsp;</div>
 		
 	<div class="span-11 last">
-		
 		<div id="contact_box">
-	
 			<div id="instructions">{% morsel signup %}</div>
-			
-				<div id="contact_box_bottom">
-			
-				<form action="/signup/" method="post" id="signupform" class="signupform">
-					<fieldset>
-					  <legend>Contact Your Representatives Today!</legend>
+			<div id="contact_box_bottom">
+			<form action="{% url index %}" method="post" id="signupform" class="signupform">
+				<fieldset>
+					{% if is_thanks %}
+					    <legend>Thanks for signing up!</legend>
+					{% else %}
+					    <legend>Contact Your Representatives Today!</legend>
 				        <ul>
-				            <li>
-				                <label for="email">Your Email</label>
-				                <input type="text" name="email" id="email">
-				            </li>
-				            <li>
-				                <label for="zip">Your Zipcode</label>
-				                <input type="text" name="zip" id="zip">
-				            </li>
-							<li>
-				                <label for="message">Your Affiliation</label>
-								<select>
-				                <option Selected>Select one</option>
-								<option>Conservative</option>
-								<option>Liberal</option>
-								<option>Independent</option>
-								<option>Private</option>
-								</select>
-				
-				            </li>
-				
-				            <li>
-				                <label for="message">Your Message</label>
-				                <textarea name="message" id="message"></textarea>
-				            </li>
-				
-					
-				
-				           <li><input type="submit" value="Send My Message!" class="button"></li>
+				            {{ form.as_ul }}
+				            <li><input type="submit" value="Send My Message!" class="button"></li>
 						</ul>
-					</fieldset>
-					</form>
-				
-
-		</div>
-
-
-	
-	</div>
+					{% endif %}
+				</fieldset>
+			</form>	
+        </div>
+    </div>
 </div>
-
-
-
-
-
-
-
-
 {% endblock %}

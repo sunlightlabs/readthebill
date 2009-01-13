@@ -7,5 +7,5 @@ urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root),
     url(r'^partners/', 'readthebill.rtb.views.partners', name="partners"),
-    url(r'^', 'readthebill.rtb.views.index', name="index"),
+    url(r'^$', 'readthebill.rtb.views.index', name="index"),
 )
