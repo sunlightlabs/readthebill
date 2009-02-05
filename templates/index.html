@@ -7,32 +7,35 @@
 <div class="span-24">
 	
 	<div class="span-12">
-		<h1 class="headline">What's Your Hurry, Congress?</h1>
-		<p class="intro">{% morsel intro %}</p>
-		<p class="intro_close">
-		    We* think it's time for Congress <em>to take their time</em>.
-		</p>
-		{% withmorsel shoo %}
-		    {% if morsel.content %}
-        		<div id="shoo_container">
-        	        <div id="shoo">
-         			    <p>{{ morsel.content }}</p>  
-        			    <p style="text-align:right"><a href="#" id="shoo_close">Dismiss this message</a></p>
-        	        </div>
-        	        {% if user.is_staff %}<a href="#" id="shoo_clear">Clear cookie</a>{% endif %}
-        	    </div>
-    	    {% endif %}
-        {% endwithmorsel %}
-    </div>
-	<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
-</div>
+
+			<h1 class="headline">What's Your Hurry, Congress?</h1>
+			<p class="intro">{% morsel intro %}</p>
+			<p class="intro_close">
+			We* think it's time for Congress <em>to take their time</em>.
+			</p>
+
+			<div class="nav">
+				<ul id="navlist">
+					<li><a href="#">Learn More</a></li>
+					<li><a href="#">See Endorsements</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+			</div>	
+			
+			
+		</div>
+
+		
+		<div class="span-12 last"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
+	</div>
+
 
 	<div class="span-12">
-		
-		
-		<h2 class="blog_head">Read The Bill, A Blog Campaign</h2>
+				
+		<h2 class="blog_head">Read The Bill: What People are Saying</h2>
 		
 		<p class="blogroll_explanation">{% morsel blogroll %}</p>
+
 		
 		
 		<div id="affiliation">
@@ -79,19 +82,31 @@
 		
 	<div class="span-11 last">
 		<div id="contact_box">
-			<div id="instructions">{% morsel signup %}</div>
-			<div id="contact_box_bottom">
-			<form action="{% url index %}" method="post" id="signupform" class="signupform">
-				<fieldset>
-					{% if is_thanks %}
-					    <legend>Thanks for signing up!</legend>
-					{% else %}
-					    <legend>Contact Your Representatives Today!</legend>
-				        <ul>
-				            {{ form.as_ul }}
-				            <li><input type="submit" value="Send My Message!" class="button"></li>
-						</ul>
+
+	
+			<div id="instructions">{% morsel signup %} </div>
+			
+				<div id="contact_box_bottom">
+			
+				<form action="{% url index %}" method="post" id="signupform" class="signupform">
+					<fieldset>
+						{% if is_thanks %}
+						    <legend>Thanks for signing up!</legend>
+						{% else %}
+					  <legend>Join The Read The Bill Coalition!</legend>
+
+					{{ form.as_ul }}
+					
+				
+				           
+
+					
 					{% endif %}
+					
+					<ul>
+						<li><input type="submit" value="Join The Coalition" class="button"></li>
+					</ul>	
+					
 				</fieldset>
 			</form>	
         </div>
