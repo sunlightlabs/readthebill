@@ -26,7 +26,8 @@ def index(request):
             params = {"email": email, "zip": zipcode, "custom-109": affiliation, "custom-108": message}
             response = urllib2.urlopen(bsd_url, urllib.urlencode(params)).read()
 
-            return HttpResponseRedirect('/?thanks')
+            #return HttpResponseRedirect('/?thanks')
+            return HttpResponseRedirect('http://bsd.sunlightfoundation.com/page/invite/readthebill')
     
     else:
         form = SignupForm()
