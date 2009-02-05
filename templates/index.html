@@ -20,6 +20,7 @@
 					<li><a href="#">See Endorsements</a></li>
 					<li><a href="#">Press</a></li>
 					<li><a href="#">Contact</a></li>
+				</ul>
 			</div>	
 			
 			
@@ -92,21 +93,15 @@
 					<fieldset>
 						{% if is_thanks %}
 						    <legend>Thanks for signing up!</legend>
+						    <p>&nbsp;</p>
+						    <p>&nbsp;</p>
 						{% else %}
-					  <legend>Join The Read The Bill Coalition!</legend>
-
-					{{ form.as_ul }}
-					
-				
-				           
-
-					
-					{% endif %}
-					
-					<ul>
-						<li><input type="submit" value="Join The Coalition" class="button"></li>
-					</ul>	
-					
+					        <legend>Join The Read The Bill Coalition!</legend>
+                            {{ form.as_ul }}
+					        <ul>
+       						    <li><input type="submit" value="Join The Coalition" class="button"></li>
+       					    </ul>
+					    {% endif %}	
 				</fieldset>
 			</form>	
         </div>
