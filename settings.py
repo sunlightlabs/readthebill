@@ -1,6 +1,6 @@
 # Django settings for readthebill project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -62,6 +62,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'gatekeeper.middleware.GatekeeperMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'readthebill.urls'
@@ -69,6 +70,7 @@ ROOT_URLCONF = 'readthebill.urls'
 INSTALLED_APPS = (
 	'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.flatpages',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -83,6 +85,7 @@ GATEKEEPER_ENABLE_AUTOMODERATION = True
 GATEKEEPER_DEFAULT_STATUS = 0
 
 RTB_TAG = "#rtb"
+RTB_APPROVE_ALL = False
 
 try:
     from local_settings import *

@@ -15,9 +15,10 @@
    	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/style.css" type="text/css" media="screen, projection" />
 
 	<style>
-	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/rtb_bg.png); background-position:0 32px; background-repeat:repeat-x; margin-top:0; padding-top:0;}
+	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/rtb_bg.png); background-position:0 0px; background-repeat:repeat-x; margin-top:0; padding-top:0;}
 
-
+	#top_header { padding:0 20px 0 0;}
+	
 	.spacer {height:200px; padding-top:50px;}
 	.subhead { font-size:15px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif;}
 	h1.headline {font-size:28px; font-family:Georgia, Times, Serif; color:#092545; padding-bottom:10px; margin-top:10px;}
@@ -27,24 +28,51 @@
     em { font-style:italics;}
     .bold {font-weight:bold;}
 	
-
-	.nav { text-align:center;  padding:0 0 3px 0 ; 
+	#flatpage { padding:0 20px 0 0;}
+	#datebook { margin:0 0 40px 0;}
+	
+	table.navtable { width:100%; border-width: 0px 0px 0px 0px;}
+	table.navtable td { border-width: 0px 0px 0px 0px;}
+	
+	
+	h3.nav_item { margin:0; padding:0; font-size:18px;}
+	
+	h3.nav_item a:link { text-decoration:none; color:#003366;}
+	h3.nav_item a:visited { text-decoration:none; color:#003366;}
+	h3.nav_item a:hover { text-decoration:none; color:#bf5004;}
+	h3.nav_item a:active { text-decoration:none; color:#003366;}
+	
+	.nav_subtext { font-size:11px; margin:0; padding:0; color:#003399;}
+	
+	.nav_about { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_about.png); height:32px; width:35px; background-position:0 -4px; }
+	
+	.nav_press { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_press.png); height:32px; width:35px; background-position:0 -4px; }
+	
+	.nav_endorsements { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_heart.png); height:32px; width:35px; background-position:0 -4px; }
+	
+	.nav_contact { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_contact.png); height:32px; width:35px; background-position:0 -4px; }
+	
+	
+	
+	/* old nav stuff */
+	.nav {  padding:0 0 3px 0 ; 
 		background-image:url(http://media.sunlightprojects.org/readthebill/images/navbg.png);
 		background-repeat:no-repeat;
-		background-position:bottom center;
-		
+		background-position:bottom left;
+		width:467px;
 		}
 	
 	
-	#navlist { display:inline; margin:0; padding:0 0 0 35px; font-family:Trebuchet,Tahoma,Arial,sans-serif; font-weight:bold; font-size:12px;}
+	#navlist { display:inline; margin:0; padding:0 0 0 30px; font-family:Trebuchet,Tahoma,Arial,sans-serif; font-weight:bold; font-size:12px;
+ }
 	
-	#navlist a:link { text-decoration:none; color:#435c7a; }
-	#navlist a:visited { text-decoration:none; color:#435c7a;}
+	#navlist a:link { text-decoration:none; color:#003399; }
+	#navlist a:visited { text-decoration:none; color:#336699;}
 	#navlist a:hover { text-decoration:none; color:#bf5004;}
-	#navlist a:active {text-decoration:none; color:#435c7a; }
+	#navlist a:active {text-decoration:none; color:#003399; }
 	
 	
-	#navlist li { display:inline; margin:0; padding:0 35px 0 0}
+	#navlist li { display:inline; margin:0; padding:0 30px 0 9px; background-image:url(http://media.sunlightprojects.org/readthebill/images/arrow_right.png); background-repeat:no-repeat; background-position:0 4px;}
 	
 	#alertbox { border:1px solid #d1b85b; background-color:#fffdd7; padding:1em; margin-bottom:2em; }
 	#alertbox p { color:#bf5004; padding:0; margin:0; font-weight:bold;}
@@ -258,18 +286,18 @@ ul.brought_by li {display:inline; padding-right:20px;}
 		ul.checkboxes li.checked { background-color: green; }
 		*/
 	</style>
-	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
+	
 	
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
     <div class="container noicon">
-		<img src="http://media.sunlightprojects.org/readthebill/images/rtb_head.png">
-		<p class="subhead">{% morsel lede %}</p>
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_head.png"></a>
+		<p class="subhead">Encouraging the 111th Congress to share legislation online and wait at least 72 hours before bringing any legislation to consideration</p>
 		
 		
 		            {% block content %}{% endblock %}
 		
-	<div class="span-24 footer"><h4 class="thin" style="color:#a5a5a5;">*Read The Bill is brought to you by the following organizations:</h4>
+	<div class="span-24 footer"><h4 class="thin" style="color:#a5a5a5;">*Read The Bill is brought to you by these and <a href="/endorsements/">other fine organizations</a>:</h4>
 		
 		<ul class="brought_by">
 		<li><a href="http://www.sunlightfoundation.com"><img src="http://media.sunlightprojects.org/readthebill/images/logo_sf.png"></a></li>

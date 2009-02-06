@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load morsel_tags %}
+{% block content %}
+<div class="span-11">
+	<h3>{{ flatpage.title }}</h3>
+<div id="flatpage">
+    {{ flatpage.content }}
+</div>
+
+</div>
+
+<div class="span-13 last">
+	
+	<div id="datebook"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
+	
+
+		<table class="navtable">
+			<tr>
+				<td>
+					<div class="nav_about">&nbsp;</div>
+					<h3 class="nav_item"><a href="/about/">About the Project</a></h3><span class="nav_subtext">Learn more about Read The Bill</span></td>
+				<td>
+					<div class="nav_press">&nbsp;</div>
+					<h3 class="nav_item"><a href="/press/">Press Center</a></h3><span class="nav_subtext">Read releases and articles about RTB</span></td>	
+			</tr>
+				<tr>
+					<td>
+						<div class="nav_endorsements">&nbsp;</div>
+						<h3 class="nav_item"><a href="/endorsements/">Endorsements</a></h3><span class="nav_subtext">See our growing list of support</span></td>
+					<td>
+						<div class="nav_contact">&nbsp;</div>
+						<h3 class="nav_item"><a href="/contact/">Contact Us</a></h3><span class="nav_subtext">Let us know what you think</span></td>	
+				</tr>
+		</table>
+
+		
+</div>
+	
+{% endblock %}
