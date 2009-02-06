@@ -292,7 +292,7 @@ ul.brought_by li {display:inline; padding-right:20px;}
 <body id="{% block body %}readthebill{% endblock %}">
     <div class="container noicon">
 		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_head.png"></a>
-		<p class="subhead">Encouraging the 111th Congress to share legislation online and wait at least 72 hours before bringing any legislation to consideration</p>
+		<p class="subhead">{% morsel lede inherit %}</p>
 		
 		
 		            {% block content %}{% endblock %}
