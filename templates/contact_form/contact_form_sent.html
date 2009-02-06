@@ -1,7 +1,21 @@
 {% extends "base.html" %}
+{% load morsel_tags %}
 
-{% block meta %}<meta http-equiv="refresh" content="2;url=http://readthebill.org" />{% endblock %}
+{% block meta %}<meta http-equiv="refresh" content="5;url=http://readthebill.org" />{% endblock %}
 
 {% block content %}
-    <p><a href="http://readthebill.org">Thanks for your message!</a></p>
+
+<div class="span-11">
+	<div id="contact_form_sent">
+	<h3>Thank you for your message.</h3>
+	<p>{% morsel sent %}</p>
+	</div>
+</div>
+
+
+<div class="span-13 last">
+	
+	<div id="datebook"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
+		
+</div>
 {% endblock %}
