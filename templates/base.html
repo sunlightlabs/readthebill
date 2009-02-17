@@ -16,7 +16,7 @@
    	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/style.css" type="text/css" media="screen, projection" />
 
 	<style>
-	body {background-image:url(!http://media.sunlightprojects.org/readthebill/images/rtb_bg.png); background-position:0 0px; background-repeat:repeat-x; margin-top:0; padding-top:0;}
+	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg);  background-repeat:repeat-x; margin-top:0; padding-top:0;}
 
 	#top_header { padding:0 20px 0 0;}
 	
@@ -193,6 +193,14 @@ ul.brought_by li {display:inline; padding-right:20px;}
 #sf_footer_address { margin-left:.5em; }
 
 
+/* NEW STYLES FOR THE NEW VERSION */
+.header_bg { background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_header_bg.jpg); background-repeat:no-repeat; min-height:407px; background-position:0 7px}
+#endorse_carousel { margin-top:100px; height:201px; width:324px; margin-bottom:50px; margin-left:40px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;
+	}
+#navbox { }
+#navbox_flat { margin:0;}
+#buttonbox { margin-top:30px; text-align:right; width:120px; height:120px; float:right;}
+#rtb_datebook { margin-top:20px;}
 
 		</style>
 		<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
@@ -311,10 +319,22 @@ ul.brought_by li {display:inline; padding-right:20px;}
 	
 </head>
 <body id="{% block body %}readthebill{% endblock %}">
-    <div class="container noicon">
-		<p class="subhead">&mdash;{% morsel lede inherit %}&mdash;</p>
-		
-		
+    <div class="container">
+		<div class="span-24 header_bg">
+			<div class="span-12">
+			&nbsp;
+			</div>
+			<div class="span-12 last">
+				<div id="buttonbox"><a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a></div>
+				<div id="endorse_carousel">&nbsp;</div>
+				<div id="navbox">
+				{% include "includes/nav.html" %}
+				</div>
+			</div>
+		</div>
+
+
+
 		            {% block content %}{% endblock %}
 		
 	<div class="span-24 footer"><h4 class="thin" style="color:#a5a5a5;">*Read The Bill is brought to you by these and <a href="/endorsements/">other fine organizations</a>:</h4>
