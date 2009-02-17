@@ -4,79 +4,74 @@
 
 {% block content %}
 
-		<div class="span-12">
-		<h2 class="blog_head">Read The Bill: What People are Saying</h2>
-		<p class="blogroll_explanation">{% morsel blogroll %}</p>
-		<div id="affiliation">
-			<fieldset>	
-				<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
-				<ul class="key">
-				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">Conservative</li>
-				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Liberal</li>
-				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Independent</li>
-				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Non-Partisan</li>
-				<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_x.png" class="key_code">Unknown</li>
-				</ul>
-			</fieldset>	
-		</div>
-		
-		
-		<ul class="blog_roll_new noicon">
-			 {% for entry in entries %}
-			
-			<li class="{% cycle 'plain' 'alt' %}">
-				<div>
-					<div id="bubble">
-						<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_{{ entry.feed.organization.affiliation }}.png">
-					</div>
-				
-					<div id="blogroll_details">
-					    <a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
-    					<br />
-                        <span class="blogroll_blogtitle">
-                            Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
-                            -
-                            Posted by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-                            on {{ entry.date_published|date:"F j, Y" }}
-                        </span> 
-				    </div>
-				
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
+
+	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
+	<p class="blogroll_explanation">{% morsel blogroll %}</p>
+	<div id="affiliation">
+		<fieldset>	
+			<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
+			<ul class="key">
+			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">Conservative</li>
+			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Liberal</li>
+			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Independent</li>
+			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Non-Partisan</li>
+			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_x.png" class="key_code">Unknown</li>
+			</ul>
+		</fieldset>	
 	</div>
 	
-	<div class="span-1">&nbsp;</div>
-		
-	<div class="span-11 last">
-
-		
-<a href="/"><!img src="http://media.sunlightprojects.org/readthebill/images/v2/v2_rtb_datebook.png"></a>
-		<div id="contact_box">
-
 	
-			<div id="instructions">{% morsel signup %} </div>
+	<ul class="blog_roll_new noicon">
+		 {% for entry in entries %}
+		
+		<li class="{% cycle 'plain' 'alt' %}">
+			<div>
+				<div id="bubble">
+					<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_{{ entry.feed.organization.affiliation }}.png">
+				</div>
 			
-				<div id="contact_box_bottom">
+				<div id="blogroll_details">
+				    <a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
+					<br />
+                    <span class="blogroll_blogtitle">
+                        Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
+                        -
+                        Posted by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+                        on {{ entry.date_published|date:"F j, Y" }}
+                    </span> 
+			    </div>
 			
-				<form action="{% url index %}" method="post" id="signupform" class="signupform">
-					<fieldset>
-						{% if is_thanks %}
-						    <legend>Thanks for signing up!</legend>
-						    <p>&nbsp;</p>
-						    <p>&nbsp;</p>
-						{% else %}
-					        <legend>Join The Read The Bill Coalition!</legend>
-                            {{ form.as_ul }}
-<br />
-					        <ul>
-       						    <li><input type="submit" value="Join The Coalition" class="button"></li>
-       					    </ul>
-					    {% endif %}	
-				</fieldset>
-			</form>	
-        </div>
-    </div>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+	</div>
 </div>
+
+
 {% endblock %}
+
+
+{% block form %}
+<div id="contact_box">
+	<div id="instructions">{% morsel signup %} </div>
+		<div id="contact_box_bottom">
+			<form action="{% url index %}" method="post" id="signupform" class="signupform">
+			<fieldset>
+				{% if is_thanks %}
+				    <legend>Thanks for signing up!</legend>
+				    <p>&nbsp;</p>
+				    <p>&nbsp;</p>
+				{% else %}
+			        <legend>Join The Read The Bill Coalition!</legend>
+                    {{ form.as_ul }}
+					<br />
+			        <ul>
+					   <li><input type="submit" value="Join The Coalition" class="button"></li>
+				    </ul>
+			    {% endif %}	
+			</fieldset>
+		</form>	
+	</div>
+</div>
+{% endblock form %}
