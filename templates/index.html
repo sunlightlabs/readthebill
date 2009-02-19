@@ -6,20 +6,7 @@
 
 
 	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
-	<p class="blogroll_explanation">{% morsel blogroll %}</p>
-	<div id="affiliation">
-		<fieldset>	
-			<legend class="key_legend">Blog Partner Political Affiliation Key</legend>
-			<ul class="key">
-			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_r.png" class="key_code">Conservative</li>
-			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_d.png" class="key_code">Liberal</li>
-			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_i.png" class="key_code">Independent</li>
-			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_n.png" class="key_code">Non-Partisan</li>
-			<li><img src="http://media.sunlightprojects.org/readthebill/images/roll_x.png" class="key_code">Unknown</li>
-			</ul>
-		</fieldset>	
-	</div>
-	
+	<p class="blogroll_explanation">{% morsel blogroll %}</p>	
 	
 	<ul class="blog_roll_new noicon">
 		 {% for entry in entries %}
@@ -27,7 +14,7 @@
 		<li class="{% cycle 'plain' 'alt' %}">
 			<div>
 				<div id="bubble">
-					<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_{{ entry.feed.organization.affiliation }}.png">
+					<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_plain.png">
 				</div>
 			
 				<div id="blogroll_details">
