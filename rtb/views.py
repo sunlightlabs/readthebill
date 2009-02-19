@@ -43,6 +43,10 @@ def partner_page(request, id):
     entry = FeedEntry.objects.get(pk=id)
     return render_to_response("partner_frame.html", {"entry": entry})
 
+def press(request):
+    feed = Feed.objects.get(codename="press")
+    return render_to_response("press.html", {"feed": feed})
+
 def rushed_bills(request):
     feed = Feed.objects.get(codename="rushedbills")
     return render_to_response("rushed_bills.html", {"feed": feed})
