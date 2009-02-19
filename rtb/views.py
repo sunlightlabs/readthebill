@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from feedinator.models import FeedEntry
+from feedinator.models import Feed, FeedEntry
 from readthebill.rtb.forms import SignupForm
 from readthebill.rtb.models import Organization
 import gatekeeper
@@ -38,3 +38,12 @@ def index(request):
 def partners(request):
     partners = Organization.objects.order_by('name')
     return render_to_response("partners.html", {"partners": partners})
+
+def partner_page(request, id):
+    entry = FeedEntry.objects.get(pk=id)
+    return render_to_response("partner_frame.html", {"entry": entry})
+
+def rushed_bills(request):
+    feed = Feed.objects.get(codename="rushedbills")
+    return render_to_response("rushed_bills.html", {"feed": feed})
+    

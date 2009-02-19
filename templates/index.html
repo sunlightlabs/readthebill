@@ -18,7 +18,7 @@
 				</div>
 			
 				<div id="blogroll_details">
-				    <a href="{{ entry.link }}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
+				    <a href="{% url partner_page entry.pk %}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
 					<br />
                     <span class="blogroll_blogtitle">
                         Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
@@ -32,9 +32,6 @@
 		</li>
 		{% endfor %}
 	</ul>
-	</div>
-</div>
-
 
 {% endblock %}
 
