@@ -15,7 +15,7 @@
    	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/style.css" type="text/css" media="screen, projection" />
 
 	<style>
-	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg);  background-repeat:repeat-x; margin-top:0; padding-top:0;}
+	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg);  background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -48px;}
 
 	#top_header { padding:0 20px 0 0;}
 	
@@ -193,10 +193,13 @@ ul.brought_by li {display:inline; padding-right:20px;}
 
 
 /* NEW STYLES FOR THE NEW VERSION */
-.header_bg { background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_header_bg.jpg); background-repeat:no-repeat; min-height:407px; background-position:0 0}
+.header_bg { background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_header_bg_short.jpg); background-repeat:no-repeat; min-height:407px; background-position:0 0}
 
-#endorse_carousel { margin:1px 0 50px 40px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
+#endorse_carousel { margin:80px 0 50px 40px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
 #endorse_logo { margin-left:35px; padding-top:55px;}	
+
+#endorse_carousel_front { margin:0 0 50px 60px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
+
 
 #endorse_nav {margin-left:18px; }	
 	
@@ -208,9 +211,9 @@ ul.brought_by li {display:inline; padding-right:20px;}
 
 
 /*revised */
-#leftbox { margin-top:430px; padding-left:10px;}
-.link_block { display:block; height:400px;  padding:0; margin:0;}
-		#link_block_box {  height:400px; margin:0; padding:0; width:420px; float:left;}
+#leftbox { margin-top:390px; padding-left:10px;}
+.link_block { display:block; height:300px;  padding:0; margin:0;}
+		#link_block_box {  height:300px; margin:0; padding:0; width:420px; float:left;}
 		#link_block_box a:link { text-decoration:none; }
 		#link_block_box a:visited { text-decoration:none; }
 		#link_block_box a:hover { text-decoration:none; }
@@ -360,21 +363,9 @@ ul.brought_by li {display:inline; padding-right:20px;}
 	{% block form %}
 	{% endblock form %}
 	
+	{% block endorse %}
+	{% endblock endorse %}
 	
-	<!--<div id="endorse_carousel">
-		<div id="endorse_logo">
-		<a href="/endorsements/"><img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_campaign_legal_center.jpg" border="0"></a>
-		</div>
-		
-		<div id="endorse_nav">
-			<img src="http://media.sunlightprojects.org/readthebill/images/v2/carousel_left.png"><img src="http://media.sunlightprojects.org/readthebill/images/v2/carousel_right.png">
-		</div>
-		
-	</div>
--->
-	
-	
-
 	
 		{% block nav %}
 		{% endblock nav %}
