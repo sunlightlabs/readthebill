@@ -344,6 +344,7 @@ ul.brought_by li {display:inline; padding-right:20px;}
 			<div id="link_block_box"><a href="/"><span class="link_block">&nbsp;</span></a></div>
 			
 			<div id="leftbox">
+			
 {% block content %}
 
 {% endblock %}
@@ -357,7 +358,7 @@ ul.brought_by li {display:inline; padding-right:20px;}
 	
 	<div id="endorse_carousel">
 		<div id="endorse_logo">
-		<img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_campaign_legal_center.jpg">
+		<a href="/endorsements/"><img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_campaign_legal_center.jpg" border="0"></a>
 		</div>
 		
 		<div id="endorse_nav">
@@ -365,11 +366,14 @@ ul.brought_by li {display:inline; padding-right:20px;}
 		</div>
 		
 	</div>
-	<div id="navbox">{% include "includes/nav.html" %}</div>
+
 	
 	
 	{% block form %}
 	{% endblock form %}
+	
+		{% block nav %}
+		{% endblock nav %}
 	
 	{% block datebook %}
 	{% endblock datebook %}
