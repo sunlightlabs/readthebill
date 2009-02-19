@@ -93,7 +93,7 @@ EMAIL_HOST_USER = "***REMOVED***"
 EMAIL_HOST_PASSWORD = "***REMOVED***"
 EMAIL_USE_TLS = True
 
-RTB_TAG = "#rtb"
+RTB_TAGS = ["#readthebill","72-hour rule","read the bill"]
 RTB_APPROVE_ALL = False
 
 try:

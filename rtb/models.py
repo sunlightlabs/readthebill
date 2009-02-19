@@ -25,5 +25,7 @@ class Organization(models.Model):
 
 def mod(mo):
     entry = mo.content_object
-    return settings.RTB_TAG in entry.content.upper()
+    for tag in settings.RTB_TAGS:
+        if tag in entry.content.lower():
+            return True
 gatekeeper.register(FeedEntry, auto_moderator=mod)    
