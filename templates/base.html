@@ -5,14 +5,13 @@
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 	{% block meta %}{% endblock %}
-	<title>{% block title %}{% endblock %}</title>
+
 	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/screen.css" type="text/css" media="screen, projection" />
    	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
 
-   	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/style.css" type="text/css" media="screen, projection" />
 
 	<style>
 	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg);  background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -48px;}
@@ -140,22 +139,6 @@
     	ul.partners {}
     	ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
 
-    	/* External links */
-    	a[href^="http:"]          { background:none; } 
-    	a[href^="mailto:"]        { background:none; }
-    	a[href^="http:"]:visited  { background:none; }
-
-
-    	#hideme { text-align:right; display:block; margin:0; padding:0; float:right;}
-    	#hideme a:link { text-decoration:none; color:#bf5004;}
-    	#hideme a:visited { text-decoration:none; color:#bf5004;}
-    	#hideme a:hover { text-decoration:none; color:#bf5004;}
-    	#hideme a:active { text-decoration:none; color:#bf5004;}
-
-    	.affiliation_block { margin-right:5px; margin-left:3px;}
-
-
-
 		#contact_box {background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep_tack.png); background-repeat:no-repeat; 			background-color:#eff5e6;  width:360px; margin:150px 0 40px 30px; }
 		#contact_box_bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; background-position:bottom; background-color:#eff5e6;  width:360px;}
 
@@ -188,7 +171,7 @@
     	form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
 
         .footer {margin-top:40px;}
-        .bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px;}
+        .bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px; margin-top:100px;}
 
 
 ul.brought_by { margin:0; padding:0;}
@@ -266,6 +249,8 @@ ul.brought_by li {display:inline; padding-right:20px;}
 	
 
 </head>
+<title>Read The Bill: {% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <body id="{% block body %}readthebill{% endblock %}">
     <div class="container noicon">
 		
