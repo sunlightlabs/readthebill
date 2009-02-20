@@ -1,33 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-		<div id="flatpage">
-    	{{ flatpage.content }}
+<div class="span-24 header_bg">
+	<div id="top_nav">
+		<div id="navbox">{% include "includes/nav.html" %}</div>
+	</div>
+
+<div class="span-13">
+	<div id="buttonbox">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
+	</div>
+	
+	<div id="postit">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
+	</div>
+	
+</div>
+	
+		<div class="span-11 last">
+		{% include "includes/endorse_carousel.html" %}
 		</div>
+		
+		
+		<div class="span-16">
+		{{ flatpage.content }}
+		</div>
+		
+		<div class="span-8 last">
+		&nbsp;
+		</div>
+		
 {% endblock %}
+		
 
-{% block endorse %}
-<div id="endorse_carousel">
-		<div id="endorse_logo">
-		<a href="/endorsements/">
-			<img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_campaign_legal_center.jpg" border="0"></a>
-		</div>
 
-		<div id="endorse_nav">
-			<img src="http://media.sunlightprojects.org/readthebill/images/v2/carousel_left.png">
-			<img src="http://media.sunlightprojects.org/readthebill/images/v2/carousel_right.png">
-		</div>
-
-	</div>
-{% endblock endorse %}		
-
-	{% block datebook %}
-	<div id="rtb_datebook">
-		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/v2_rtb_datebook.png"></a>
-	</div>
-	
-	{% endblock datebook %}
-	
-	{% block nav %}
-	<div id="navbox">{% include "includes/nav.html" %}</div>
-	{% endblock %}
