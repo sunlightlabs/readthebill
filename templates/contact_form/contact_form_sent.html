@@ -4,18 +4,43 @@
 {% block meta %}<meta http-equiv="refresh" content="5;url=http://readthebill.org" />{% endblock %}
 
 {% block content %}
-
-<div class="span-11">
-	<div id="contact_form_sent">
-	<h3>Thank you for your message.</h3>
-	<p>{% morsel sent %}</p>
+<div class="span-24">
+	<div id="top_nav">
+		<div id="navbox">{% include "includes/nav.html" %}</div>
 	</div>
-</div>
 
-
-<div class="span-13 last">
+<div class="span-13">
+	<div id="buttonbox">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
+	</div>
 	
-	<div id="datebook"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
-		
+	<div id="postit">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
+	</div>
+	
 </div>
+	
+		<div class="span-11 last">
+		{% include "includes/endorse_carousel.html" %}
+		</div>
+
+</div>
+
+<div class="span-2">
+&nbsp; 
+</div>
+
+
+	<div class="span-10">
+		<div id="contact_form_sent">
+			<h3>Thank you for your message.</h3>
+			<p>{% morsel sent %}</p>
+		</div>
+	</div>
+
+
+<div class="span-12 last">
+	<img src="http://media.sunlightprojects.org/readthebill/images/v2/v2_rtb_datebook.png">
+</div>
+
 {% endblock %}

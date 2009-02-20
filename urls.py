@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^partner/(?P<id>\d+)/', 'readthebill.rtb.views.partner_page', name="partner_page"),
     url(r'^press/', 'readthebill.rtb.views.press', name="press"),
     url(r'^rushed/', 'readthebill.rtb.views.rushed_bills', name="rushed_bills"),
+    url(r'^endorsements/', 'django.views.generic.simple.direct_to_template', {'template': 'endorsements.html'}, name="endorsements"),
     url(r'^invite/', 'django.views.generic.simple.direct_to_template', {'template': 'invite.html'}, name="invite"),
     url(r'^$', 'readthebill.rtb.views.index', name="index"),
 )

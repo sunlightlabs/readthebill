@@ -23,9 +23,12 @@
 		{% include "includes/endorse_carousel.html" %}
 		</div>
 
+</div>
 
+<div class="span-2">&nbsp;</div>
 
-<div class="span-13">
+<div class="span-14">
+	<h3>Rushed Bills</h3>
     <ol>
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
@@ -33,7 +36,7 @@
     </ol>
 </div>
 	
-	<div class="span-11 last">
+	<div class="span-8 last">
 	
 	Right side. Something here?  Perhaps an explanation of what the heck this is.  Or Case Study links?
 	

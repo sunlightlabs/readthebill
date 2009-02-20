@@ -1,7 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="span-11">
+<div class="span-24">
+	<div id="top_nav">
+		<div id="navbox">{% include "includes/nav.html" %}</div>
+	</div>
+
+<div class="span-13">
+	<div id="buttonbox">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
+	</div>
+	
+	<div id="postit">
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
+	</div>
+	
+</div>
+	
+		<div class="span-11 last">
+		{% include "includes/endorse_carousel.html" %}
+		</div>
+
+</div>		
+		
+		<div class="span-2">
+		&nbsp; 
+		</div>
+		
+		
+		<div class="span-10">
+
 	<div id="contact_form">
 		<fieldset>
     		<legend>Send us an Email</legend>
@@ -11,33 +39,12 @@
     		</form>
 		</fieldset>
 	</div>
+
 </div>
 
 
-<div class="span-13 last">
-	
-	<div id="datebook"><img src="http://media.sunlightprojects.org/readthebill/images/rtb_datebook.png"></div>
-	
-
-		<table class="navtable">
-			<tr>
-				<td>
-					<div class="nav_about">&nbsp;</div>
-					<h3 class="nav_item"><a href="/about/">About the Project</a></h3><span class="nav_subtext">Learn more about Read The Bill</span></td>
-				<td>
-					<div class="nav_press">&nbsp;</div>
-					<h3 class="nav_item"><a href="/press/">Press Center</a></h3><span class="nav_subtext">Read releases and articles about RTB</span></td>	
-			</tr>
-				<tr>
-					<td>
-						<div class="nav_endorsements">&nbsp;</div>
-						<h3 class="nav_item"><a href="/endorsements/">Endorsements</a></h3><span class="nav_subtext">See our growing list of support</span></td>
-					<td>
-						<div class="nav_contact">&nbsp;</div>
-						<h3 class="nav_item"><a href="/contact/">Contact Us</a></h3><span class="nav_subtext">Let us know what you think</span></td>	
-				</tr>
-		</table>
-
-		
+<div class="span-12 last">
+	<img src="http://media.sunlightprojects.org/readthebill/images/v2/v2_rtb_datebook.png">
 </div>
+
 {% endblock %}

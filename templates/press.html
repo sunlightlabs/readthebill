@@ -23,10 +23,13 @@
 		{% include "includes/endorse_carousel.html" %}
 		</div>
 
+	</div>
 
+	<div class="span-2">&nbsp;</div>
 
-<div class="span-13">
-
+<div class="span-14">
+<h3>Press Center</h3>
+<p>People are talking about the Read The Bill campaign</p>
     <ol>
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
@@ -34,9 +37,9 @@
     </ol>
 </div>
 	
-	<div class="span-11 last">
+	<div class="span-8 last">
 	
-	Right side. Something here? Anyone?
+	&nbsp;
 	
 	</div>
 {% endblock %}

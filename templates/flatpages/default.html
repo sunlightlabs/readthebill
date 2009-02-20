@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="span-24 header_bg">
+<div class="span-24">
 	<div id="top_nav">
 		<div id="navbox">{% include "includes/nav.html" %}</div>
 	</div>
@@ -20,14 +20,20 @@
 		<div class="span-11 last">
 		{% include "includes/endorse_carousel.html" %}
 		</div>
+
+</div>		
+		
+		<div class="span-2">
+		&nbsp; 
+		</div>
 		
 		
-		<div class="span-16">
+		<div class="span-12">
 		{{ flatpage.content }}
 		</div>
 		
-		<div class="span-8 last">
-		&nbsp;
+		<div class="span-10 last">
+			<img src="http://media.sunlightprojects.org/readthebill/images/v2/v2_rtb_datebook.png">
 		</div>
 		
 {% endblock %}
