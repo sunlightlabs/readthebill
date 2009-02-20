@@ -26,26 +26,18 @@ Improve the legislative process by posting bills online for 72 hours before deba
 	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
 	<p class="blogroll_explanation">{% morsel blogroll %}</p>	
 	
-	<ul class="blog_roll_new noicon">
+	<ul class="blog_roll_new">
 		 {% for entry in entries %}
 		
-		<li class="{% cycle 'plain' 'alt' %}">
-			<div>
-				<div id="bubble">
-					<img src="http://media.sunlightprojects.org/readthebill/images/roll_bubble_plain.png">
-				</div>
-			
-				<div id="blogroll_details">
-				    <a href="{% url partner_page entry.pk %}" class="blogroll_headline">{{ entry.title|safe }}</a></a>
-					<br />
-                    <span class="blogroll_blogtitle">
-                        Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
-                        -
-                        Posted by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-                        on {{ entry.date_published|date:"F j, Y" }}
-                    </span> 
-			    </div>
-			
+		<li>
+			<div class="blogroll_v2">
+			<h3><a href="{% url partner_page entry.pk %}" class="blogroll_headline">{{ entry.title|safe }}</a></h3>
+			<span class="blogroll_meta">
+Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
+			by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+            on {{ entry.date_published|date:"F j, Y" }}
+        </span>
+
 			</div>
 		</li>
 		{% endfor %}

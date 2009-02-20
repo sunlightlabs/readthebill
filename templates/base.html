@@ -14,142 +14,45 @@
 
 
 	<style>
-	body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg);  background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -48px;}
+/*cleaned up CSS */
 
-	#top_header { padding:0 20px 0 0;}
+body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg); background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -48px;}
 	
-	.spacer {height:200px; padding-top:50px;}
-	.subhead { font-size:15px; color:#c8ced7; text-align:center; font-family:Georgia, Times, Serif; margin-top:10px;}
-	h1.headline {font-size:28px; font-family:Georgia, Times, Serif; color:#092545; padding-bottom:10px; margin-top:10px;}
-	.intro { font-size:18px; color:#637288; font-family:Georgia, Times, Serif; line-height:24px;}
-	.intro_close { font-size:20px; color:#637288; font-family:Georgia, Times, Serif;  color:#2f4867; padding-bottom:0;}
-	
-    em { font-style:italics;}
-    .bold {font-weight:bold;}
-	
-	#flatpage { padding:0 20px 0 0;}
-	#datebook { margin:0 0 40px 0;}
-	
-	#flatpage h3 { color:#003366;}
-	
+
 /* CONTACT FORM */	
-	#contact_form { padding:0 40px 0 0; }
-	#contact_form_sent { text-align:center;}
-	
-	#contact_form label { width: 10em;	float: left;	text-align: left; display: block; 	}
-	#contact_form .submit input { margin-left:1em;	} 
-	#contact_form textarea { width:320px; height:100px;}
-	#contact_form input { width:200px;}
-	#contact_form p { font-size:12px; line-height:18px; font-family:Helvetica Neue, Arial, Helvetica, sans-serif; color:#1a1a1a; }
-	#contact_form li { list-style-type:none; font-size:12px; line-height:18px; font-family:Helvetica Neue, Arial, Helvetica, sans-serif; color:#1a1a1a; padding-bottom:1em; clear: both; }
-	
-	
-	
-	#endorsed li { list-style-type:disc;}
-	
-	
+#contact_form { padding:0 40px 0 0; }
+#contact_form_sent { text-align:center;}
 
-	
-	
-	h3.nav_item { margin:0; padding:0; font-size:18px;}
-	
-	h3.nav_item a:link { text-decoration:none; color:#003366;}
-	h3.nav_item a:visited { text-decoration:none; color:#003366;}
-	h3.nav_item a:hover { text-decoration:none; color:#bf5004;}
-	h3.nav_item a:active { text-decoration:none; color:#003366;}
-	
-	.nav_subtext_old { font-size:11px; margin:0; padding:0; color:#003399;}
-	
-	.nav_about { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_about.png); height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}
-	
-	.nav_press { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_paper.png); height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}
-	
-	.nav_endorsements { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_heart.png); height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}
-	
-	.nav_contact { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_contact.png); height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}
+#contact_form label { width: 10em;	float: left;	text-align: left; display: block; 	}
+#contact_form .submit input { margin-left:1em;	} 
+#contact_form textarea { width:320px; height:100px;}
+#contact_form input { width:200px;}
+#contact_form p { font-size:12px; line-height:18px; font-family:Helvetica Neue, Arial, Helvetica, sans-serif; color:#1a1a1a; }
+#contact_form li { list-style-type:none; font-size:12px; line-height:18px; font-family:Helvetica Neue, Arial, Helvetica, sans-serif; color:#1a1a1a; padding-bottom:1em; clear: both; }
 
-	.nav_rushed { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_rushed.png); 
-	height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}	
-	
-		.nav_cases { float:left; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_case.png); 				  height:32px; width:32px; background-position:0 -4px; padding:0 5px 0 0; background-repeat:no-repeat;}	
-	
-	
-	/* old nav stuff */
-	.nav {  padding:0 0 3px 0 ; 
-		background-image:url(http://media.sunlightprojects.org/readthebill/images/navbg.png);
-		background-repeat:no-repeat;
-		background-position:bottom left;
-		width:467px;
-		}
-	
-	
-	#navlist { display:inline; margin:0; padding:0 0 0 30px; font-family:Trebuchet,Tahoma,Arial,sans-serif; font-weight:bold; font-size:12px;
- }
-	
-	#navlist a:link { text-decoration:none; color:#003399; }
-	#navlist a:visited { text-decoration:none; color:#336699;}
-	#navlist a:hover { text-decoration:none; color:#bf5004;}
-	#navlist a:active {text-decoration:none; color:#003399; }
-	
-	
-	#navlist li { display:inline; margin:0; padding:0 30px 0 9px; background-image:url(http://media.sunlightprojects.org/readthebill/images/arrow_right.png); background-repeat:no-repeat; background-position:0 4px;}
-	
-	#alertbox { border:1px solid #d1b85b; background-color:#fffdd7; padding:1em; margin-bottom:2em; }
-	#alertbox p { color:#bf5004; padding:0; margin:0; font-weight:bold;}
+/* blogroll  NEEDS REVISING*/
+h2.blog_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px; background-image:url(http://media.sunlightprojects.org/readthebill/images/roll_bubble_g.png); background-repeat:no-repeat; padding-left:45px; padding-top:5px;}
 
-    	h2.blog_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px; background-image:url(http://media.sunlightprojects.org/readthebill/images/roll_bubble_g.png); background-repeat:no-repeat; padding-left:45px; padding-top:5px;}
-    	.blogroll_explanation {color:#4c4f54;}
+.blogroll_explanation {color:#4c4f54;}
 
+ul.blog_roll_new { margin:0; padding:0; }
+ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 10px 0;}
 
-	
-    	.blogroll_blogtitle { font-weight:normal; font-size:10px; color:#a5a5a5; }
-    	.blogroll_headline { font-weight:bold; font-size:14px; text-decoration:underline; color:#4c4f54; }
-	
-    	#blogroll_details a:link { color:#435c7a; text-decoration:none; }
-    	#blogroll_details a:visited { color:#666666;  text-decoration:none; }
-    	#blogroll_details a:hover { color:#bf5004; }
-    	#blogroll_details a:active { color:#435c7a;  text-decoration:none; }
-	
-	.blogroll_org a:link { color:#000000;}
-	
-	#affiliation {margin-bottom:2em;}
-	#bubble { float:left; margin-bottom:10px; display:none;}
-	
+.blog_roll_new h3 {  font-weight:bold; font-size:14px; color:#4c4f54; padding:0; margin:0;}
 
-	#partner_box {margin-top:5em; margin-left:2em;}
-
-
-    	ul.blog_roll_new { margin:0 0 10px 0; padding:0; }
-    	ul.blog_roll_new li {margin:10px 0 10px 0; padding:0px 0 10px 0; border-bottom:1px solid #f4f4f4;}
-    	ul.blog_roll_new li.alt { background-color:#fffffff;  }
-    	ul.blog_roll_new li.plain { background-color:#ffffff; }
-
-    	.blogroll_blogtitle a:link { text-decoration:none; padding:0; margin:0;}
-    	.blogroll_blogtitle a:visited { text-decoration:none; padding:0; margin:0;}
-    	.blogroll_blogtitle a:hover { text-decoration:none; padding:0; margin:0;}
-    	.blogroll_blogtitle a:active { text-decoration:none; padding:0; margin:0;}
-
-
-    	ul.key {margin:5px 0 0 0; padding:0;}
-    	ul.key li {display: inline; list-style-type: none;	padding-right: 18px;	margin:0; font-size:10px;}
-    	.key_code { margin-right:3px; height:8px;}
-    	.key_legend {font-size:1em; color:#a5a5a5;}
-
-
-    	ul.partners {}
-    	ul.partners li {list-style-type: none;  font-size:12px; padding-bottom:1em;}
-
-		#contact_box {background-image:url(http://media.sunlightprojects.org/readthebill/images/tell_your_rep_tack.png); background-repeat:no-repeat; 			background-color:#eff5e6;  width:360px; margin:150px 0 40px 30px; }
-		#contact_box_bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/message_bg.png); background-repeat:no-repeat; background-position:bottom; background-color:#eff5e6;  width:360px;}
-
+.blogroll_meta { font-weight:normal; font-size:10px; color:#a5a5a5; }
+.blogroll_meta a:link { text-decoration:none; padding:0; margin:0; color:#666666;}
+.blogroll_meta a:visited { text-decoration:none; padding:0; margin:0; color:#666666;}
+.blogroll_meta a:hover { text-decoration:none; padding:0; margin:0; color:#666666;}
+.blogroll_meta a:active { text-decoration:none; padding:0; margin:0; color:#666666;}
 
 
 /* petition form front page */
-#instructions { padding-top:100px; width:250px; margin-left:40px; color:#9ca991;}
+	#instructions { padding-top:100px; width:250px; margin-left:40px; color:#9ca991;}
 
-#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 40px 20px;}
+	#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 40px 20px;}
 
-#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:360px;}
+	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:360px;}
 
 /* The form styling */
 	form.signupform fieldset { margin-left:20px;	border:0px solid ;	}
@@ -168,57 +71,24 @@
 	form.signupform input.button { border:1px solid #9ca991; background-color:#eff5e6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
 
 
-    	form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
+		form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
 
-        .footer {margin-top:40px;}
-        .bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px; margin-top:100px;}
+	    .footer {margin-top:40px;}
+	    .bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px; margin-top:100px;}
 
-
-ul.brought_by { margin:0; padding:0;}
-ul.brought_by li {display:inline; padding-right:20px;}
-
-
-
-
-
-
-
-
-/* SF footer box */
-#sf_footer { }
-
-#sf_footer_box { padding:10px; margin-top:.5em; margin-bottom:.5em; float:left; width:910px; margin-left:10px; }
-#sf_footer_box ul { padding:0 0 1.25em .5em; }
-#sf_footer_box li { }
-
-#sf_footer_head { width:20%; float:left; }
-#sf_footer_address { margin-left:.5em; }
-
-
-/* NEW STYLES FOR THE NEW VERSION */
-.header_bg_no { background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_header_bg_short.jpg); background-repeat:no-repeat; min-height:407px; background-position:0 0}
-
+/* Endorse carousel */
 #endorse_carousel { margin:5px 0 50px 40px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
 #endorse_logo { margin-left:35px; padding-top:55px;}	
 
 #endorse_carousel_front { margin:0 0 50px 60px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
 
+#endorse_nav {margin-left:18px; }
 
-#endorse_nav {margin-left:18px; }	
-	
-#navbox {}
-#navbox_flat { margin:0;}
+/*Top Nav */
+#top_nav {  margin:10px 0 0 0; height:85px; padding-left:20px; background-image:url(http://media.sunlightprojects.org/readthebill/images/tape_bg.png); background-repeat:no-repeat;}
 
-#rtb_datebook { margin-top:20px;}
-
-
-
-/*revised */
-#top_nav {  margin:10px 0 0 0; height:85px; padding-left:20px;
-	background-image:url(http://media.sunlightprojects.org/readthebill/images/tape_bg.png);
-	background-repeat:no-repeat;
-	}
 #topnav { margin:0; padding:20px 0 0 0; }
+
 #topnav li { display: inline-block; padding-right:30px;}
 .top_nav_item { font-size:18px; font-weight:bold; padding:0; margin:0; line-height:18px;}
 .top_nav_item a:link { text-decoration:none; color:#003366;}
@@ -227,25 +97,40 @@ ul.brought_by li {display:inline; padding-right:20px;}
 .top_nav_item a:active { text-decoration:none; color:#003366;}
 .nav_subtext {font-weight:normal; padding:0; margin:0; color:#003399; font-size:11px;}
 
-	
+
 #leftbox { margin-top:20px; padding-left:10px;}
+
 #postit { margin:5px 0 0 30px;}
+
 #buttonbox { margin-top:55px; text-align:right; width:120px; height:120px; float:right;}
 
 .link_block { display:block; height:300px;  padding:0; margin:0;}
-		#link_block_box {  height:300px; margin:0; padding:0; width:420px; float:left;}
-		#link_block_box a:link { text-decoration:none; }
-		#link_block_box a:visited { text-decoration:none; }
-		#link_block_box a:hover { text-decoration:none; }
-		#link_block_box a:active { text-decoration:none; }
+	#link_block_box {  height:300px; margin:0; padding:0; width:420px; float:left;}
+	#link_block_box a:link { text-decoration:none; }
+	#link_block_box a:visited { text-decoration:none; }
+	#link_block_box a:hover { text-decoration:none; }
+	#link_block_box a:active { text-decoration:none; }
 
 .blue { background-color:#5875b6;}
+#rushed { list-style-type:none; font-size:14px; margin:0; padding:0;}
+#rushed li { margin-bottom:10px; border-bottom:1px solid #eeeeee; padding:0 0 10px 0;}
 
+/* SF footer box */
+		#sf_footer_box { padding:10px; margin-top:.5em; margin-bottom:.5em; float:left; width:910px; margin-left:10px; }
+		#sf_footer_box ul { padding:0 0 1.25em .5em; }
+		#sf_footer_box li { }
+
+		#sf_footer_head { width:20%; float:left; }
+		#sf_footer_address { margin-left:.5em; }
+
+/* misc crap leftover */
+#affiliation {margin-bottom:2em;}
+#bubble { float:left; margin-bottom:10px; display:none;}
 
 
 		</style>
-	<!script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
-	<!script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
+	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
+	<script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
 	
 
 </head>
@@ -270,20 +155,9 @@ ul.brought_by li {display:inline; padding-right:20px;}
 		</div>
 
 
-
-
-
-
-
-
-
-
-
 <div class="bottom">
 	
 	   <div class="container noicon">
-
-
 			<div class="column span-24" id="sf_footer">
                <div id="sf_footer_box">
                    <div id="sf_footer_head">
@@ -341,12 +215,9 @@ ul.brought_by li {display:inline; padding-right:20px;}
                        </ul>
                    </div>
                </div>
-           </div>
-		
+           </div>		
 		</div>
-	
-
-</div>	
+	</div>	
 
 
 </body>
