@@ -13,13 +13,13 @@ Improve the legislative process by posting bills online for 72 hours before deba
 	<div id="navbox">{% include "includes/nav.html" %}</div>
 	</div>
 <div class="span-13">
-	<!--<div id="link_block_box"><a href="/"><span class="link_block">&nbsp;</span></a></div>-->
 	<div id="buttonbox">
 		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
 	</div>
 	<div id="postit">
-		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a></div>
-	
+		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
+	</div>
+
 	<div id="leftbox">
 
 
@@ -52,10 +52,6 @@ Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{
 	
 
 
-{% endblock %}
-
-
-{% block form %}
 <div id="contact_box_new">
 	<div id="instructions">{% morsel signup %} </div>
 		<div id="contact_box_bottom_new">
@@ -77,7 +73,7 @@ Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{
 		</form>	
 	</div>
 </div>
-{% endblock form %}
 
 
-
+{% include "includes/endorse_carousel.html" %}
+{% endblock %}
