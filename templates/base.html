@@ -56,7 +56,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 /* petition form front page */
 	#instructions { padding-top:100px; width:250px; margin-left:40px; color:#9ca991;}
 
-	#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 40px 20px;}
+	#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 20px 20px;}
 
 	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:360px;}
 
@@ -83,7 +83,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 	    .bottom {background-image:url(http://media.sunlightprojects.org/readthebill/images/footer_bg.png); background-repeat:repeat-x; height:150px; margin-top:100px;}
 
 /* Endorse carousel */
-#endorse_carousel { margin:5px 0 50px 40px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
+#endorse_carousel { margin:5px 0 50px 50px; height:201px; width:324px; background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/carousel_bg.png); background-repeat:no-repeat;}
 
 #endorse_logo { margin-left:35px; padding-top:62px;}	
 
@@ -97,7 +97,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 #topnav { margin:0; padding:10px 0 0 0; }
 
 #topnav li { display: inline-block;}
-.top_nav_item { font-size:15px; font-weight:bold; padding:0; margin:0; line-height:18px;}
+/* old .top_nav_item { font-size:15px; font-weight:bold; padding:0; margin:0; line-height:18px;} */
 
 .top_nav_item_1 { display:block; width:160px; height:40px; margin:0; padding:0;}
 .top_nav_item_2 { display:block; width:160px; height:40px; margin:0; padding:0;}
@@ -107,13 +107,13 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 .top_nav_item_6 { display:block; width:90px; height:40px; margin:0; padding:0;}
 .top_nav_item_7 { display:block; width:90px; height:40px; margin:0; padding:0;}
 
-
+/* old 
 .top_nav_item a:link { text-decoration:none; color:#003366;}
 .top_nav_item a:visited { text-decoration:none; color:#003366;}
 .top_nav_item a:hover { text-decoration:none; color:#bf5004;}
 .top_nav_item a:active { text-decoration:none; color:#003366;}
 .nav_subtext {font-weight:normal; padding:0; margin:0; color:#003399; font-size:11px; display:none;}
-
+*/
 
 #leftbox { margin-top:20px; padding-left:10px;}
 
@@ -150,9 +150,40 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 .endorse_indiv { display:block; margin:0; padding:0; font-size:130%; color:#000000;}
 
 		</style>
-	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
-	<!script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
-	
+
+		<SCRIPT LANGUAGE="JavaScript">
+		// Set up the image files to be used.
+		var theButtons = new Array() // do not change this
+		// To add more image files, continue with the
+		// pattern below, adding to the array.
+
+		theButtons[0] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button.png'
+		theButtons[1] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_a.png'
+		theButtons[2] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_b.png'
+		theButtons[3] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_c.png'
+
+		// do not edit anything below this line
+
+		var j = 0
+		var p = theButtons.length;
+		var preBuffer = new Array()
+		for (i = 0; i < p; i++){
+		   preBuffer[i] = new Image()
+		   preBuffer[i].src = theButtons[i]
+		}
+		var whichButton = Math.round(Math.random()*(p-1));
+		function showButton(){
+		document.write('<img src="'+theButtons[whichButton]+'">');
+		}
+
+		//  End -->
+		</script>
+
+
+
+		<script src="http://media.sunlightprojects.org/js/jquery-1.2.6.min.js" type="text/javascript"></script>
+		<script type="text/javascript" charset="utf-8" src="http://media.sunlightprojects.org/js/jquery.pngFix.pack.js"></script>
+	<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>	
 
 </head>
 <title>Read The Bill: {% block title %}{% endblock %}</title>
@@ -168,7 +199,8 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 
 		<div class="span-13">
 			<div id="buttonbox">
-				<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
+				<a href="/">
+						<SCRIPT LANGUAGE="JavaScript"> showButton();	</script>
 			</div>
 			<div id="postit">
 				<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
@@ -183,6 +215,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 	</div>
 </div>	
 <div class="span-11 last">
+
 
 <div id="contact_box_new">
 	<div id="instructions">{% morsel signup %} </div>
@@ -208,13 +241,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 	</div>
 </div>
 
-
 {% include "includes/endorse_carousel.html" %}
-
-
-
-
-
 	
 </div>
 	</div>
