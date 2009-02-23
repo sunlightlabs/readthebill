@@ -8,21 +8,6 @@ Improve the legislative process by posting bills online for 72 hours before deba
 
 
 {% block content %}
-<div class="span-24 header_bg">
-	<div id="top_nav">
-	<div id="navbox">{% include "includes/nav.html" %}</div>
-	</div>
-<div class="span-13">
-	<div id="buttonbox">
-		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png"></a>
-	</div>
-	<div id="postit">
-		<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png"></a>
-	</div>
-
-	<div id="leftbox">
-
-
 	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
 	<p class="blogroll_explanation">{% morsel blogroll %}</p>	
 	
@@ -43,37 +28,4 @@ Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{
 		{% endfor %}
 	</ul>
 
-
-
-	</div>
-</div>
-<div class="span-11 last">
-	
-	
-
-
-<div id="contact_box_new">
-	<div id="instructions">{% morsel signup %} </div>
-		<div id="contact_box_bottom_new">
-			<form action="{% url index %}" method="post" id="signupform" class="signupform">
-			<fieldset>
-				{% if is_thanks %}
-				    <legend>Thanks for signing up!</legend>
-				    <p>&nbsp;</p>
-				    <p>&nbsp;</p>
-				{% else %}
-			        <legend>Join The Read The Bill Coalition!</legend>
-                    {{ form.as_ul }}
-					<br />
-			        <ul>
-					   <li><input type="submit" value="Join The Coalition" class="button"></li>
-				    </ul>
-			    {% endif %}	
-			</fieldset>
-		</form>	
-	</div>
-</div>
-
-
-{% include "includes/endorse_carousel.html" %}
 {% endblock %}

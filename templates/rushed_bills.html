@@ -3,28 +3,23 @@
 Rushed Bills
 {% endblock %}
 
+{% load morsel_tags %}
+{% load rtb %}
+
 {% block content %}
 
 
-{% include "includes/corked.html" %}
+	
+		<h3>Rushed Bills</h3>
+		<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+	    <ul id="rushed">
+	        {% for entry in feed.entries.all %}
+	            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+	        {% endfor %}
+	    </ul>
 	
 
-<div class="span-2">&nbsp;</div>
 
-<div class="span-14">
-	<h3>Rushed Bills</h3>
-    <ul id="rushed">
-        {% for entry in feed.entries.all %}
-            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
-	
-	<div class="span-8 last">
-	
-	Right side. Something here?  Perhaps an explanation of what the heck this is.  Or Case Study links?
-	
-	</div>
 
 
 {% endblock %}

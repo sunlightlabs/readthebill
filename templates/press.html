@@ -5,12 +5,6 @@ Press Center
 
 {% block content %}
 
-
-	{% include "includes/corked.html" %}
-	
-	<div class="span-2">&nbsp;</div>
-
-<div class="span-14">
 <h3>Press Center</h3>
 <p>People are talking about the Read The Bill campaign</p>
     <ol>
@@ -18,11 +12,5 @@ Press Center
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
         {% endfor %}
     </ol>
-</div>
-	
-	<div class="span-8 last">
-	
-	&nbsp;
-	
-	</div>
+
 {% endblock %}
