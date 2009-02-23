@@ -2,6 +2,7 @@
     "http://www.w3.org/TR/html4/strict.dtd">
 
 {% load morsel_tags %}
+{% load rtb %}
 
 <html lang="en">
 <head>
@@ -194,7 +195,9 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 				    <p>&nbsp;</p>
 				{% else %}
 			        <legend>Join The Read The Bill Coalition!</legend>
-                    {{ form.as_ul }}
+					{% block signupform %}
+						{% signup_form %}
+					{% endblock %}
 					<br />
 			        <ul>
 					   <li><input type="submit" value="Join The Coalition" class="button"></li>
