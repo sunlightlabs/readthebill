@@ -7,7 +7,7 @@ Press Center
 
 <h3 class="headline">Press Center</h3>
 <p>People are talking about the Read The Bill campaign</p>
-    <ul id="blog_roll_new">
+    <ul class="blog_roll_new">
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
         {% endfor %}
