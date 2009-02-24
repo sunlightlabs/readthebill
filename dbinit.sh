@@ -13,7 +13,7 @@
 ./manage.py addfeed http://blog.cdt.org/feed/ cdt
 
 ./manage.py addfeed "http://dev.opencongress.org/bill/readthebill.rss?sort=gpo&show_resolutions=false" rushedbills
-./manage.py addfeed "http://feeds.delicious.com/v2/rss/sunlight_foundation/bundle:readthebill?count=15" press
+./manage.py addfeed "http://feeds.delicious.com/v2/rss/sunlight_foundation/readthebill?count=15" press
 
 ./manage.py updatefeeds
 
