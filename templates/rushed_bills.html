@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% load morsel_tags %}
-{% block title %}
-Rushed Bills
-{% endblock %}
-
-
+{% block title %}Rushed Bills{% endblock %}
 {% block content %}
+
 	<h3 class="headline">Rushed Bills</h3>
 	<p>{% morsel rushed %}</p>
     <ul class="blog_roll_new">
@@ -13,5 +10,6 @@ Rushed Bills
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
         {% endfor %}
     </ul>
+
 {% endblock %}
 	
