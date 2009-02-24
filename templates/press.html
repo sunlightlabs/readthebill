@@ -7,10 +7,10 @@ Press Center
 
 <h3>Press Center</h3>
 <p>People are talking about the Read The Bill campaign</p>
-    <ol>
+    <ul id="rushed">
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
         {% endfor %}
-    </ol>
+    </ul>
 
 {% endblock %}
