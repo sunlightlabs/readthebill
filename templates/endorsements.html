@@ -37,10 +37,7 @@
 <li><a href="http://www.youstreet.org"><img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_youstreet.jpg"></a></li>
 </ul>
 
-<h3>Individual Endorsements</h3>
-<ul id="endorsed">
-{% morsel individs %}
-</ul>
+
 	
 	<!-- hiding this outdated
 	<ul id="endorsed">
@@ -66,3 +63,12 @@ MISSING LOGO	<li><a href="http://www.demos.org">Demos</a></li>
 -->
 
 {% endblock %}
+
+
+
+{% block indiv %}
+<h3 class="headline">Individual Endorsements</h3>
+<ul id="endorsed">
+{% morsel individs %}
+</ul>
+{% endblock indiv %}
