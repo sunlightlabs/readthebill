@@ -5,9 +5,9 @@ Press Center
 
 {% block content %}
 
-<h3>Press Center</h3>
+<h3 class="headline">Press Center</h3>
 <p>People are talking about the Read The Bill campaign</p>
-    <ul id="rushed">
+    <ul id="blog_roll_new">
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
         {% endfor %}
