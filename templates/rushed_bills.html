@@ -6,20 +6,12 @@ Rushed Bills
 
 
 {% block content %}
-
-
-	
-		<h3 class="headline">Rushed Bills</h3>
-		<p>{% morsel rushed %}</p>
-	    <ul class="blog_roll_new">
-	        {% for entry in feed.entries.all %}
-	            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
-	        {% endfor %}
-	    </ul>
-	
-
-
-
-
+	<h3 class="headline">Rushed Bills</h3>
+	<p>{% morsel rushed %}</p>
+    <ul class="blog_roll_new">
+        {% for entry in feed.entries.all %}
+            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 	

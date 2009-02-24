@@ -37,17 +37,17 @@ def index(request):
 
 def partners(request):
     partners = Organization.objects.order_by('name')
-    return render_to_response("partners.html", {"partners": partners})
+    return render_to_response("partners.html", {"partners": partners}, context_instance=RequestContext(request))
 
 def partner_page(request, id):
     entry = FeedEntry.objects.get(pk=id)
-    return render_to_response("partner_frame.html", {"entry": entry})
+    return render_to_response("partner_frame.html", {"entry": entry}, context_instance=RequestContext(request))
 
 def press(request):
     feed = Feed.objects.get(codename="press")
-    return render_to_response("press.html", {"feed": feed})
+    return render_to_response("press.html", {"feed": feed}, context_instance=RequestContext(request))
 
 def rushed_bills(request):
     feed = Feed.objects.get(codename="rushedbills")
-    return render_to_response("rushed_bills.html", {"feed": feed})
+    return render_to_response("rushed_bills.html", {"feed": feed}, context_instance=RequestContext(request))
     
