@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load morsel_tags %}
 {% block title %}Endorsements{% endblock %}
 
 {% block content %}
@@ -7,7 +7,7 @@
 	<a name="endorsers"></a>
 	<h3 class="headline">Groups Endorsing Read The Bill</h3>
 
-	<p>"We support the 72 hours online rule to require generally that legislation and conference reports be posted on the Internet for 72 hours before floor consideration in Congress."</p>
+	<p>{% morsel endorsements %}</p>
 
 	<ul id="endorsed">
 

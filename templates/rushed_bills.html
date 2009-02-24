@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load morsel_tags %}
 {% block title %}
 Rushed Bills
 {% endblock %}
@@ -11,7 +12,7 @@ Rushed Bills
 
 	
 		<h3 class="headline">Rushed Bills</h3>
-		<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+		<p>{% morsel rushed %}</p>
 	    <ul class="blog_roll_new">
 	        {% for entry in feed.entries.all %}
 	            <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>

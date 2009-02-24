@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load morsel_tags %}
 {% block title %}
 Press Center
 {% endblock %}
@@ -6,7 +7,7 @@ Press Center
 {% block content %}
 
 <h3 class="headline">Press Center</h3>
-<p>People are talking about the Read The Bill campaign</p>
+<p>{% morsel press %}</p>
     <ul class="blog_roll_new">
         {% for entry in feed.entries.all %}
             <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
