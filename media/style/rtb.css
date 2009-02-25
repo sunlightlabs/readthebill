@@ -1,10 +1,12 @@
 /*cleaned up CSS */
 
 body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg); background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -40px;}
-	
-.intro { font-size:110%; padding:0 0 15px 0;}
 
+body p { font-size:110%;}	
+.intro { font-size:100%; padding:0 0 15px 0;}
 
+/*intro copy bit */
+h2.intro_head { color:#817d7a; border-bottom:1px solid #b0b0b0; padding-bottom:5px; background-image:url(http://media.sunlightprojects.org/readthebill/images/nav_rushed.png); background-repeat:no-repeat; padding-left:37px; padding-top:7px;}
 
 /* CONTACT FORM */	
 #contact_form { padding:0 40px 0 0; }
@@ -38,13 +40,18 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 .blogroll_meta a:hover { text-decoration:none; padding:0; margin:0; color:#666666;}
 .blogroll_meta a:active { text-decoration:none; padding:0; margin:0; color:#666666;}
 
+/*share box */
+
+#share { margin:0 20px 0 50px;}
+
+
 
 /* petition form front page */
 	#instructions { padding-top:100px; width:250px; margin-left:40px; color:#9ca991;}
 
 	#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 20px 20px;}
 
-	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:360px;}
+	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:260px;}
 
 /* The form styling */
 	form.signupform fieldset { margin-left:20px;	border:0px solid ;	}
@@ -83,7 +90,6 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 #topnav { margin:0; padding:10px 0 0 0; }
 
 #topnav li { display: inline-block;}
-/* old .top_nav_item { font-size:15px; font-weight:bold; padding:0; margin:0; line-height:18px;} */
 
 .top_nav_item_1 { display:block; width:160px; height:40px; margin:0; padding:0;}
 .top_nav_item_2 { display:block; width:160px; height:40px; margin:0; padding:0;}
@@ -93,13 +99,6 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 .top_nav_item_6 { display:block; width:90px; height:40px; margin:0; padding:0;}
 .top_nav_item_7 { display:block; width:90px; height:40px; margin:0; padding:0;}
 
-/* old 
-.top_nav_item a:link { text-decoration:none; color:#003366;}
-.top_nav_item a:visited { text-decoration:none; color:#003366;}
-.top_nav_item a:hover { text-decoration:none; color:#bf5004;}
-.top_nav_item a:active { text-decoration:none; color:#003366;}
-.nav_subtext {font-weight:normal; padding:0; margin:0; color:#003399; font-size:11px; display:none;}
-*/
 
 #leftbox { margin-top:20px; padding-left:10px;}
 
@@ -137,3 +136,10 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 
 .flatpages h3 { color:#817d7a; border-bottom:1px solid #b0b0b0;}
 h3.headline { color:#817d7a; border-bottom:1px solid #b0b0b0;}
+
+.flatpages h4 { font-size:110%;}
+
+p.pages {font-size:200%; font-weight:bold; padding:0 0 20px 0; margin:0;}
+
+.casestudies h5 {background-image:url(http://media.sunlightprojects.org/readthebill/images/case_studies.png); height:33px; width:404px;}
+
