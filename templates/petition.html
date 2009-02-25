@@ -1,0 +1,60 @@
+{% load rtb %}
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/print.css" type="text/css" media="print" />
+	<!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+	<style>
+		body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg); background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -20px;}
+		#buttonbox { margin-top:55px; text-align:right; width:220px; height:120px; float:right;}
+		#postit { margin:45px 0 0 10px;}
+		#footer { margin-top:100px; }
+		#head_invite { margin-top:20px; background-image:url(http://media.sunlightprojects.org/readthebill/images/invite_bg.png); background-repeat:no-repeat; padding:80px 30px 0 30px; height:1000px;}
+		.container table {
+			border-left:0;
+			border-right:0;
+			border-top:0;
+			border-bottom:0;
+		}
+		.container th, .container td {
+			border-bottom:0;
+			border-right:0;
+		}
+	</style>
+	<script src="http://media.sunlightprojects.org/js/jquery-1.2.6.min.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8" src="http://media.sunlightprojects.org/js/jquery.pngFix.pack.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="span-9">
+    		<div id="postit">
+				<a href="http://www.readthebill.org"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button_b.png" border="0"></a>
+				<a href="http://www.readthebill.org"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button.png" border="0"></a>
+				<a href="http://www.readthebill.org"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button_a.png" border="0"></a><br />
+				<a href="http://www.readthebill.org"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png" border="0"></a>
+    		</div>
+		</div>
+		<div class="span-15 last">
+			<div id="head_invite">
+				
+				
+				<form action="{% url index %}" method="post" id="signupform" class="signupform">
+					<fieldset>
+						<legend>Join The Read The Bill Coalition!</legend>
+						{% signup_form %}
+						<br />
+					    <ul>
+							<li><input type="submit" value="Join The Coalition" class="button"></li>
+						</ul>
+					</fieldset>
+				</form>
+			
+				
+			</div>
+		</div>
+		<div class="span-24">
+			<div id="footer">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>
