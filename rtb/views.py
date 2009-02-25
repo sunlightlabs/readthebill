@@ -19,11 +19,15 @@ def index(request):
             
             email = form.cleaned_data['email']
             zipcode = form.cleaned_data['zipcode']
-            affiliation = form.cleaned_data['affiliation']
-            message = form.cleaned_data.get('message', '')
+            #affiliation = form.cleaned_data['affiliation']
+            #message = form.cleaned_data.get('message', '')
+            
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
                         
             bsd_url = "http://bsd.sunlightfoundation.com/page/s/rtbpetition"
-            params = {"email": email, "zip": zipcode, "custom-109": affiliation, "custom-108": message}
+            #params = {"email": email, "zip": zipcode, "custom-109": affiliation, "custom-108": message}
+            params = {"email": email, "zip": zipcode, "firstname": first_name, "lastname": last_name}
             response = urllib2.urlopen(bsd_url, urllib.urlencode(params)).read()
 
             #return HttpResponseRedirect('/?thanks')
