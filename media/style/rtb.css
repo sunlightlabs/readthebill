@@ -85,19 +85,9 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 #endorse_nav {margin-left:18px; margin-top:1px; margin-right:5px;}
 
 /*Top Nav */
-#top_nav {  margin:10px 0 10px 0; height:50px; padding-left:2px; background-image:url(http://media.sunlightprojects.org/readthebill/images/tape_head_short.png); background-repeat:no-repeat;}
-
-#topnav { margin:0; padding:10px 0 0 0; }
-
-#topnav li { display: inline-block;}
-
-.top_nav_item_1 { display:block; width:160px; height:40px; margin:0; padding:0;}
-.top_nav_item_2 { display:block; width:160px; height:40px; margin:0; padding:0;}
-.top_nav_item_3 { display:block; width:100px; height:40px; margin:0; padding:0;}
-.top_nav_item_4 { display:block; width:120px; height:40px; margin:0; padding:0;}
-.top_nav_item_5 { display:block; width:120px; height:40px; margin:0; padding:0;}
-.top_nav_item_6 { display:block; width:90px; height:40px; margin:0; padding:0;}
-.top_nav_item_7 { display:block; width:90px; height:40px; margin:0; padding:0;}
+#top_nav { margin:10px 0 10px 0; padding:0; }
+#topnav ul { padding:0; margin:0;}
+#topnav li { display:inline; padding:0; margin:0; list-style-type:none;}
 
 
 #leftbox { margin-top:20px; padding-left:10px;}
@@ -140,6 +130,7 @@ h3.headline { color:#817d7a; border-bottom:1px solid #b0b0b0;}
 .flatpages h4 { font-size:110%;}
 
 p.pages {font-size:200%; font-weight:bold; padding:0 0 20px 0; margin:0;}
+.pages_small { font-size:14px; font-weight:normal;}
 
 .casestudies h5 {background-image:url(http://media.sunlightprojects.org/readthebill/images/case_studies.png); height:33px; width:404px;}
 
