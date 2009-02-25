@@ -51,11 +51,11 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 
 	#contact_box_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/form_bg_tall.png); background-repeat:no-repeat; width:380px; margin:30px 0 20px 20px;}
 
-	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:260px;}
+	#contact_box_bottom_new {background-image:url(http://media.sunlightprojects.org/readthebill/images/bottom_form_new.png); background-repeat:no-repeat; background-position:bottom; width:380px; height:300px;}
 
 /* The form styling */
 	form.signupform fieldset { margin-left:20px;	border:0px solid ;	}
-	form.signupform legend { padding: 0 2px;  font-weight: bold; color:#336600; }
+	form.signupform legend { padding: 0 2px 10px 10px;  font-weight: bold; color:#336600; }
 	form.signupform label { display: inline-block;  line-height: 1.8;  vertical-align: top; text-align:right; color:#548330; }
 	form.signupform fieldset ol { margin: 0;  padding: 0; }
 	form.signupform fieldset li { list-style: none;  padding: 5px;  margin: 0; }
@@ -67,7 +67,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 	form.signupform fieldset fieldset label { margin-left: 123px; /* Width plus 3 (html space) */ }
 	form.signupform input { width:160px;}
 	form.signupform textarea { width:160px; height:100px; margin-bottom:10px;}
-	form.signupform input.button { border:1px solid #9ca991; background-color:#eff5e6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
+	form.signupform input.button { border:1px solid #9ca991; background-color:#e2ead6; height:30px; width:260px; background-repeat:no-repeat; background-position: 30px 50%; font-weight:bold; color:#336600; padding-top:1px; font-size:14px; display:block; margin-bottom:-10px; text-align:center; margin-left:0px;}
 
 
 		form.signupform input.button:hover { background-color:#fbf5b0; border:1px solid #e7d77f;}
@@ -104,7 +104,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 
 #postit { margin:5px 0 0 30px;}
 
-#buttonbox { margin-top:55px; text-align:right; width:120px; height:120px; float:right;}
+#buttonbox { margin-top:75px; text-align:right; width:120px; height:120px; float:right;}
 
 .link_block { display:block; height:300px;  padding:0; margin:0;}
 	#link_block_box {  height:300px; margin:0; padding:0; width:420px; float:left;}
@@ -119,11 +119,11 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 
 /* SF footer box */
 		#sf_footer_box { padding:10px; margin-top:.5em; margin-bottom:.5em; float:left; width:910px; margin-left:10px; }
-		#sf_footer_box ul { padding:0 0 1.25em .5em; }
-		#sf_footer_box li { }
+		#sf_footer_box ul { padding:0 0 1.25em 0; margin:0; }
+		#sf_footer_box li { padding:0; margin:0;}
 
 		#sf_footer_head { width:20%; float:left; }
-		#sf_footer_address { margin-left:.5em; }
+		#sf_footer_address { margin:0; }
 
 /* misc crap leftover */
 #affiliation {margin-bottom:2em;}
