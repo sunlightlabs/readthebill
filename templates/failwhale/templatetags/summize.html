@@ -1,14 +1,6 @@
 {% load failtags %}
-<style>
-#summize ul { margin:0; padding:0;}
-#summize li { margin:5px 0 5px 5px; padding:5px 0 5px 0; border-bottom:1px solid #f4f4f4;}
 
-#twit_item { margin:0 0 10px 0; clear:both;}
-#twit_icon { float:left;}
-#twit_message { margin:0 0 0 55px; padding:0 0 0 0; }
-
-</style>
-<div id="summize" style="margin:0 20px 0 50px;">
+<div id="summize_box">
 <h3 class="headline">#ReadTheBill on Twitter</h3>
 <ul id="summize">
     {% for result in results %}
