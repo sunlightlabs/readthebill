@@ -1,6 +1,6 @@
 # Django settings for readthebill project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -76,6 +76,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'sunlightcore',
     'gatekeeper',
+    'failwhale',
     'feedinator',
     'morsels',
     'contact_form',

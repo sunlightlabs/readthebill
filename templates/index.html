@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load failtags %}
 {% load morsel_tags %}
 {% load rtb %}
 
@@ -15,6 +16,7 @@ Improve the legislative process by posting bills online for 72 hours before deba
 {% morsel intro %}
 </div>
 
+	{% summize "#readthebill" %}
 
 	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
 	<p class="blogroll_explanation">{% morsel blogroll %}</p>	

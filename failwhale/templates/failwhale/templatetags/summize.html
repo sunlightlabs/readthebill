@@ -1,0 +1,6 @@
+{% import failtags %}
+<ol>
+    {% for result in results %}
+        <li>{{ result|tweetile|safe }}</li>
+    {% endfor %}
+</ol>
