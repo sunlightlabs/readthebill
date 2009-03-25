@@ -8,7 +8,7 @@
 	<div id="twit_item">
 	
 	<div id="twit_icon">
-		<a href="http://www.twitter.com/{{ result.sender.username }}"><img src="{{ result.sender.avatar_url }}"></a>
+		<a href="http://www.twitter.com/{{ result.sender.username }}"><img src="{{ result.sender.avatar_url }}" height="48" width="48"></a>
 	</div>
 	
 	<div id="twit_message">{{ result.message|tweetile|safe }}</div>
