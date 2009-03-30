@@ -28,11 +28,11 @@ Improve the legislative process by posting bills online for 72 hours before deba
 
 <div style="margin:0 20px 40px 50px;">
 	
-		<h2 class="blog_head">What People are Saying</h2>
+		<h3 class="blog_head"><a href="#">What People are Saying</a></h3>
 		<!--<p class="blogroll_explanation">{% morsel blogroll %}</p>-->
 
 		<ul class="blog_roll_new">
-			 {% for entry in entries|slice:":10" %}
+			 {% for entry in entries %}
 
 			<li>
 				<div class="blogroll_v2">
@@ -47,6 +47,7 @@ Improve the legislative process by posting bills online for 72 hours before deba
 			</li>
 			{% endfor %}
 		</ul>
+		<div class="read_all"><a href="#">Read All Blog Mentions</a></div>
 	</div>	
 
 
