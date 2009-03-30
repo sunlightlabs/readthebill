@@ -18,31 +18,39 @@ Improve the legislative process by posting bills online for 72 hours before deba
 
 
 
-	<h2 class="blog_head">Read The Bill: What People are Saying</h2>
-	<p class="blogroll_explanation">{% morsel blogroll %}</p>	
-	
-	<ul class="blog_roll_new">
-		 {% for entry in entries %}
-		
-		<li>
-			<div class="blogroll_v2">
-			<h3><a href="{% url partner_page entry.pk %}" class="blogroll_headline">{{ entry.title|safe }}</a></h3>
-			<span class="blogroll_meta">
-Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
-			by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
-            on {{ entry.date_published|date:"F j, Y" }}
-        </span>
-
-			</div>
-		</li>
-		{% endfor %}
-	</ul>
 
 {% endblock %}
 
 
 {% block share %}
+
 {% include "includes/share.html" %}
+
+<div style="margin:0 20px 40px 50px;">
+	
+		<h2 class="blog_head">What People are Saying</h2>
+		<!--<p class="blogroll_explanation">{% morsel blogroll %}</p>-->
+
+		<ul class="blog_roll_new">
+			 {% for entry in entries %}
+
+			<li>
+				<div class="blogroll_v2">
+				<h3><a href="{% url partner_page entry.pk %}" class="blogroll_headline">{{ entry.title|safe }}</a></h3>
+				<span class="blogroll_meta">
+	Published on <a href="{{ entry.feed.organization.url }}" class="blogroll_org">{{ entry.feed.organization }}</a>
+				by <span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+	            on {{ entry.date_published|date:"F j, Y" }}
+	        </span>
+
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>	
+
+
+
 
 	{% summize "#readthebill" %}
 
