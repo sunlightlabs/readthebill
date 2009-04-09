@@ -30,8 +30,8 @@ def index(request):
             params = {"email": email, "zip": zipcode, "firstname": first_name, "lastname": last_name}
             response = urllib2.urlopen(bsd_url, urllib.urlencode(params)).read()
 
-            #return HttpResponseRedirect('/?thanks')
-            return HttpResponseRedirect('http://bsd.sunlightfoundation.com/page/invite/readthebill')
+            return HttpResponseRedirect('/?thanks')
+            #return HttpResponseRedirect('http://bsd.sunlightfoundation.com/page/invite/readthebill')
     
     else:
         form = SignupForm()
