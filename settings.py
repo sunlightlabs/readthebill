@@ -94,7 +94,9 @@ EMAIL_HOST_USER = "***REMOVED***"
 EMAIL_HOST_PASSWORD = "***REMOVED***"
 EMAIL_USE_TLS = True
 
-RTB_TAGS = ["72 hour","72-hour","72 hours","read the bill","readthebill","h. res. 504","h.res. 504","rtb"]
+import re
+RTB_TAGS = ["72[\-\s]hour","read\s?the\s?bill", "h.\s?res. 504", "[^\w]?rtb[^\w]?"]
+RTB_REGEX = [re.compile(r) for r in RTB_TAGS]
 RTB_APPROVE_ALL = False
 
 try:
