@@ -74,7 +74,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'sunlightcore',
+    'mediasync',
     'gatekeeper',
     'failwhale',
     'feedinator',
