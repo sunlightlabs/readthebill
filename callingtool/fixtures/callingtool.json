@@ -1,0 +1,1902 @@
+[
+ {
+  "pk": 71, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Lisa", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-6665", 
+   "bioguide_id": "M001153", 
+   "state": "AK", 
+   "call_goal": 10, 
+   "lastname": "Murkowski", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 90, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Ted", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3004", 
+   "bioguide_id": "S000888", 
+   "state": "AK", 
+   "call_goal": 10, 
+   "lastname": "Stevens", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 84, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Jefferson", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4124", 
+   "bioguide_id": "S001141", 
+   "state": "AL", 
+   "call_goal": 10, 
+   "lastname": "Sessions", 
+   "party": "R", 
+   "nickname": "Jeff"
+  }
+ }, 
+ {
+  "pk": 85, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Richard", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5744", 
+   "bioguide_id": "S000320", 
+   "state": "AL", 
+   "call_goal": 10, 
+   "lastname": "Shelby", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 63, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Blanche", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-4843", 
+   "bioguide_id": "L000447", 
+   "state": "AR", 
+   "call_goal": 10, 
+   "lastname": "Lincoln", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 76, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Mark", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2353", 
+   "bioguide_id": "P000590", 
+   "state": "AR", 
+   "call_goal": 10, 
+   "lastname": "Pryor", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 57, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Jon", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4521", 
+   "bioguide_id": "K000352", 
+   "state": "AZ", 
+   "call_goal": 10, 
+   "lastname": "Kyl", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 66, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2235", 
+   "bioguide_id": "M000303", 
+   "state": "AZ", 
+   "call_goal": 10, 
+   "lastname": "McCain", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 11, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Barbara", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-3553", 
+   "bioguide_id": "B000711", 
+   "state": "CA", 
+   "call_goal": 10, 
+   "lastname": "Boxer", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 41, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Dianne", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-3841", 
+   "bioguide_id": "F000062", 
+   "state": "CA", 
+   "call_goal": 10, 
+   "lastname": "Feinstein", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Wayne", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5941", 
+   "bioguide_id": "A000109", 
+   "state": "CO", 
+   "call_goal": 10, 
+   "lastname": "Allard", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 81, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Ken", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5852", 
+   "bioguide_id": "S001163", 
+   "state": "CO", 
+   "call_goal": 10, 
+   "lastname": "Salazar", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 33, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Christopher", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2823", 
+   "bioguide_id": "D000388", 
+   "state": "CT", 
+   "call_goal": 10, 
+   "lastname": "Dodd", 
+   "party": "D", 
+   "nickname": "Chris"
+  }
+ }, 
+ {
+  "pk": 62, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Joseph", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4041", 
+   "bioguide_id": "L000304", 
+   "state": "CT", 
+   "call_goal": 10, 
+   "lastname": "Lieberman", 
+   "party": "I", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Joseph", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5042", 
+   "bioguide_id": "B000444", 
+   "state": "DE", 
+   "call_goal": 10, 
+   "lastname": "Biden", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 19, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Thomas", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2441", 
+   "bioguide_id": "C000174", 
+   "state": "DE", 
+   "call_goal": 10, 
+   "lastname": "Carper", 
+   "party": "D", 
+   "nickname": "Tom"
+  }
+ }, 
+ {
+  "pk": 65, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Melquiades", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3041", 
+   "bioguide_id": "M001162", 
+   "state": "FL", 
+   "call_goal": 10, 
+   "lastname": "Martinez", 
+   "party": "R", 
+   "nickname": "Mel"
+  }
+ }, 
+ {
+  "pk": 73, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Bill", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5274", 
+   "bioguide_id": "N000032", 
+   "state": "FL", 
+   "call_goal": 10, 
+   "lastname": "Nelson", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 21, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "C. Saxby", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3521", 
+   "bioguide_id": "C000286", 
+   "state": "GA", 
+   "call_goal": 10, 
+   "lastname": "Chambliss", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 51, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3643", 
+   "bioguide_id": "I000055", 
+   "state": "GA", 
+   "call_goal": 10, 
+   "lastname": "Isakson", 
+   "party": "R", 
+   "nickname": "Johnny"
+  }
+ }, 
+ {
+  "pk": 1, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Daniel", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6361", 
+   "bioguide_id": "A000069", 
+   "state": "HI", 
+   "call_goal": 10, 
+   "lastname": "Akaka", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 50, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Daniel", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3934", 
+   "bioguide_id": "I000025", 
+   "state": "HI", 
+   "call_goal": 10, 
+   "lastname": "Inouye", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 43, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Charles", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3744", 
+   "bioguide_id": "G000386", 
+   "state": "IA", 
+   "call_goal": 10, 
+   "lastname": "Grassley", 
+   "party": "R", 
+   "nickname": "Chuck"
+  }
+ }, 
+ {
+  "pk": 46, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Thomas", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3254", 
+   "bioguide_id": "H000206", 
+   "state": "IA", 
+   "call_goal": 10, 
+   "lastname": "Harkin", 
+   "party": "D", 
+   "nickname": "Tom"
+  }
+ }, 
+ {
+  "pk": 30, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Larry", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2752", 
+   "bioguide_id": "C000858", 
+   "state": "ID", 
+   "call_goal": 10, 
+   "lastname": "Craig", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 31, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Michael", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6142", 
+   "bioguide_id": "C000880", 
+   "state": "ID", 
+   "call_goal": 10, 
+   "lastname": "Crapo", 
+   "party": "R", 
+   "nickname": "Mike"
+  }
+ }, 
+ {
+  "pk": 37, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Richard", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2152", 
+   "bioguide_id": "D000563", 
+   "state": "IL", 
+   "call_goal": 10, 
+   "lastname": "Durbin", 
+   "party": "D", 
+   "nickname": "Dick"
+  }
+ }, 
+ {
+  "pk": 75, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Barack", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2854", 
+   "bioguide_id": "O000167", 
+   "state": "IL", 
+   "call_goal": 10, 
+   "lastname": "Obama", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Evan", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5623", 
+   "bioguide_id": "B001233", 
+   "state": "IN", 
+   "call_goal": 10, 
+   "lastname": "Bayh", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 64, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Richard", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4814", 
+   "bioguide_id": "L000504", 
+   "state": "IN", 
+   "call_goal": 10, 
+   "lastname": "Lugar", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 13, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Samuel", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6521", 
+   "bioguide_id": "B000953", 
+   "state": "KS", 
+   "call_goal": 10, 
+   "lastname": "Brownback", 
+   "party": "R", 
+   "nickname": "Sam"
+  }
+ }, 
+ {
+  "pk": 79, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Pat", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4774", 
+   "bioguide_id": "R000307", 
+   "state": "KS", 
+   "call_goal": 10, 
+   "lastname": "Roberts", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 14, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Jim", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4343", 
+   "bioguide_id": "B001066", 
+   "state": "KY", 
+   "call_goal": 10, 
+   "lastname": "Bunning", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 68, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Mitch", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2541", 
+   "bioguide_id": "M000355", 
+   "state": "KY", 
+   "call_goal": 10, 
+   "lastname": "McConnell", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 58, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Mary", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-5824", 
+   "bioguide_id": "L000550", 
+   "state": "LA", 
+   "call_goal": 10, 
+   "lastname": "Landrieu", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 94, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "David", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4623", 
+   "bioguide_id": "V000127", 
+   "state": "LA", 
+   "call_goal": 10, 
+   "lastname": "Vitter", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 53, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Edward", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4543", 
+   "bioguide_id": "K000105", 
+   "state": "MA", 
+   "call_goal": 10, 
+   "lastname": "Kennedy", 
+   "party": "D", 
+   "nickname": "Ted"
+  }
+ }, 
+ {
+  "pk": 54, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2742", 
+   "bioguide_id": "K000148", 
+   "state": "MA", 
+   "call_goal": 10, 
+   "lastname": "Kerry", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 18, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Benjamin", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4524", 
+   "bioguide_id": "C000141", 
+   "state": "MD", 
+   "call_goal": 10, 
+   "lastname": "Cardin", 
+   "party": "D", 
+   "nickname": "Ben"
+  }
+ }, 
+ {
+  "pk": 70, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Barbara", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-4654", 
+   "bioguide_id": "M000702", 
+   "state": "MD", 
+   "call_goal": 10, 
+   "lastname": "Mikulski", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 26, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Susan", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-2523", 
+   "bioguide_id": "C001035", 
+   "state": "ME", 
+   "call_goal": 10, 
+   "lastname": "Collins", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 87, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Olympia", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-5344", 
+   "bioguide_id": "S000663", 
+   "state": "ME", 
+   "call_goal": 10, 
+   "lastname": "Snowe", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 61, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Carl", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6221", 
+   "bioguide_id": "L000261", 
+   "state": "MI", 
+   "call_goal": 10, 
+   "lastname": "Levin", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 89, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Debbie", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-4822", 
+   "bioguide_id": "S000770", 
+   "state": "MI", 
+   "call_goal": 10, 
+   "lastname": "Stabenow", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 25, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Norm", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5641", 
+   "bioguide_id": "C001057", 
+   "state": "MN", 
+   "call_goal": 10, 
+   "lastname": "Coleman", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 55, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Amy", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-3244", 
+   "bioguide_id": "K000367", 
+   "state": "MN", 
+   "call_goal": 10, 
+   "lastname": "Klobuchar", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 10, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Christopher", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5721", 
+   "bioguide_id": "B000611", 
+   "state": "MO", 
+   "call_goal": 10, 
+   "lastname": "Bond", 
+   "party": "R", 
+   "nickname": "Kit"
+  }
+ }, 
+ {
+  "pk": 67, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Claire", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-6154", 
+   "bioguide_id": "M001170", 
+   "state": "MO", 
+   "call_goal": 10, 
+   "lastname": "McCaskill", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 24, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Thad", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5054", 
+   "bioguide_id": "C000567", 
+   "state": "MS", 
+   "call_goal": 10, 
+   "lastname": "Cochran", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 99, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Roger", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6253", 
+   "bioguide_id": "W000437", 
+   "state": "MS", 
+   "call_goal": 10, 
+   "lastname": "Wicker", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Max", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2651", 
+   "bioguide_id": "B000243", 
+   "state": "MT", 
+   "call_goal": 10, 
+   "lastname": "Baucus", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 92, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Jon", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2644", 
+   "bioguide_id": "T000464", 
+   "state": "MT", 
+   "call_goal": 10, 
+   "lastname": "Tester", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 15, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Richard", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3154", 
+   "bioguide_id": "B001135", 
+   "state": "NC", 
+   "call_goal": 10, 
+   "lastname": "Burr", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 34, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Elizabeth", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-6342", 
+   "bioguide_id": "D000601", 
+   "state": "NC", 
+   "call_goal": 10, 
+   "lastname": "Dole", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 27, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Kent", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2043", 
+   "bioguide_id": "C000705", 
+   "state": "ND", 
+   "call_goal": 10, 
+   "lastname": "Conrad", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 36, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Byron", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2551", 
+   "bioguide_id": "D000432", 
+   "state": "ND", 
+   "call_goal": 10, 
+   "lastname": "Dorgan", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 45, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Charles", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4224", 
+   "bioguide_id": "H001028", 
+   "state": "NE", 
+   "call_goal": 10, 
+   "lastname": "Hagel", 
+   "party": "R", 
+   "nickname": "Chuck"
+  }
+ }, 
+ {
+  "pk": 74, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "E. Benjamin", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6551", 
+   "bioguide_id": "N000180", 
+   "state": "NE", 
+   "call_goal": 10, 
+   "lastname": "Nelson", 
+   "party": "D", 
+   "nickname": "Ben"
+  }
+ }, 
+ {
+  "pk": 44, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Judd", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3324", 
+   "bioguide_id": "G000445", 
+   "state": "NH", 
+   "call_goal": 10, 
+   "lastname": "Gregg", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 91, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2841", 
+   "bioguide_id": "S001078", 
+   "state": "NH", 
+   "call_goal": 10, 
+   "lastname": "Sununu", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 59, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Frank", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3224", 
+   "bioguide_id": "L000123", 
+   "state": "NJ", 
+   "call_goal": 10, 
+   "lastname": "Lautenberg", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 69, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Robert", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4744", 
+   "bioguide_id": "M000639", 
+   "state": "NJ", 
+   "call_goal": 10, 
+   "lastname": "Menendez", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 9, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Jeff", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5521", 
+   "bioguide_id": "B000468", 
+   "state": "NM", 
+   "call_goal": 10, 
+   "lastname": "Bingaman", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 35, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Pete", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6621", 
+   "bioguide_id": "D000407", 
+   "state": "NM", 
+   "call_goal": 10, 
+   "lastname": "Domenici", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 38, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6244", 
+   "bioguide_id": "E000194", 
+   "state": "NV", 
+   "call_goal": 10, 
+   "lastname": "Ensign", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 78, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Harry", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3542", 
+   "bioguide_id": "R000146", 
+   "state": "NV", 
+   "call_goal": 10, 
+   "lastname": "Reid", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 22, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Hillary", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-4451", 
+   "bioguide_id": "C001041", 
+   "state": "NY", 
+   "call_goal": 10, 
+   "lastname": "Clinton", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 83, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Charles", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6542", 
+   "bioguide_id": "S000148", 
+   "state": "NY", 
+   "call_goal": 10, 
+   "lastname": "Schumer", 
+   "party": "D", 
+   "nickname": "Chuck"
+  }
+ }, 
+ {
+  "pk": 12, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Sherrod", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2315", 
+   "bioguide_id": "B000944", 
+   "state": "OH", 
+   "call_goal": 10, 
+   "lastname": "Brown", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 95, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "George", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3353", 
+   "bioguide_id": "V000126", 
+   "state": "OH", 
+   "call_goal": 10, 
+   "lastname": "Voinovich", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 23, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Thomas Allen", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5754", 
+   "bioguide_id": "C000560", 
+   "state": "OK", 
+   "call_goal": 10, 
+   "lastname": "Coburn", 
+   "party": "R", 
+   "nickname": "Tom"
+  }
+ }, 
+ {
+  "pk": 49, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "James", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4721", 
+   "bioguide_id": "I000024", 
+   "state": "OK", 
+   "call_goal": 10, 
+   "lastname": "Inhofe", 
+   "party": "R", 
+   "nickname": "Jim"
+  }
+ }, 
+ {
+  "pk": 86, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Gordon Harold", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3753", 
+   "bioguide_id": "S001142", 
+   "state": "OR", 
+   "call_goal": 10, 
+   "lastname": "Smith", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 100, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Ron", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5244", 
+   "bioguide_id": "W000779", 
+   "state": "OR", 
+   "call_goal": 10, 
+   "lastname": "Wyden", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 20, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Robert", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6324", 
+   "bioguide_id": "C001070", 
+   "state": "PA", 
+   "call_goal": 10, 
+   "lastname": "Casey", 
+   "party": "D", 
+   "nickname": "Bob"
+  }
+ }, 
+ {
+  "pk": 88, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Arlen", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4254", 
+   "bioguide_id": "S000709", 
+   "state": "PA", 
+   "call_goal": 10, 
+   "lastname": "Specter", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 77, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4642", 
+   "bioguide_id": "R000122", 
+   "state": "RI", 
+   "call_goal": 10, 
+   "lastname": "Reed", 
+   "party": "D", 
+   "nickname": "Jack"
+  }
+ }, 
+ {
+  "pk": 98, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Sheldon", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2921", 
+   "bioguide_id": "W000802", 
+   "state": "RI", 
+   "call_goal": 10, 
+   "lastname": "Whitehouse", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 32, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Jim", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6121", 
+   "bioguide_id": "D000595", 
+   "state": "SC", 
+   "call_goal": 10, 
+   "lastname": "DeMint", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 42, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Lindsey", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5972", 
+   "bioguide_id": "G000359", 
+   "state": "SC", 
+   "call_goal": 10, 
+   "lastname": "Graham", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 52, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Tim", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5842", 
+   "bioguide_id": "J000177", 
+   "state": "SD", 
+   "call_goal": 10, 
+   "lastname": "Johnson", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 93, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2321", 
+   "bioguide_id": "T000250", 
+   "state": "SD", 
+   "call_goal": 10, 
+   "lastname": "Thune", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Lamar", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4944", 
+   "bioguide_id": "A000360", 
+   "state": "TN", 
+   "call_goal": 10, 
+   "lastname": "Alexander", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 28, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Bob", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3344", 
+   "bioguide_id": "C001071", 
+   "state": "TN", 
+   "call_goal": 10, 
+   "lastname": "Corker", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 29, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2934", 
+   "bioguide_id": "C001056", 
+   "state": "TX", 
+   "call_goal": 10, 
+   "lastname": "Cornyn", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 48, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Kay", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-5922", 
+   "bioguide_id": "H001016", 
+   "state": "TX", 
+   "call_goal": 10, 
+   "lastname": "Hutchison", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Robert", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5444", 
+   "bioguide_id": "B000382", 
+   "state": "UT", 
+   "call_goal": 10, 
+   "lastname": "Bennett", 
+   "party": "R", 
+   "nickname": "Bob"
+  }
+ }, 
+ {
+  "pk": 47, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Orrin", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5251", 
+   "bioguide_id": "H000338", 
+   "state": "UT", 
+   "call_goal": 10, 
+   "lastname": "Hatch", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 96, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-2023", 
+   "bioguide_id": "W000154", 
+   "state": "VA", 
+   "call_goal": 10, 
+   "lastname": "Warner", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 97, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "James", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4024", 
+   "bioguide_id": "W000803", 
+   "state": "VA", 
+   "call_goal": 10, 
+   "lastname": "Webb", 
+   "party": "D", 
+   "nickname": "Jim"
+  }
+ }, 
+ {
+  "pk": 60, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Patrick", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-4242", 
+   "bioguide_id": "L000174", 
+   "state": "VT", 
+   "call_goal": 10, 
+   "lastname": "Leahy", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 82, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Bernard", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5141", 
+   "bioguide_id": "S000033", 
+   "state": "VT", 
+   "call_goal": 10, 
+   "lastname": "Sanders", 
+   "party": "I", 
+   "nickname": "Bernie"
+  }
+ }, 
+ {
+  "pk": 17, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Maria", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-3441", 
+   "bioguide_id": "C000127", 
+   "state": "WA", 
+   "call_goal": 10, 
+   "lastname": "Cantwell", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 72, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Patty", 
+   "title": "Sen", 
+   "gender": "F", 
+   "on_s223": "U", 
+   "phone": "202-224-2621", 
+   "bioguide_id": "M001111", 
+   "state": "WA", 
+   "call_goal": 10, 
+   "lastname": "Murray", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 40, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "Russell", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5323", 
+   "bioguide_id": "F000061", 
+   "state": "WI", 
+   "call_goal": 10, 
+   "lastname": "Feingold", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 56, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Herbert", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-5653", 
+   "bioguide_id": "K000305", 
+   "state": "WI", 
+   "call_goal": 10, 
+   "lastname": "Kohl", 
+   "party": "D", 
+   "nickname": "Herb"
+  }
+ }, 
+ {
+  "pk": 16, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Senior Seat", 
+   "firstname": "Robert", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3954", 
+   "bioguide_id": "B001210", 
+   "state": "WV", 
+   "call_goal": 10, 
+   "lastname": "Byrd", 
+   "party": "D", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 80, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "Junior Seat", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6472", 
+   "bioguide_id": "R000361", 
+   "state": "WV", 
+   "call_goal": 10, 
+   "lastname": "Rockefeller", 
+   "party": "D", 
+   "nickname": "Jay"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "John", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-6441", 
+   "bioguide_id": "B001261", 
+   "state": "WY", 
+   "call_goal": 10, 
+   "lastname": "Barrasso", 
+   "party": "R", 
+   "nickname": ""
+  }
+ }, 
+ {
+  "pk": 39, 
+  "model": "callingtool.legislator", 
+  "fields": {
+   "on_ensign": null, 
+   "district": "0", 
+   "firstname": "Michael", 
+   "title": "Sen", 
+   "gender": "M", 
+   "on_s223": "U", 
+   "phone": "202-224-3424", 
+   "bioguide_id": "E000285", 
+   "state": "WY", 
+   "call_goal": 10, 
+   "lastname": "Enzi", 
+   "party": "R", 
+   "nickname": "Mike"
+  }
+ }
+]

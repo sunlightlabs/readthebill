@@ -1,0 +1,17 @@
+<h4>The US Senators for the State of {{state_name}}</h4>
+
+{% for senator in senators %}
+<div class="column span-9 {% if forloop.last %} last {% endif %}">
+    <div id="senator_photo"><a href="{% url call_legislator senator.id %}#step3"><img src="http://assets.sunlightfoundation.com/moc/100x125/{{senator.legislator.bioguide_id}}.jpg" border="0"></a></div>
+    <div id="senator_info"><a href="{% url call_legislator senator.id %}#step3" class="listings">
+    <a href="{% url call_legislator senator.id %}#step3">
+        <ul>
+        <li><a href="{% url call_legislator senator.id %}#step3"><strong>Sen. {{senator.legislator.lastname}} ({{senator.legislator.party}})</strong></a></li>
+        <li>Supports S482: {{senator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li>
+        <li>Cosponsor of S482: {{senator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li>
+        <li>Calls: {{senator.num_calls}} reported</li>
+        </ul>
+    </span></a>
+    </div>
+</div>
+{% endfor %}

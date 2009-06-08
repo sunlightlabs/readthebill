@@ -1,0 +1,31 @@
+    <p>I am also calling to find out if the senator will withdraw his amendment to S. 482.
+    This amendment will decrease the chances that S.482 will pass and become law and it should be considered separately.</p>
+
+    <p>Can you tell me if he plans to withdraw it? </p>
+
+    <select name="oppose_amendment" id="oppose_amendment">
+      <option value="n/a">-- Report the Response --</option>
+      <option value="yes">Yes</option>
+      <option value="unknown">I Don't Know / Senator hasn't decided yet</option>
+      <option value="no">No</option>
+    </select>
+
+    <div class="script_item oppose_amendment_answer" id="oppose_amendment_yes">
+    <h5 class="green">If "Yes" on withdrawing amendment</h5>
+    <p>Please thank Senator {{legislator.legislator.lastname}} for {{legislator.his_or_her}} support for a more transparent Congress.</p>
+    {% include "callingtool/end_call.html" %}
+    </div>
+
+    <div class="script_item oppose_amendment_answer" id="oppose_amendment_unknown">
+    <h5 class="orange">If "I Don't Know" or "Senator Hasn't Decided Yet" on withdrawing amendment </h5>
+    <p>Please let Senator {{legislator.legislator.lastname}} know that his Amendment will prevent groups from filing legitimate ethics complaints and should be considered separately.
+    {% include "callingtool/end_call.html" %}
+    </div>
+
+    <div class="script_item oppose_amendment_answer" id="oppose_amendment_no">
+    <h5 class="red">If "No" on withdrawing amendment </h5>
+    <p>Please let Senator {{legislator.legislator.lastname}} know that I hope {{legislator.he_or_she}} reconsiders. The amendment will hurt S. 482's chances of passing and becoming law.
+    S. 482 is commonsense, uncontroversial legislation that will pass as long as the Roberts Amendment fails.</p>
+    {% include "callingtool/end_call.html" %}
+    </div>
+

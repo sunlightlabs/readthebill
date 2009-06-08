@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script type="text/javascript">
+/* on ready */
+$(
+  function() {
+    // register state_select ajax
+    $('#state_select').change( function() {
+      $('#your_senators').load('/pass482/state_senators/' + this.value + '/', null, function() { $('#chosen_senators').fadeIn(); });
+    } );
+  }
+);
+
+$(function() {
+    $("table").tablesorter();
+} );
+</script>
+
+
+{% if has_called %}
+<div id="thanks_box"><h1 class="header thanks">Thank you for taking the time to call your senator about S.482.</h1></div>
+{% else %}
+<!--<div id="header_box">
+<h1 class="header">The Senate is considering a bill S. 482 that would increase the disclosure of campaign contributions to Senate campaigns.</h1>
+</div>-->
+{% endif %}
+
+<div id="considering">The Senate is considering a bill&mdash;S.482&mdash;that would fix this.</div>
+
+<div id="explanation">
+	<p>&#8220;Unfortunately, <span style="color:#000000; font-weight:bold;">one senator</span>, Sen. Roberts, KS, is setting this bill up to fail by tacking on an unnecessary and controversial amendment that would actually decrease transparency and accountability in the Senate.&#8221;</p>
+</div>
+
+<h2 class="fortunately">Fortunately, Helping is as Easy as These 3 Simple Steps.</h2>
+<div id="steps">
+	<ul>
+    <li>Call your senators.</li>
+    <li>Ask your senators if they will co-sponsor S. 482.</li>
+    <li>Ask your senators to oppose the Roberts amendment.</li>	</ul>
+</div>	
+
+<div class="readmore">
+	<a href="/pass482/about/" class="about_project">Learn More About the Project</a>
+</div>
+
+
+<h2 class="please_select">Please select your state to begin:</h2>
+<div id="step_container">
+<div id="step_1" style="margin-left:100px; margin-top:10px;">
+<form>
+ <h3>
+  <img src="http://media.sunlightprojects.org/s223/images/num_1.png" alt="Step 1" border="0">Select Your State
+
+  <select id="state_select">
+    <option> -------- </option>
+    {% for state in states %}
+    <option value="{{state.0}}">{{state.1}}</option>
+    {% endfor %}
+  </select>
+ </h3>
+</form>
+</div>
+
+<div id="chosen_senators" style="display:none; margin-left:100px;">
+  <div id="step_2">
+   <h3><img src="http://media.sunlightprojects.org/s223/images/num_2.png" alt="Step 2" border="0">Select a Senator to Contact by Phone</h3>
+  </div>
+
+  <div id="your_senators">
+    <!-- filled via ajax call -->
+  </div>
+
+</div> <!-- ends senator box -->
+</div>
+
+
+
+<div class="column span-22">
+
+<div id="total_status_box">
+
+<h3>The Current Status of Senate Wide Support for S.482</h3>
+<!--<p>(Legislators who need to be called are <span class="highlighted">highlighted</span>)</p>-->
+<table>
+<thead>
+<tr>
+    <th class="table_left_pad">Senator<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>State<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Party<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th># Calls<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Cosponsor<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Supports S.482<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Likely to Oppose Roberts Amendment<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+</tr>
+</thead>
+<tbody>
+{% for legislator in legislator_list %}
+<tr {% ifequal legislator.num_calls 0 %} class="nocalls" {% endifequal %}>
+  <td class="table_left_pad"><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.good_fname}} {{legislator.legislator.lastname}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.state}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.party}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.num_calls}} {% if legislator.needs_more_calls %} / {{legislator.call_goal}} {% else %} <img src="http://media.sunlightprojects.org/s223/images/accept.png"> {% endif %}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.on_amendment|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+
+
+
+{% endblock content %}

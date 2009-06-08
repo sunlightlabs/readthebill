@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{num_calls}} calls | {{num_unique}} unique email addresses | {{num_sens}} Senators called
+</h1>
+
+<table>
+<tr>
+<th>Caller</th><th>Senator</th><th>Email</th><th>Zip</th><th>Time</th><th>Comments / Notes</th><th>Supports S.482</th><th>Opposes Roberts</th></tr>
+<tbody>
+{% for call in calls %}
+<tr>
+  <td width="10%">{{call.name}}</td>
+  <td width="10%">{{call.senator}}</td>
+  <td width="10%">{{call.email}}</td>
+  <td width="5%">{{call.zip}}</td>
+  <td width="10%">{{call.date|date:"m.d.y"}} @ {{call.date|date:"h:i A"}}</td>
+  <td width="35%">{{call.comments}}</td>
+  <td width="5%">{{call.on_bill}}</td>
+  <td width="10%">{{call.on_amendment}}</td>
+  <td width="5%"><a href="{% url delete_call call.id %}">delete?</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
