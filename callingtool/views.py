@@ -10,10 +10,6 @@ from django.contrib.auth.decorators import login_required
 from simplesurvey.models import AnswerSet, Answer, Question, QuestionSet
 from callingtool.models import LegislatorDetail
 
-S482_QSET = QuestionSet.objects.get(slug='s482-call')
-
-BAD_WORDS = ('.ru', 'Porn', 'porn')
-
 STATES = (
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -105,6 +101,11 @@ def state_senators(request, state):
                               {'state_name': STATE_DICT[state],
                                'senators': senators})
 
+def zip_representatives(request, zipcode):
+    reps = LegislatorDetail.objects.get(legislator__state=state, legislator__title='Rep')
+    return render_to_response('callingtool/state_representatives.html',
+                              {'zip':zipcode, 'reps': reps})
+
 def submit_call(request, id):
     if request.method != 'POST':
         return HttpResponseNotAllowed(['POST'])
@@ -113,11 +114,6 @@ def submit_call(request, id):
     zipcode = request.POST['zip']
     if not re.match('^(\d{5}(\-\d{4})?)?$', zipcode):
         return HttpResponseRedirect(reverse('legislator_list'))
-
-    # quick hack, added in response to one specific spammer
-    for word in BAD_WORDS:
-        if word in request.POST['comments']:
-            return HttpResponseRedirect(reverse('legislator_list'))
 
     call = AnswerSet.objects.create(question_set=S482_QSET,
                                 related_object=LegislatorDetail.objects.get(id=id))

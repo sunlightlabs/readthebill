@@ -70,7 +70,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'readthebill.urls'
 
 INSTALLED_APPS = (
-	'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.flatpages',
     'django.contrib.contenttypes',
