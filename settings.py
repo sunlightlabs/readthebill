@@ -5,6 +5,8 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     ('Jeremy Carbaugh', 'jcarbaugh@sunlightfoundation.com'),
+    ('James Turk', 'jturk@sunlightfoundation.com'),
+    ('Luke Rosiak', 'lrosiak@sunlightfoundation.com'),
 )
 
 MANAGERS = ADMINS
@@ -80,6 +82,7 @@ INSTALLED_APPS = (
     'feedinator',
     'morsels',
     'contact_form',
+    'uspolitics.politicians',
     'readthebill.rtb',
 )
 
