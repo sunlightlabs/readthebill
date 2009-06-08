@@ -82,7 +82,9 @@ INSTALLED_APPS = (
     'feedinator',
     'morsels',
     'contact_form',
+    'simplesurvey',
     'uspolitics.politicians',
+    'callingtool',
     'readthebill.rtb',
 )
 
