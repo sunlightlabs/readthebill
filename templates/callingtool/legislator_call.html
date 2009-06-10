@@ -4,11 +4,6 @@
 
 <script>
 $(function() {
-    $('#oppose_amendment').change(function() {
-        $('.oppose_amendment_answer').hide();
-        $('#oppose_amendment_'+this.value).slideDown();
-        $('#call_complete').slideDown();
-    });
     $('#on_bill').change(function() {
         $('.on_bill_answer').hide();
         $('#on_bill_'+this.value).slideDown();
@@ -16,17 +11,14 @@ $(function() {
             $('#call_complete').slideDown();
         }
     });
-    $('#amendment_help').click(function() {
-        $('#amendment_toggle').slideDown();
-    });
-    $('#amendment_toggle').hide();
+
 });
 </script>
 
 <div id="the_inside_pitch">
 <div style="float:left;"><a href="/pass482"><img src="http://media.sunlightprojects.org/s482/images/s482_logo.png" border="0" align="left"></a></div>
-<h3 class="pitch">Where does Senator {{legislator.legislator.lastname}} stand?</h3>
-<span class="headline">Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on S. 482 and let
+<h3 class="pitch">Where does Rep. {{legislator.legislator.lastname}} stand?</h3>
+<span class="headline">Please call {{legislator}} to find out where {{legislator.he_or_she}} stands on the 72 Hour Rule and let
 {{legislator.him_or_her}} know that {{legislator.he_or_she}} should support the bill.</span>
 </div>
 
@@ -36,22 +28,17 @@ $(function() {
 <div id="senator_page_box_status">
 <ul>
 <li><h2>{{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h2></li>
-<li>Supports S482: {{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li>
+<li>Supports 72 Hour Rule {{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li>
 <li>Cosponsor of S482: {{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">,CALL"|safe}}</li>
-<li>Opposes Roberts: {{legislator.on_amendment|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">,CALL"|safe}} <span style="font-weight:normal; font-size:10px;">[ <a href="#" id="amendment_help">Why?</a> ]</span></li>
 <li>Calls: <a href="#calls">{{legislator.num_calls}} reported</a> {% if legislator.needs_more_calls %}(our goal is {{legislator.call_goal}} calls){% endif %}</li>
 </ul>
 </div>
 </div>
 
-<div id="amendment_toggle">
-<h3>Why Oppose Roberts Amendment?</h3>
-<p>At this moment, Sen. Roberts, who insists on adding an unnecessary, poison pill amendment, is blocking the bill. </p><p>The amendment proposed by Sen. Roberts would reduce accountability by requiring outside groups filing ethics complaints to reveal their sources of funding. This provision would constitute an unconstitutional burden on charities, religious bodies and non-profits attempting to ensure the operation of an honest and clean government. [ <a href="/pass482/about/">read more</a> ]</p>
-</div>
 
 
 <div id="step_3">
-  <h3><img src="http://media.sunlightprojects.org/s223/images/num_3.png" alt="Step 3" border="0">Call Senator {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3>
+  <h3><img src="http://media.sunlightprojects.org/s223/images/num_3.png" alt="Step 3" border="0">Call Rep. {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3>
 </div>
 
 <div class="call_note"><p>Ask to speak to the legislative aide responsible for handling campaign finance legislation, or you can leave a message with the receptionist.</p></div>
@@ -62,7 +49,7 @@ $(function() {
     <div class="script_item" id="script_opener">
 
     <h5>Suggested Conversation Script</h5>
-    <p>I am calling to thank Senator {{legislator.legislator.lastname}} for {{legislator.his_or_her}} co-sponsorship of S. 482, the Senate Campaign Disclosure Parity Act.</p>
+    <p>I am calling to thank Rep. {{legislator.legislator.lastname}} for {{legislator.his_or_her}} co-sponsorship of the 72 Hour Rule.</p>
 
     {% include "callingtool/amendment_script.html" %}
 
@@ -70,15 +57,15 @@ $(function() {
 
     <div class="script_item" id="script_opener">
     <h4>Suggested Conversation Script</h4>
-    <p>I am calling to ask Senator {{legislator.legislator.lastname}} to support S. 482, the Senate Campaign Disclosure Parity Act.
-    This simple bill will ensure that senators file their campaign finance disclosure reports electronically, just like House members and Presidential candidates.</p>
+    <p>I am calling to ask Rep. {{legislator.legislator.lastname}} to support the 72 Hour Rule.
+    This simple bill will ensure that lawmakers have sufficient time to read non-emergency legislation before voting on it.</p>
 
-    <p>Will Senator {{legislator.legislator.lastname}} cosponsor or vote in favor of S. 482?</p>
+    <p>Will Rep. {{legislator.legislator.lastname}} cosponsor or vote in favor of the 72 Hour Rule?</p>
 
     <select name="on_bill" id="on_bill">
       <option value="n/a">-- Report the Response --</option>
       <option value="yes">Yes</option>
-      <option value="unknown">I Don't Know / Senator hasn't decided yet</option>
+      <option value="unknown">I Don't Know / Representative hasn't decided yet</option>
       <option value="no">No</option>
     </select>
 
@@ -86,23 +73,19 @@ $(function() {
 
         <div class="script_item on_bill_answer" id="on_bill_yes">
         <h5 class="green">If "Yes" on Supporting or Cosponsoring S. 482</h5>
-        {% ifequal legislator.legislator.bioguide_id 'R000307' %}
-            {% include "callingtool/roberts_script.html" %}
-        {% else %}
-            {% include "callingtool/amendment_script.html" %}
-        {% endifequal %}
+      	Thanks!
         </div>
 
         <div class="script_item on_bill_answer" id="on_bill_unknown">
-        <h5 class="orange">I Don't Know or Senator Hasn't Decided Yet on S. 482</h5>
-        <p>I hope the Senator will support this bill.  There is no public opposition to this bill and it does not contain any new mandates.  House and Presidential candidates and PACs have had to file their campaign finance reports electronically since 2001.
+        <h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5>
+        <p>I hope the Representative will support this bill.  There is no public opposition to this bill and it does not contain any new mandates.  House and Presidential candidates and PACs have had to file their campaign finance reports electronically since 2001.
         </p>
         {% include "callingtool/end_call.html" %}
         </div>
 
         <div class="script_item on_bill_answer" id="on_bill_no">
         <h5 class="red">If "No"</h5>
-        <p>I hope the senator will reconsider. Can you tell me why {{legislator.he_or_she}} opposes this common sense legislation? </p>
+        <p>I hope the Representative will reconsider. Can you tell me why {{legislator.he_or_she}} opposes this common sense legislation? </p>
 
          {% include "callingtool/end_call.html" %}
         </div>
@@ -121,7 +104,7 @@ $(function() {
 
     <p><label>Comments / Notes</label></p>
     <textarea name="comments"></textarea><br /><br />
-    <input type="submit" value="Click Here to Submit the Senator's Responses and Your Comments"  class="submit" />
+    <input type="submit" value="Click Here to Submit the Congressional Office's Responses and Your Comments"  class="submit" />
     </div>
 
 
@@ -130,7 +113,7 @@ $(function() {
 <h4>{{legislator.num_calls}} calls have been made to {{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h4>
 <table>
 <tr>
-<th>Caller</th><th>Time</th><th>Comments / Notes</th><th>Supports S.482</th><th>Opposes Roberts</th></tr>
+<th>Caller</th><th>Time</th><th>Comments / Notes</th><th>Supports 72 Hour Rule</th></tr>
 <tbody>
 {% for call in calls %}
 <tr>
@@ -138,7 +121,6 @@ $(function() {
   <td width="20%">{{call.date|date:"m.d.y"}} @ {{call.date|date:"h:i A"}}</td>
   <td width="40%">{{call.comments}}</td>
   <td width="15%">{{call.on_bill}}</td> 
-  <td width="15%">{{call.oppose_amendment}}</td>
 </tr>
 {% endfor %}
 </tbody>

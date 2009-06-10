@@ -10,6 +10,10 @@ from django.contrib.auth.decorators import login_required
 from simplesurvey.models import AnswerSet, Answer, Question, QuestionSet
 from callingtool.models import LegislatorDetail
 
+from sunlightapi import sunlight, SunlightApiError
+sunlight.apikey = '0b738e1dc83d9ac6d619537c7d48e088'
+
+
 STATES = (
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -78,7 +82,7 @@ def legislator_list(request):
     if has_called:
         del request.session['has_called']
     return render_to_response('callingtool/legislator_list.html',
-                              {'legislator_list': LegislatorDetail.objects.all(),
+                              {'legislator_list': LegislatorDetail.objects.filter(legislator__title='Rep'),
                                'states': STATES,
                                'has_called': has_called})
 
@@ -95,16 +99,20 @@ def call_legislator(request, id):
     return render_to_response('callingtool/legislator_call.html',
                               {'legislator': legislator, 'calls': calls})
 
-def state_senators(request, state):
-    senators = LegislatorDetail.objects.filter(legislator__state=state, legislator__title='Sen')
-    return render_to_response('callingtool/state_senators.html',
+def state_reps(request, state):
+    reps = LegislatorDetail.objects.filter(legislator__state=state, legislator__title='Rep')
+    return render_to_response('callingtool/state_reps.html',
                               {'state_name': STATE_DICT[state],
-                               'senators': senators})
+                               'reps': reps})
 
-def zip_representatives(request, zipcode):
-    reps = LegislatorDetail.objects.get(legislator__state=state, legislator__title='Rep')
-    return render_to_response('callingtool/state_representatives.html',
-                              {'zip':zipcode, 'reps': reps})
+def zip_rep(request, zipcode):
+    oreps = sunlight.legislators.allForZip(zipcode)
+    reps = []
+    for o in oreps:
+	if o.title=='Rep':
+	    reps.append(  LegislatorDetail.objects.get(legislator__crp_id=o.crp_id) )
+    return render_to_response('callingtool/zip_rep.html',
+                              {'zipcode':zipcode, 'reps': reps})
 
 def submit_call(request, id):
     if request.method != 'POST':
@@ -115,19 +123,19 @@ def submit_call(request, id):
     if not re.match('^(\d{5}(\-\d{4})?)?$', zipcode):
         return HttpResponseRedirect(reverse('legislator_list'))
 
-    call = AnswerSet.objects.create(question_set=S482_QSET,
+    call = AnswerSet.objects.create(question_set=QuestionSet.objects.get(slug="readthebill-call"),
                                 related_object=LegislatorDetail.objects.get(id=id))
 
     for q in request.POST.iterkeys():
         Answer.objects.create(answer_set=call,
-                              question=Question.objects.get(text=q),
+                              question=Question.objects.get(id=1), #text=q
                               text=request.POST.get(q))
 
     request.session['has_called'] = id
 
     # clear related cache keys
     delete_url_cache('/')
-    delete_url_cache('/state_senators/%s/' % LegislatorDetail.objects.get(pk=id).legislator.state)
+    delete_url_cache('/state_reps/%s/' % LegislatorDetail.objects.get(pk=id).legislator.state)
     delete_url_cache('/call/%s/' % id)
     delete_url_cache('/all_calls/')
 
@@ -136,7 +144,7 @@ def submit_call(request, id):
 def all_calls(request):
     calls = []
     for call in AnswerSet.objects.all().order_by('-date'):
-        cdict = {'date':call.date, 'senator':call.related_object, 'id': call.id}
+        cdict = {'date':call.date, 'rep':call.related_object, 'id': call.id}
         for q,a in call.q_and_a():
             if a:
                 cdict[q.text] = a.text

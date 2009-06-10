@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^rushed/', 'readthebill.rtb.views.rushed_bills', name="rushed_bills"),
     url(r'^endorsements/', 'django.views.generic.simple.direct_to_template', {'template': 'endorsements.html'}, name="endorsements"),
     url(r'^invite/', 'django.views.generic.simple.direct_to_template', {'template': 'invite.html'}, name="invite"),
+    url(r'^call/(?P<id>\d+)/$', 'callingtool.views.call_legislator', name='call_legislator'),
     url(r'^call/', include('callingtool.urls')),
     url(r'^$', 'readthebill.rtb.views.index', name="index"),
 )

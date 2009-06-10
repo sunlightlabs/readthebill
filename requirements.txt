@@ -4,4 +4,5 @@ Django
 -e git://github.com/sunlightlabs/django-uspolitics.git#egg=django-uspolitics
 -e svn+https://source.sunlightlabs.com/pymods/django-feedinator/#egg=django-feedinator
 -e svn+https://source.sunlightlabs.com/pymods/django-simplesurvey/#egg=django-simplesurvey
+python-sunlightapi
 feedparser
