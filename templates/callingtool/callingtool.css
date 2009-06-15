@@ -1,0 +1,230 @@
+  /***** Tables *****/
+
+        table {
+        border:0;
+        margin:0;
+        padding:1em 2em 1em 1em;
+        font-family: Helvetica Neue, Corbel, Tahoma, Arial,Trebuchet MS, sans-serif;
+        font-size:93%;
+        border-collapse: collapse;
+        text-align:left;
+        }
+        th { background-color:#eeeeee; padding:5px; font-size:14px;}
+        td { padding:8px; font-size:14px; vertical-align: top;}
+        tr { border-bottom:1px solid #a5a5a5; }
+
+      	tr:hover{background-color: #fffdd7;}
+        .row_tot {display:block; }
+
+        .table_left_pad { padding-left:10px;}
+
+        .supports { background-color:#eff5e6;}
+        .nocalls { background-color:#fffdd7;}
+        .nocalls:hover { background-color:#eff536;}
+
+        /***** Global Settings *****/
+        body { font-family: Helvetica Neue, Corbel, Tahoma, Arial,Trebuchet MS, sans-serif; margin:0; padding:0; background-color:#ffffff;}
+
+        /***** Common Formatting *****/
+        .clear { clear:both; }
+        .right { float: right; }
+        .left  { float: left; }
+
+        h1 { font-size: 2.5em; font-weight: bold; }
+        h2 { font-size: 2.2em; font-weight: bold; padding-bottom: .4em; }
+
+        h4 { font-size: 1.8em; font-weight: bold; margin-bottom:1em;}
+        h5 { font-size: 1.4em; font-weight: bold; padding-bottom: .5em;}
+        h6 { font-size: 1.2em; font-weight: bold; }
+
+        span#ten_more { color:#bf5004; }
+
+        .headline {margin:0; padding:0 0 1em 0; color:#454242;
+        font-family:Georgia;
+        font-size:18px;
+        font-weight:normal;
+        letter-spacing:0pt;
+        line-height:1.4em;
+        margin:0pt 0pt 14px;
+        padding:0pt;
+        text-align:left;
+        text-decoration:none;
+        word-spacing:normal;}
+
+        p {margin:0; padding:0 0 1em 0; color:#454242;
+        font-family:Georgia;
+        font-size:133%;
+        font-weight:normal;
+        letter-spacing:0pt;
+        line-height:1.3125em;
+        margin:0pt 0pt 14px;
+        padding:0pt;
+        text-align:left;
+        text-decoration:none;
+        word-spacing:normal;}
+
+        fieldset { border: 1px solid #c7c7c7;  color:#ba2725; padding:10px 10px 20px 20px; margin:0;}
+        legend { padding: 2px 6px; margin-left:10px; }
+        #header_box { background-color:#ffffff; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; padding:20px 20px 20px 20px;  margin-bottom:30px;}
+        .header {margin:0; padding:0 0 1em 0; color:#454242;
+        font-family:Georgia;
+        font-size:24px;
+        font-weight:bold;
+        letter-spacing:0pt;
+        line-height:1.5em;
+        margin:0pt 0pt 14px;
+        padding:0pt;
+        text-align:left;
+        text-decoration:none;
+        word-spacing:normal; }
+
+		.thanks { color:#98bd72; }
+
+a:link.about_link {text-decoration:none; color:#000000;}
+a:visited.about_link {text-decoration:none; color:#000000;}
+a:hover.about_link {text-decoration:none; color:#000000;}
+a:active.about_link {text-decoration:none; color:#000000;}
+
+
+  /***** Front Page *****/
+#thanks_box { background-color:#ffffff;
+border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6;
+padding:20px 20px 20px 20px;  margin-bottom:30px; text-align:center;}
+
+
+  	#partner_logos_top { text-align:center; margin-top:30px; margin-bottom:30px; }
+
+	.partner_padding { margin-right:40px; }
+
+        #the_pitch { margin-bottom:20px;  height:220px; }
+        #the_pitch img { margin-right:20px; }
+        h3.pitch { color:#bf5004; font-size:30px; padding-top:40px; padding-bottom:20px; margin:0; font-weight:bold;}
+
+.headline {display:block; padding-right:50px; }
+
+        #step_1 {}
+        #step_1 img { vertical-align:middle; padding-right:20px;}
+        #step_1 select { font-size:22px; margin-left:20px;  width:250px;}
+
+        #step_2 { margin-top:50px;}
+        #step_2 img { vertical-align:middle; padding-right:20px;}
+
+        #step_3 { margin-top:50px;}
+        #step_3 h3 { font-size:22px; font-weight:bold;}
+        #step_3 img { vertical-align:middle; padding-right:20px;}
+
+        #your_senators { margin-top:30px; }
+        #your_senators h4 { border-bottom:1px solid #000;}
+
+        #senator_photo {margin-right:15px; width:115px; float:left;}
+        #senator_photo img { border:1px solid;  }
+        #senator_info {}
+        #senator_info img { vertical-align:middle; }
+        #senator_info li { font-family: Helvetica Neue, Corbel, Tahoma, Arial,Trebuchet MS, sans-serif; font-size:16px; color:#000000;  margin-bottom:0; list-style-type:none;}
+        #senator_info h5 { font-size:16px;}
+
+        .senator_info_call { background-color:#ccff99; width:260px; height:30px; margin-left:115px; padding:5px; }
+        .senator_info_call img { padding-right:10px;}
+
+		#senator_info a:link {text-decoration:none; }
+		#senator_info a:visited {text-decoration:none; }
+		#senator_info a:hover {text-decoration:none; }
+		#senator_info a:active {text-decoration:none; }
+
+		#senator_info {background-color: #ffffff;  height:127px;}
+		#senator_info:hover {	background: #eff5e6; }
+
+		.senator_box { height:150px;  display:block;}
+
+
+		.senator_box h3 { font-size:16px; }
+
+		#senator_info ul { padding-top:20px;}
+
+
+
+        #script_box { background-color:#fbf5b0; padding:10px;}
+
+        #script_box img { vertical-align:middle;padding-right:20px;}
+        #script_box h5 { margin-bottom:0; margin-left:20px; padding-bottom:0; color:#435c7a;}
+
+        #script_box .green { color:#548330;}
+        #script_box .orange { color:#e36f1e; }
+
+        .script_item { margin:0 15px 15px 15px; padding:10px; font-size:16px; display:none; }
+        #script_opener { display: block; margin-top:20px; }
+
+		#script_opener h5 { border-bottom:1px solid #000000; display:block; margin:0 0 20px 0; padding:0; }
+
+        .responses { text-align:center; font-size:18px; }
+#debug { display:none;}
+
+
+
+
+
+a.listings:link { text-decoration:none; display:block; }
+a.listings:visited { text-decoration:none; display:block; }
+a.listings:hover { text-decoration:none; display:block; background-color:#eff5e6;}
+a.listings:active { text-decoration:none; display:block; }
+
+		#total_status_box { margin-top: 60px; margin-bottom: 50px; border-top:1px solid #e6e6e6; padding-top:3px; }
+		#total_status_box table a:link {text-decoration:none; color:#000000;}
+        #total_status_box table a:visited {text-decoration:none; color:#000000;}
+        #total_status_box table a:hover {text-decoration:none; color:#000000;}
+        #total_status_box table a:active {text-decoration:none; color:#000000; }
+		#total_status_box h3 { color:#548330; margin:0; padding:0 0 5px 0;}
+
+	#total_status_box p { padding-bottom:20px; }
+.highlighted { background-color: #eff5e6; padding:3px;}
+
+
+/****************** ABOUT PAGE ********/
+
+#about_content { margin-top:30px; }
+#about_logo { float:left; margin-right:20px; }
+#opencongress_widget { float:right; margin-left:20px; margin-bottom:20px; }
+
+
+
+/****************** SENATOR PAGE ********/
+#partner_logos_top_senator {  text-align:center; margin-top:30px; padding-bottom:30px; border-bottom:1px solid #e6e6e6;}
+#partner_logos_bottom {  text-align:center; margin-top:30px; padding-top:30px; border-top:1px solid #e6e6e6;}
+.partner_padding_bottom { margin-right:10px; }
+
+
+		#the_inside_pitch { margin-bottom:20px;  height:220px; margin-top:30px;}
+        #the_inside_pitch img { margin-right:20px; }
+        h3.pitch { color:#bf5004; font-size:30px; padding-top:40px; padding-bottom:20px; margin:0;}
+
+#ensign_toggle { margin-top:5px; background-color:#f8f6ec; border:1px solid #c2912c; padding:10px; display:none;}
+
+
+
+select {font-size:22px;}
+#senator_page_box_info { height:127px; background-color: #eff5e6; border:1px solid #98bd72; margin-top:30px; padding:20px;}
+#senator_page_box_photo { float:left; margin-right:15px;}
+#senator_page_box_photo img { border:1px solid #000000; }
+#senator_page_box_status { }
+#senator_page_box_status h2 { margin:0; padding:0; }
+#senator_page_box_status li { font-size:14px; font-weight:bold; list-style-type:none;}
+
+.call_note { background-color:#f4f4f4; padding:10px 10px 5px 10px; margin-left:20px; margin-right:20px;}
+.call_note p { font-family: Helvetica Neue, Corbel, Tahoma, Arial,Trebuchet MS, sans-serif;; font-size:16px;}
+
+.made_calls {margin-bottom:400px; margin-top:100px; border-top:1px solid #e6e6e6; padding-top:20px; }
+.made_calls h4 { color:#2d73bf; }
+.script_item label {  margin-right:10px; }
+#call_complete { background-color:#fffdd7; border:1px solid #e7d77f; padding:20px;}
+
+input { margin-right:5px;}
+
+input.submit {background-color: #fdf270; font-size:18px; padding:10px; width:700px;}
+
+.end_call { text-align:center; display:block; border:1px solid #bf5004; color:#bf5004; padding:10px; margin-top:30px; }
+
+h5.green {color:#548330; }
+h5.orange {color:#e36f1e; }
+h5.red {color:#990000; }
+
+textarea { width:760px; height:200px; }
