@@ -7,7 +7,7 @@ $(function() {
     $('#on_bill').change(function() {
         $('.on_bill_answer').hide();
         $('#on_bill_'+this.value).slideDown();
-        if(this.value == 'unknown' || this.value == 'no') {
+        if(this.value == 'unknown' || this.value == 'no' || this.value=='yes') {
             $('#call_complete').slideDown();
         }
     });
@@ -29,7 +29,7 @@ $(function() {
 <ul>
 <li><h2>{{legislator}} ({{legislator.legislator.party}}-{{legislator.legislator.state}})</h2></li>
 <li>Supports 72 Hour Rule {{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</li>
-<li>Cosponsor of S482: {{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">,CALL"|safe}}</li>
+<li>Cosponsor: {{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">,CALL"|safe}}</li>
 <li>Calls: <a href="#calls">{{legislator.num_calls}} reported</a> {% if legislator.needs_more_calls %}(our goal is {{legislator.call_goal}} calls){% endif %}</li>
 </ul>
 </div>
@@ -41,7 +41,7 @@ $(function() {
   <h3><img src="http://media.sunlightprojects.org/s223/images/num_3.png" alt="Step 3" border="0">Call Rep. {{legislator.legislator.lastname}}'s office: {{legislator.legislator.phone}}</h3>
 </div>
 
-<div class="call_note"><p>Ask to speak to the legislative aide responsible for handling campaign finance legislation, or you can leave a message with the receptionist.</p></div>
+<div class="call_note"><p>Ask to speak to a legislative aide, or you can leave a message with the receptionist.</p></div>
 
 <form method="post" action="{% url submit_call legislator.id %}">
 
@@ -57,10 +57,12 @@ $(function() {
 
     <div class="script_item" id="script_opener">
     <h4>Suggested Conversation Script</h4>
-    <p>I am calling to ask Rep. {{legislator.legislator.lastname}} to support the 72 Hour Rule.
-    This simple bill will ensure that lawmakers have sufficient time to read non-emergency legislation before voting on it.</p>
+    <p>I am calling to ask Representative {{legislator.legislator.lastname}} to support H. Res.
+XXX, the NAME OF BILL.  This legislation will ensure that members of
+Congress and the public have 72 hours to read the final versions of
+bills online before they are considered for a vote.</p>
 
-    <p>Will Rep. {{legislator.legislator.lastname}} cosponsor or vote in favor of the 72 Hour Rule?</p>
+    <p>Will Rep. {{legislator.legislator.lastname}} support H. Res. XXX?</p>
 
     <select name="on_bill" id="on_bill">
       <option value="n/a">-- Report the Response --</option>
@@ -73,19 +75,29 @@ $(function() {
 
         <div class="script_item on_bill_answer" id="on_bill_yes">
         <h5 class="green">If "Yes" on Supporting or Cosponsoring S. 482</h5>
-      	Thanks!
+      	<p>Great. Please thank Representative {{legislator.legislator.lastname}} for his/her support for a more
+transparent Congress.</p>
+  {% include "callingtool/end_call.html" %}
         </div>
 
         <div class="script_item on_bill_answer" id="on_bill_unknown">
         <h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5>
-        <p>I hope the Representative will support this bill.  There is no public opposition to this bill and it does not contain any new mandates.  House and Presidential candidates and PACs have had to file their campaign finance reports electronically since 2001.
-        </p>
+        <p>Please let Representative {{legislator.legislator.lastname}} know that the 72 Hour Rule is a
+simple solution that will give Members and people like me the chance
+to read and understand bills before they are voted on. Posting bills
+online 72 hours before consideration means that a lot of wasteful
+spending and last minute provisions will be avoided.</p>
         {% include "callingtool/end_call.html" %}
         </div>
 
         <div class="script_item on_bill_answer" id="on_bill_no">
         <h5 class="red">If "No"</h5>
-        <p>I hope the Representative will reconsider. Can you tell me why {{legislator.he_or_she}} opposes this common sense legislation? </p>
+        <p>Please let Representative {{legislator.legislator.lastname}} know that I hope {{legislator.he_or_she}}
+reconsiders. The 72 Hour Rule is a simple solution that will give
+Members and people like me the chance to read and understand bills
+before they are voted on. Posting bills online 72 hours before
+consideration means that a lot of wasteful spending and last minute
+provisions will be avoided. </p>
 
          {% include "callingtool/end_call.html" %}
         </div>
@@ -104,7 +116,7 @@ $(function() {
 
     <p><label>Comments / Notes</label></p>
     <textarea name="comments"></textarea><br /><br />
-    <input type="submit" value="Click Here to Submit the Congressional Office's Responses and Your Comments"  class="submit" />
+    <input type="submit" value="Submit the Congressional Office's Response"  class="submit" />
     </div>
 
 

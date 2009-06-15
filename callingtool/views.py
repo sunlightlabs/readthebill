@@ -128,7 +128,7 @@ def submit_call(request, id):
 
     for q in request.POST.iterkeys():
         Answer.objects.create(answer_set=call,
-                              question=Question.objects.get(id=1), #text=q
+                              question=Question.objects.get(text=q),
                               text=request.POST.get(q))
 
     request.session['has_called'] = id
