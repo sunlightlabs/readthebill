@@ -86,16 +86,21 @@
 		</div>	
 <div class="span-11 last">
 
-<div id="contact_box_new">
-	<div id="instructions">{% morsel signup inherit %} </div>
 
-			<form action="{% url index %}" method="post" id="signupform" class="signupform">
-			<fieldset>
+
+			
 				{% if is_thanks %}
-				    Now please <a href="call/">call your representative</a> to encourage him to pass the bill!
-				    <p>&nbsp;</p>
-				    <p>&nbsp;</p>
+
+				<div id="call_box_new" style="margin-top:150px; border:0;">
+				    <a href="/call/"><img src="http://media.sunlightprojects.org/readthebill/images/top_form_new_call.png"></a>
 				{% else %}
+				
+				<div id="contact_box_new">
+					
+				<div id="instructions">{% morsel signup inherit %} </div>
+				
+						<form action="{% url index %}" method="post" id="signupform" class="signupform">
+							<fieldset>
 			        <legend>Sign the Read the Bill Petition:</legend>
 					{% block signupform %}
 						{% signup_form %}
