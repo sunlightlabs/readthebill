@@ -1,4 +1,4 @@
-{% extends "base_call.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
@@ -21,52 +21,86 @@ function checkZip(elmnt,content) {
 {% if has_called %}
 <div id="thanks_box"><h1 class="header thanks">Thank you for taking the time to call your representative about the 72 Hour Rule.</h1></div>
 {% else %}
-
+<!--<div id="header_box">
+<h1 class="header">The Senate is considering a bill S. 482 that would increase the disclosure of campaign contributions to Senate campaigns.</h1>
+</div>-->
 {% endif %}
 
-<div id="candidates_box">
-<div id="candidates_explanation">Committees of legislators in the United States Congress write the laws that shape our government&ndash;massive documents with far-reaching implications.</div>
+<div id="considering">Committees of legislators in the United States Congress write the laws that shape our government--massive documents with far-reaching implications.</div>
+
+<div id="explanation">
+	<p>Unfortunately, the congressmen voting on those bills almost never have time to read them first.</p>
 </div>
 
-<div id="considering">Unfortunately, the congressmen voting on those bills almost never have time to read them first.</div>
-
-<h2 class="fortunately">Fortunately, Helping is as Easy as These 3 Simple Steps.</h2>
+<h2 class="fortunately">Fortunately, helping is as easy as these three simple steps.</h2>
 <div id="steps">
 	<ul>
     <li>Determine your representative.</li>
     <li>Call his or her office.</li>
-    <li>Ask if he or she will vote for the 72 Hour Rule (H. Res. 554).</li>
+    <li>Ask if he or she will vote for the 72 Hour Rule.</li>
     </ul>
 </div>	
 
 
 
 <h2 class="please_select">Please enter your zip code to begin:</h2>
-	<div id="step_container">
-			<div id="step_1" style="margin-left:100px; margin-top:10px;">
-				<form>
- 					<h3>
-  						<img src="http://media.sunlightprojects.org/s223/images/num_1.png" alt="Step 1" border="0">Enter your zip code
-  						<input type="text" id="zip" size="10" maxlength="5" onkeyup="checkZip(this,this.value)"/>
- 					</h3>
-				</form>
-			</div>
+<div id="step_container">
+<div id="step_1" style="margin-left:100px; margin-top:10px;">
+<form onsubmit="return false;">
+ <h3>
+  <img src="http://media.sunlightprojects.org/s223/images/num_1.png" alt="Step 1" border="0">Enter your zip code
+  <input type="text" id="zip" size="10" maxlength="5" onkeyup="checkZip(this,this.value)" onsubmit="return false;"/>
+ </h3>
+</form>
+</div>
 
-			<div id="chosen_reps" style="margin-left:100px; display:none;"> 
-  				<div id="step_2">
-   					<h3><img src="http://media.sunlightprojects.org/s223/images/num_2.png" alt="Step 2" border="0">Select a Representative to Contact by Phone</h3>
-  				</div>
+<div id="chosen_reps" style="margin-left:100px; display:none;"> 
+  <div id="step_2">
+   <h3><img src="http://media.sunlightprojects.org/s223/images/num_2.png" alt="Step 2" border="0">Select a Representative to Contact by Phone</h3>
+  </div>
 
-  			<div id="your_reps">
-    			<!-- filled via ajax call -->
-  			</div>
+  <div id="your_reps">
+    <!-- filled via ajax call -->
+  </div>
 
-		</div> <!-- ends rep box -->
+</div> <!-- ends senator box -->
 </div>
 
 
 
+<div class="column span-22">
 
+<div id="total_status_box">
+
+<h3>The Current Status of House-wide Support for the 72-hour Rule</h3>
+<!--<p>(Legislators who need to be called are <span class="highlighted">highlighted</span>)</p>-->
+<table>
+<thead>
+<tr>
+    <th class="table_left_pad">Rep. <img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>State<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Party<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th># Calls<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Cosponsor<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Supports 72 Hour Rule<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+</tr>
+</thead>
+<tbody>
+
+{% for legislator in legislator_list %}
+<tr {% ifequal legislator.num_calls 0 %} class="nocalls" {% endifequal %}>
+  <td class="table_left_pad"><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.good_fname}} {{legislator.legislator.lastname}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.state}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.party}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.num_calls}} {% if legislator.needs_more_calls %} / {{legislator.call_goal}} {% else %} <img src="http://media.sunlightprojects.org/s223/images/accept.png"> {% endif %}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
+  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
 
 
 
