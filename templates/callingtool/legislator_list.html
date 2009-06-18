@@ -76,39 +76,6 @@ legislation and voice their concerns to their congressional delegation.
 
 
 
-<div class="column span-22">
-
-<div id="total_status_box">
-
-<h3>The Current Status of House-wide Support for the 72-hour Rule</h3>
-<!--<p>(Legislators who need to be called are <span class="highlighted">highlighted</span>)</p>-->
-<table>
-<thead>
-<tr>
-    <th class="table_left_pad">Rep. <img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-    <th>State<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-    <th>Party<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-    <th># Calls<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-    <th>Cosponsor<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-    <th>Supports 72 Hour Rule<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
-</tr>
-</thead>
-<tbody>
-
-{% for legislator in legislator_list %}
-<tr {% ifequal legislator.num_calls 0 %} class="nocalls" {% endifequal %}>
-  <td class="table_left_pad"><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.good_fname}} {{legislator.legislator.lastname}}</a></td>
-  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.state}}</a></td>
-  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.legislator.party}}</a></td>
-  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.num_calls}} {% if legislator.needs_more_calls %} / {{legislator.call_goal}} {% else %} <img src="http://media.sunlightprojects.org/s223/images/accept.png"> {% endif %}</a></td>
-  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.is_cosponsor|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
-  <td><a href="{% url call_legislator legislator.id %}" class="row_tot">{{legislator.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL"|safe}}</a></td>
-</tr>
-{% endfor %}
-
-</tbody>
-</table>
-</div>
 
 
 
