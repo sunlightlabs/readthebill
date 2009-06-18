@@ -23,7 +23,7 @@ STATES = (
     ('CO', 'Colorado'),
     ('CT', 'Connecticut'),
     ('DE', 'Delaware'),
-#    ('DC', 'District of Columbia'),
+    ('DC', 'District of Columbia'),
     ('FL', 'Florida'),
     ('GA', 'Georgia'),
     ('HI', 'Hawaii'),
@@ -82,7 +82,7 @@ def legislator_list(request):
     if has_called:
         del request.session['has_called']
     return render_to_response('callingtool/legislator_list.html',
-                              {'legislator_list': LegislatorDetail.objects.filter(legislator__title='Rep'),
+                              {'legislator_list': LegislatorDetail.objects.exclude(legislator__title='Sen'),
                                'states': STATES,
                                'has_called': has_called})
 
@@ -100,7 +100,7 @@ def call_legislator(request, id):
                               {'legislator': legislator, 'calls': calls})
 
 def state_reps(request, state):
-    reps = LegislatorDetail.objects.filter(legislator__state=state, legislator__title='Rep')
+    reps = LegislatorDetail.objects.filter(legislator__state=state).exclude(legislator__title='Sen')
     return render_to_response('callingtool/state_reps.html',
                               {'state_name': STATE_DICT[state],
                                'reps': reps})
@@ -109,7 +109,7 @@ def zip_rep(request, zipcode):
     oreps = sunlight.legislators.allForZip(zipcode)
     reps = []
     for o in oreps:
-	if o.title=='Rep':
+	if o.title!='Sen':
 	    reps.append(  LegislatorDetail.objects.get(legislator__crp_id=o.crp_id) )
     return render_to_response('callingtool/zip_rep.html',
                               {'zipcode':zipcode, 'reps': reps})
