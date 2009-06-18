@@ -57,10 +57,8 @@ $(function() {
 
     <div class="script_item" id="script_opener">
     <h4>Suggested Conversation Script</h4>
-    <p>I am calling to ask Representative {{legislator.legislator.lastname}} to support H. Res.
-554, the 72 Hour Rule.  This legislation will ensure that members of
-Congress and the public have 72 hours to read the final versions of
-bills online before they are considered for a vote.</p>
+    <p>
+	I am calling to ask Representative {{legislator.legislator.lastname}} to support H. Res. 554, the 72 Hour Rule. This legislation will ensure that members of Congress and the public have 72 hours to read bills online before Congress begins debating them.</p>
 
     <p>Will Rep. {{legislator.legislator.lastname}} support H. Res. 554?</p>
 
@@ -82,22 +80,17 @@ transparent Congress.</p>
 
         <div class="script_item on_bill_answer" id="on_bill_unknown">
         <h5 class="orange">I Don't Know or Representative Hasn't Decided Yet on 72 Hour Rule</h5>
-        <p>Please let Representative {{legislator.legislator.lastname}} know that the 72 Hour Rule is a
-simple solution that will give Members and people like me the chance
-to read and understand bills before they are voted on. Posting bills
-online 72 hours before consideration means that a lot of wasteful
-spending and last minute provisions will be avoided.</p>
+        <p>Please let Representative {{legislator.legislator.lastname}} know that the 72 Hour Rule is a simple solution that will give
+		legislators and people like me the chance to read and understand bills
+		before Congress begins debating them. 
+		
+		Posting bills online 72 hours before consideration means that a lot of wasteful spending and last minute provisions will be avoided.</p>
         {% include "callingtool/end_call.html" %}
         </div>
 
         <div class="script_item on_bill_answer" id="on_bill_no">
         <h5 class="red">If "No"</h5>
-        <p>Please let Representative {{legislator.legislator.lastname}} know that I hope {{legislator.he_or_she}}
-reconsiders. The 72 Hour Rule is a simple solution that will give
-Members and people like me the chance to read and understand bills
-before they are voted on. Posting bills online 72 hours before
-consideration means that a lot of wasteful spending and last minute
-provisions will be avoided. </p>
+        <p>Please let Representative {{legislator.legislator.lastname}} know that I hope {{legislator.he_or_she}} reconsiders. The 72 Hour Rule (H. Res. 554) is a simple solution that will give legislators and people like me the chance to read and understand bills before Congress begins debating them. Posting bills online 72 hours before consideration means that a lot of wasteful spending and last minute provisions will be avoided. </p>
 
          {% include "callingtool/end_call.html" %}
         </div>
