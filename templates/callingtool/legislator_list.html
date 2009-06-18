@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_call.html" %}
 
 {% block content %}
 
@@ -19,25 +19,33 @@ function checkZip(elmnt,content) {
 
 
 {% if has_called %}
-<div id="thanks_box"><h1 class="header thanks">Thank you for taking the time to call your representative about the 72 Hour Rule.</h1></div>
+<div id="thanks_box"><h1 class="header thanks">Thank you for taking the time to call your representative.</h1></div>
 {% else %}
 <!--<div id="header_box">
 <h1 class="header">The Senate is considering a bill S. 482 that would increase the disclosure of campaign contributions to Senate campaigns.</h1>
 </div>-->
 {% endif %}
 
-<div id="considering">Committees of legislators in the United States Congress write the laws that shape our government--massive documents with far-reaching implications.</div>
 
-<div id="explanation">
-	<p>Unfortunately, the congressmen voting on those bills almost never have time to read them first.</p>
+<div id="candidates_box">
+<div id="candidates_explanation">Reps. Baird and Culberson recently introduced a resolution (H. Res. 554) to require the U.S. House of Representatives to post online all non-emergency legislation 72 hours before debate begins.</div>
 </div>
 
-<h2 class="fortunately">Fortunately, helping is as easy as these three simple steps.</h2>
+
+<div id="considering2" style="font-size:18px; line-height:23px; height:100px;"><img src="http://media.sunlightprojects.org/readthebill/images/v2/72_button_a.png" border="0" style="float:left; margin-right:5px;">
+	<span class="display:block; width:200px;">This resolution will create more transparency of the legislative process by 
+giving lawmakers the time to debate bills with full knowledge and consideration of their implications, while giving citizens time to read 
+legislation and voice their concerns to their congressional delegation.
+</span>
+</div>
+
+<h2 class="fortunately" style="clear:both;">Legislative transparency is only a phone call away. Call now.</h2>
 <div id="steps">
 	<ul>
     <li>Determine your representative.</li>
     <li>Call his or her office.</li>
-    <li>Ask if he or she will vote for the 72 Hour Rule.</li>
+    <li>Ask if he or she will co-sponsor the 72 Hour Rule (H. Res. 554).</li>
+
     </ul>
 </div>	
 
