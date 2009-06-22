@@ -1,12 +1,10 @@
 # Django settings for readthebill project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Jeremy Carbaugh', 'jcarbaugh@sunlightfoundation.com'),
-    ('James Turk', 'jturk@sunlightfoundation.com'),
-    ('Luke Rosiak', 'lrosiak@sunlightfoundation.com'),
+    ('Tim Ball', 'tball@sunlightfoundation.com'),
 )
 
 MANAGERS = ADMINS
