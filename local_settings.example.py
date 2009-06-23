@@ -7,3 +7,6 @@ DATABASE_PORT = ''
 
 import os.path
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'))
+
+# path to the receive URL for the TransparencyCorps photo-gathering task
+TCORPS_TASK_URL = ''

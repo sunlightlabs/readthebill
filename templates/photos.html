@@ -1,0 +1,26 @@
+{% extends "minimal.html" %}
+{% load rtb %}
+
+{% block content %}
+  <div class="head general">
+    <h1>Show Your Support</h1>
+    <p>
+      Lorem ipsum dolor.
+    </p>
+    <form action="{% tcorps_url %}" method="post" id="signupform" class="signupform" enctype="multipart/form-data">
+      <fieldset>
+        <ul>
+          <li>
+            <label for="photo_file">Select your photo:</label><br/>
+            <input type="file" name="photo" id="photo_file" />
+          </li>
+        </ul>
+        
+        <br />
+        <ul>
+          <li><input type="submit" value="Upload Your Photo" class="button"></li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}
