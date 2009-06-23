@@ -43,7 +43,7 @@ def petition(request):
     return render_to_response("petition.html")
     
 def photos(request):
-    return render_to_response("photos.html")
+    return render_to_response("photos.html", {"task_key": request.GET.get("task_key"), "username": request.GET.get("username")})
 
 def partners(request):
     partners = Organization.objects.order_by('name')
