@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -42,8 +43,11 @@ def index(request):
 def petition(request):
     return render_to_response("petition.html")
 
+def photos(request):
+    return render_to_response("photos.html", {"flickr_id": settings.FLICKR_ID, "flickr_tag": settings.FLICKR_TAG})
+
 def support(request):
-    return render_to_response("support.html", {"task_key": request.GET.get("task_key"), "username": request.GET.get("username")})
+    return render_to_response("support.html", {"task_key": request.GET.get("task_key"), "username": request.GET.get("username"), "tcorps_url": settings.TCORPS_TASK_URL, "message": request.GET.get("message")})
 
 def partners(request):
     partners = Organization.objects.order_by('name')

@@ -7,7 +7,12 @@
     <p>
       Lorem ipsum dolor.
     </p>
-    <form action="{% tcorps_url %}" method="post" id="signupform" class="signupform" enctype="multipart/form-data">
+    {% if message %}
+      <p class="error">
+        {{ message }}
+      </p>
+    {% endif %}
+    <form action="{{ tcorps_url }}" method="post" id="signupform" class="signupform" enctype="multipart/form-data">
       <fieldset>
         {% if task_key %}
           <input type="hidden" name="task_key" value="{{ task_key }}" />

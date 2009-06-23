@@ -1,4 +1,4 @@
-from django.conf import settings
+
 from django import template
 from django.template.loader import render_to_string
 from readthebill.rtb.forms import SignupForm
@@ -17,7 +17,3 @@ def random_orgs(count):
 def signup_form():
     form = SignupForm()
     return form.as_ul()
-
-@register.simple_tag
-def tcorps_url():
-    return settings.TCORPS_TASK_URL
