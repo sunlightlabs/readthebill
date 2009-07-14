@@ -109,8 +109,9 @@ def zip_rep(request, zipcode):
     oreps = sunlight.legislators.allForZip(zipcode)
     reps = []
     for o in oreps:
-	if o.title!='Sen':
-	    reps.append(  LegislatorDetail.objects.get(legislator__crp_id=o.crp_id) )
+        if o.title!='Sen':
+            qs = LegislatorDetail.objects.get(legislator__crp_id=o.crp_id)
+            reps.append(  qs )
     return render_to_response('callingtool/zip_rep.html',
                               {'zipcode':zipcode, 'reps': reps})
 

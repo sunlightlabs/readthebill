@@ -1,10 +1,10 @@
 # Django settings for readthebill project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Tim Ball', 'timball@tux.org'),
+    #'Tim Ball', 'timball@tux.org'),
 )
 
 MANAGERS = ADMINS
@@ -82,7 +82,8 @@ INSTALLED_APPS = (
     'contact_form',
     'simplesurvey',
     'uspolitics.politicians',
-    'callingtool',
+    #'callingtool',
+    'capcall', #temporary
     'readthebill.rtb',
 )
 
