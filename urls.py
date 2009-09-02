@@ -6,7 +6,7 @@ admin.autodiscover()
 
 class RTBContactForm(ContactForm):
     from_email = "bounce@sunlightfoundation.com"
-    recipient_list = ['lrosenberg@sunlightfoundation.com','nwatzman@sunlightfoundation.com']
+    recipient_list = ['jbrewer@sunlightfoundation.com']
     subject = "[ReadTheBill.org] Contact"
 
 urlpatterns = patterns('',
