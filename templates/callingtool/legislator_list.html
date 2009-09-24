@@ -54,10 +54,10 @@ legislation and voice their concerns to their congressional delegation.
 <h2 class="please_select">Please enter your zip code to begin:</h2>
 <div id="step_container">
 <div id="step_1" style="margin-left:100px; margin-top:10px;">
-<form onsubmit="return false;">
+<form onsubmit="return false;" action="/call/zip_direct/00000/" method="post">
  <h3>
   <img src="http://media.sunlightprojects.org/s223/images/num_1.png" alt="Step 1" border="0">Enter your zip code
-  <input type="text" id="zip" size="10" maxlength="5" onkeyup="checkZip(this,this.value)" onsubmit="return false;"/>
+  <input type="text" id="zip" name="zip" size="10" maxlength="5" onkeyup="checkZip(this,this.value)" onsubmit="return false;"/>
  </h3>
 </form>
 </div>

@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('callingtool.views',
 
     url(r'^zip_rep/(?P<zipcode>\d+)/$', 'zip_rep'),
+    url(r'^zip_direct/(?P<zipcode>\d*)/$', 'zip_direct'),
     url(r'^$', 'legislator_list', name='legislator_list'),
     url(r'^(?P<id>\d+)/$', 'call_legislator', name='call_legislator'),
     url(r'^state_reps/(?P<state>[A-Z]{2})/$', 'state_reps', name='state_reps'),

@@ -5,7 +5,7 @@
 <div class="column span-9 {% if forloop.last %} last {% endif %}">
     <div id="senator_photo"><a href="{% url call_legislator rep.id %}#step3"><img src="http://assets.sunlightfoundation.com/moc/100x125/{{rep.legislator.bioguide_id}}.jpg" border="0"></a></div>
     <div id="senator_info"><a href="{% url call_legislator rep.id %}#step3" class="listings">
-    <a href="{% url call_legislator rep.id %}#step3#step3">
+    <a href="{% url call_legislator rep.id %}#step3">
         <ul>
         <li><a href="{% url call_legislator rep.id %}#step3"><strong>{{rep.legislator.title}}. {{rep.legislator.lastname}} ({{rep.legislator.party}})</strong></a></li>
         <li>Supports H.R. 554? {{rep.supports_bill|yesno:"<img src=\"http://media.sunlightprojects.org/s223/images/accept.png\">,<img src=\"http://media.sunlightprojects.org/s223/images/cross.png\">, CALL!"|safe}}</li>

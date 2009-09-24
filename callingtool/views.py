@@ -115,6 +115,28 @@ def zip_rep(request, zipcode):
     return render_to_response('callingtool/zip_rep.html',
                               {'zipcode':zipcode, 'reps': reps})
 
+def zip_direct(request, zipcode):
+    from django.template.loader import get_template
+    from django.template import Context
+    from django.http import HttpResponse
+
+    if zipcode=='00000':
+        if request.POST['zip']:
+            zipcode = request.POST['zip']
+    oreps = sunlight.legislators.allForZip(zipcode)
+    reps = []
+    for o in oreps:
+        if o.title!='Sen':
+            qs = LegislatorDetail.objects.get(legislator__crp_id=o.crp_id)
+            reps.append(  qs )
+    t = get_template('callingtool/zip_rep.html')
+    repblock = t.render(Context({'zipcode':zipcode, 'reps': reps}))
+
+    return render_to_response('callingtool/legislator_list_nojs.html',
+                              {'repblock':repblock})
+
+
+
 def submit_call(request, id):
     if request.method != 'POST':
         return HttpResponseNotAllowed(['POST'])
