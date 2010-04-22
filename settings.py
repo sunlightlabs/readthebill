@@ -83,7 +83,7 @@ INSTALLED_APPS = (
     'simplesurvey',
     'uspolitics.politicians',
     #'callingtool',
-    'capcall', #temporary
+    #'capcall', #temporary
     'readthebill.rtb',
 )
 
