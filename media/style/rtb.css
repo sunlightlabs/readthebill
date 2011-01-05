@@ -1,8 +1,15 @@
 /*cleaned up CSS */
 
-body {background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg); background-repeat:repeat-x; margin-top:0; padding-top:0; background-position:0 -40px;}
+body {
+    background-image:url(http://media.sunlightprojects.org/readthebill/images/v2/v2_cork_bg.jpg); 
+    background-repeat:repeat-x; 
+    margin-top: 0; 
+    padding-top: 0; 
+    background-position: 0 -120px;
+    color: #5c5656;
+}
 
-body p { font-size:110%;}	
+body p { font-size: 110%;}	
 .intro { font-size:100%; padding:0 0 15px 0;}
 
 /*intro copy bit */

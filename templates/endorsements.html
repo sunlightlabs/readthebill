@@ -3,30 +3,31 @@
 {% block title %}Endorsements{% endblock %}
 
 {% block content %}
+	<h2 class="headline">Groups Endorsing Read The Bill</h2>
 
-	<a name="endorsers"></a>
-	<h3 class="headline">Groups Endorsing Read The Bill</h3>
+    <p>{% morsel endorsements %}</p>
 
-<p>{% morsel endorsements %}</p>
-
-<ul id="endorsed">
-{% morsel logos %}
-</ul>
-
+    <ul id="endorsed" >
+    {% morsel logos %}
+    </ul>
 {% endblock %}
 
 
 
 {% block indiv %}
-<h3 class="headline">Individual Endorsements</h3>
-<ul id="endorsed">
-{% morsel individs %}
-</ul>
+    <div class="module">
+        <h3 class="headline">Individual Endorsements</h3>
+        <ul id="endorsed">
+        {% morsel individs %}
+        </ul>
+    </div>
 {% endblock indiv %}
 
 {% block blogs %}
-<h3 class="headline">Blog Endorsements</h3>
-<ul id="endorsed">
-{% morsel blogs %}
-</ul>
+    <div class="module">
+        <h3 class="headline">Blog Endorsements</h3>
+        <ul id="endorsed">
+        {% morsel blogs %}
+        </ul>
+    </div>
 {% endblock blogs %}

@@ -3,7 +3,7 @@
 {% block title %}Rushed Bills{% endblock %}
 {% block content %}
 
-	<h3 class="headline">Rushed Bills</h3>
+	<h2 class="headline">Rushed Bills</h2>
 	<p>{% morsel rushed %}</p>
     <ul class="blog_roll_new">
         {% for entry in feed.entries.all %}
@@ -11,10 +11,8 @@
         {% endfor %}
     </ul>
 	
-	<br />
-	
-	<p>* - Due to limitations on Congressional data, the exact time this bill was made available cannot be determined at this time, but it was considered in less than 72 hours. For more info about a bill's timeline in the legislative process, click on a bill name above and then follow the link in the middle of the page to "See All Actions".</p>
-	<p>** - While the initial bill text in the House and the Senate was publicly available for over 72 hours, the final text, in the form of the conference report, was available for fewer than 72 hours.</p>
+	<p class="tip">* - Due to limitations on Congressional data, the exact time this bill was made available cannot be determined at this time, but it was considered in less than 72 hours. For more info about a bill's timeline in the legislative process, click on a bill name above and then follow the link in the middle of the page to "See All Actions".</p>
+	<p class="tip">** - While the initial bill text in the House and the Senate was publicly available for over 72 hours, the final text, in the form of the conference report, was available for fewer than 72 hours.</p>
 
 {% endblock %}
 	

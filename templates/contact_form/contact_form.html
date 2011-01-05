@@ -5,13 +5,10 @@ Contact Read The Bill
 {% endblock %}
 
 {% block content %}	
-	<div id="contact_form">
-<h3 class="headline">Contact Read The Bill</h3>
-<p>{% morsel contact %}</p>
-    		<form action="." method="post" id="contactus">
-        		{{ form.as_ul }}
-        		<p class="submit"><input type="submit" value="Send Your Messsage"></p>
-    		</form>
-
-	</div>
+    <h2 class="headline">Contact Us</h2>
+    <p>{% morsel contact %}</p>
+    <form action="." method="post" id="contactus">
+    	{{ form.as_ul }}
+    	<p class="submit"><input type="submit" value="Send Your Messsage"></p>
+    </form>
 {% endblock %}

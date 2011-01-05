@@ -3,16 +3,17 @@
 
 {% load morsel_tags %}
 {% load rtb %}
+{% load media %}
 
 <html lang="en">
 <head>
 
 	{% block meta %}{% endblock %}
 
-	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/screen.css" type="text/css" media="screen, projection" />
-   	<link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/print.css" type="text/css" media="print" />
+	{% css "css/screen.css" %}
+   	<link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
- <link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/rtb.css" type="text/css" media="screen" />
+	{% css "css/rtb.css" %}
 
 
 <style type="text/css">
@@ -64,82 +65,41 @@
 <title>Read The Bill: {% block title %}{% endblock %}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <body id="{% block body %}readthebill{% endblock %}">
-    <div class="container noicon">
-		<div class="span-24">
-			<div id="top_nav">
-				{% include "includes/nav.html" %}
-			</div>
-		<div class="span-13">
-			<div id="buttonbox">
-				<a href="/">
-						<SCRIPT LANGUAGE="JavaScript"> showButton();	</script>
-			</div>
-			<div id="postit">
-				<a href="/"><img src="http://media.sunlightprojects.org/readthebill/images/postit.png" alt="In February 2009, Congress passed the largest piece of spending legislation in history and NO ONE read the bill"></a>
-			</div>
+    <div id="containerWrapper">
+        <div class="container">
+            <div id="header">
+                <h1><a href="/">Read the Bill</a></h1>
+                <img id="button" alt="72 hours button" src= "{% media_url "/images/v2/72_button_c.png" %}" />
+                <ul id="topnav">
+                    <li id="about"><a href="/about/">About</a></li>
+                    <li id="endorsements"><a href="/endorsements/">Endorsements</a></li>
+                    <li id="rushed"><a href="/rushed/">Rushed Bills</a></li>
+                    <li id="studies"><a href="/cases/">Case Studies</a></li>
+                    <li id="press"><a href="/press/">Press</a></li>
+                    <li id="contact"><a href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div id="ltColumn">
+    			{% block content %}
+    			{% endblock %}
+    		</div>	
+            <div id="rtColumn">
+            
+                {% include "includes/share.html" %}
 
-			<div id="leftbox">
+                {% block indiv %}
+                {% endblock %}
 
-				{% block content %}
-				{% endblock %}
-			</div>
-		</div>	
-<div class="span-11 last">
-
-
-
-			
-				{% if is_thanks %}
-
-				<div id="call_box_new" style="margin-top:150px; border:0;">
-				    <a href="/call/"><img src="http://media.sunlightprojects.org/readthebill/images/top_form_new_call.png"></a>
-				{% else %}
-				
-				<div id="contact_box_new">
-					
-				<div id="instructions">{% morsel signup inherit %} </div>
-				
-						<form action="{% url index %}" method="post" id="signupform" class="signupform">
-							<fieldset>
-			        <legend>Sign the Read the Bill Petition:</legend>
-					{% block signupform %}
-						{% signup_form %}
-					{% endblock %}
-					<br />
-			        <ul>
-					   <li><input type="submit" value="Sign the Petition" class="button"></li>
-				    </ul>
-					<div class="guarantee">Sign with confidence and guaranteed privacy. <a href="http://www.sunlightfoundation.com/privacy/">We promise.</a></div>
-								
-				<a href="/call/"><img src="http://media.sunlightprojects.org/readthebill/images/top_form_new_call.png"></a>
-				</fieldset>
-			    {% endif %}	
-
-		</form>	
-
-
-</div>
-
-
-
-{% block share %}
-
-{% endblock share %}
-
-
-
-{% block indiv %}
-{% endblock indiv %}
-
-{% block blogs %}
-{% endblock blogs %}
+                {% block blogs %}
+                {% endblock %}
 	
-</div>
-	</div>
-		</div>
-		<div class="bottom">
-	   		<div class="container noicon">
-			<div class="column span-24" id="sf_footer">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container noicon">
+            <div class="column span-24" id="sf_footer">
                <div id="sf_footer_box">
                    <div id="sf_footer_head">
                        <h6>Contact</h6>
