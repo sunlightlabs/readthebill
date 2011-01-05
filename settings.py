@@ -1,4 +1,6 @@
 # Django settings for readthebill project.
+import os
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -28,12 +30,12 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -67,6 +69,10 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'readthebill.urls'
 
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -97,6 +103,16 @@ EMAIL_PORT = "25"
 EMAIL_HOST_USER = "***REMOVED***"
 EMAIL_HOST_PASSWORD = "***REMOVED***"
 EMAIL_USE_TLS = True
+
+MEDIASYNC = {
+    'BACKEND': 'mediasync.backends.s3',
+    'AWS_KEY': '***REMOVED***',
+    'AWS_SECRET': '***REMOVED***',
+    'AWS_BUCKET': 'assets.sunlightfoundation.com',
+    'AWS_PREFIX': 'rtb/2.0',
+    'DOCTYPE': 'html5',
+    'CACHE_BUSTER': 201101041109,
+}
 
 import re
 RTB_TAGS = ["72[\-\s]hour","read\s?the\s?bill", "h.\s?res. 504", "[^\w]?rtb[^\w]?"]
