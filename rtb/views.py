@@ -37,7 +37,7 @@ def index(request):
     else:
         form = SignupForm()
         
-    entries = gatekeeper.approved(FeedEntry.objects.all())
+    entries = FeedEntry.objects.all().approved()
     return render_to_response("index.html", {"entries": entries, "form": form, "is_thanks": is_thanks }, context_instance=RequestContext(request))
 
 def petition(request):
