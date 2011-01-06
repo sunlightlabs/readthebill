@@ -8,6 +8,9 @@
 			</h1>
 			<time class="published" datetime="{{ post.date_published.date.isoformat }}" pubdate>{{ post.date_published|date:"F j" }}</time>
 		</header>
+		<aside>
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-text="{{ post.title }}" data-via="readthebill" data-related="sunfoundation" data-url="http://readthebill.org{{ post.get_absolute_url }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		</aside>
 		<div class="entry-content">
 			{{ post.content }}
 		</div>

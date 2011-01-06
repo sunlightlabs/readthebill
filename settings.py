@@ -116,6 +116,10 @@ MEDIASYNC = {
     'AWS_PREFIX': 'rtb/2.0',
     'DOCTYPE': 'html5',
     'CACHE_BUSTER': 201101041109,
+    'JOINED': {
+        'css/readthebill.css': ('css/screen.css','css/rtb.css'),
+        'js/readthebill.js': ('js/jquery-1.2.6.min.js','js/jquery.tablesorter.js'),
+    }
 }
 
 import re
