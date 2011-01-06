@@ -76,8 +76,10 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.flatpages',
     'django.contrib.contenttypes',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'mediasync',
@@ -91,6 +93,8 @@ INSTALLED_APPS = (
     #'callingtool',
     #'capcall', #temporary
     'readthebill.rtb',
+    'tagging',
+    'blogdor',
 )
 
 GATEKEEPER_ENABLE_AUTOMODERATION = True
