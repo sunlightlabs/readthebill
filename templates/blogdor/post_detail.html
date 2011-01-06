@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<article class="hentry">
+		<header>
+			<h1 class="entry-title">
+				<a href="{{ post.get_absolute_url }}" class="bookmark">{{ post.title }}</a>
+			</h1>
+			<time class="published" datetime="{{ post.date_published.date.isoformat }}" pubdate>{{ post.date_published|date:"F j" }}</time>
+		</header>
+		<div class="entry-content">
+			{{ post.content }}
+		</div>
+	</article>
+{% endblock %}
