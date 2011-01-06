@@ -11,13 +11,14 @@ body {
 
 #containerWrapper { background: url(../images/v2/v2_cork_bg.jpg) left -240px repeat-x; }
 
-h1 { float: left; width: 255px; height: 123px; padding-top: 50px;}
-h1 a { width: 255px; height: 123px; text-indent: -9999em; display: block; background: url(../images/logo.png) top left no-repeat; }
+#header h1 { float: left; width: 255px; height: 123px; padding-top: 50px;}
+#header h1 a { width: 255px; height: 123px; text-indent: -9999em; display: block; background: url(../images/logo.png) top left no-repeat; }
 
 #ltColumn { width: 605px; float: left; margin-right: 25px; padding-right: 25px;}
 #rtColumn { width: 285px; float: left; }
 
 #header { height: 175px; margin-bottom: 40px;}
+header { display: block;}
 
 #topnav { margin: -10px 0 0 -14px; width: 698px; float: left;}
 #topnav li a { display: block; float: left; text-indent: -9999em; height: 48px;}
@@ -32,6 +33,14 @@ h1 a { width: 255px; height: 123px; text-indent: -9999em; display: block; backgr
 
 .tip { font-family: Georgia, "Times New Roman", Times, serif; font-size: 90%; font-style: oblique;}
 .module { margin-bottom: 50px;}
+
+time { display: block; float: left; width: 80px; text-align: center; padding-right: 15px; margin-right: 15px; border-right: 1px dotted #dae6d1;}
+.month, .day { display: block;}
+.day { font-size: 300%; font-family: Georgia, "Times New Roman", Times, serif; line-height: 30px; }
+
+#featureArea { background: url(../images/bg_feature.jpg) top left no-repeat; height: 281px; margin-bottom: 50px;}
+
+.hentry { margin-bottom: 35px; display: block;}
 
 /*intro copy bit */
 .intro_head { border-bottom: 1px solid #dae6d1; padding-bottom:5px; }

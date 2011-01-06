@@ -47,6 +47,7 @@ input[type='text'] { cursor: text; }
 /* BASE SIZES */
 
 h2 { font-size: 230%; color: #393131; line-height: 30px; margin-bottom: 25px;}
+h1.entry-title { font-size: 230%; color: #393131; line-height: 30px; vertical-align: middle; height: 50px; }
 h3 { font-size: 180%; margin-bottom: 15px; color: #393131; font-weight: normal;}
 h4 { font-size: 1.3em; }
 h5 { font-size: 1.2em; }

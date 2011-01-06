@@ -19,13 +19,14 @@
 	{% for post in posts %}
 		<article class="hentry">
 			<header>
-				<h1 class="entry-title">
-					<a href="{{ post.get_absolute_url }}" class="bookmark">{{ post.title }}</a>
-				</h1>
-				<time class="published" datetime="{{ post.date_published.date.isoformat }}" pubdate>
+			    <time class="published" datetime="{{ post.date_published.date.isoformat }}" pubdate>
 					<span class="month">{{ post.date_published|date:"F" }}</span>
 					<span class="day">{{ post.date_published|date:"j" }}</span>
 				</time>
+				<h1 class="entry-title">
+					<a href="{{ post.get_absolute_url }}" class="bookmark">{{ post.title }}</a>
+				</h1>
+				<div class="clear"></div>
 			</header>
 			{% if post.excerpt.raw %}
 				<div class="entry-summary">
