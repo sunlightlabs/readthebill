@@ -1,69 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
-
+<!DOCTYPE html>
 {% load morsel_tags %}
 {% load rtb %}
 {% load media %}
-
 <html lang="en">
 <head>
 
-	{% block meta %}{% endblock %}
+    <meta charset="utf-8"> 
+    <meta name="description" content="">
+    <meta name="og:site_name" content="ReadTheBill.org">
+    <meta name="og:title" content="ReadTheBill.org -- a project of the Sunlight Foundation">
+    <meta name="og:description" content="">
+    <meta name="og:type" content="cause">
+    <meta name="og:url" content="http://readthebill.org/">
+    <meta name="og:email" content="contact@sunlightfoundation.com">
+    <meta name="fb:admins" content="7812952">
+    {% block meta %}{% endblock %}
+    
+    <title>{% block title %}Read The Bill{% endblock %}</title>
 
-	{% css "css/screen.css" %}
-   	<link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
-	<!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
-	{% css "css/rtb.css" %}
-
-
-<style type="text/css">
-	#call_your_rep { height:30px; margin-right:20px; text-align:center; margin-bottom:5px; margin-top:20px;}
-	#call_your_rep p {margin:0; padding:0; }
-	#call_your_rep h2 { font-size:16px; }
-	#call_your_rep img { }
-
-				</style>
-
-		<SCRIPT LANGUAGE="JavaScript">
-		// Set up the image files to be used.
-		var theButtons = new Array() // do not change this
-		// To add more image files, continue with the
-		// pattern below, adding to the array.
-
-		theButtons[0] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button.png'
-		theButtons[1] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_a.png'
-		theButtons[2] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_b.png'
-		theButtons[3] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_c.png'
-		theButtons[4] = 'http://media.sunlightprojects.org/readthebill/images/v2/72_button_d.png'
-		// do not edit anything below this line
-
-		var j = 0
-		var p = theButtons.length;
-		var preBuffer = new Array()
-		for (i = 0; i < p; i++){
-		   preBuffer[i] = new Image()
-		   preBuffer[i].src = theButtons[i]
-		}
-		var whichButton = Math.round(Math.random()*(p-1));
-		function showButton(){
-		document.write('<img src="'+theButtons[whichButton]+'">');
-		}
-
-		//  End -->
-		</script>
-		<!--[if lt IE 7]>
-		<script defer type="text/javascript" src="http://media.sunlightprojects.org/readthebill/js/pngfix.js"></script>
-		<![endif]-->
-
-
-<script src="http://media.sunlightprojects.org/readthebill/js/jquery-1.2.6.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://assets.sunlightlabs.com/scripts/jquery-plugins/jquery.tablesorter.js"></script>
-<script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>	
-
+    {% css "css/readthebill.css" %}
+    <!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+    <style type="text/css">
+        #call_your_rep { height:30px; margin-right:20px; text-align:center; margin-bottom:5px; margin-top:20px;}
+        #call_your_rep p {margin:0; padding:0; }
+        #call_your_rep h2 { font-size:16px; }
+        #call_your_rep img { }
+    </style>
+    {% block css %}{% endblock %}
 
 </head>
-<title>Read The Bill: {% block title %}{% endblock %}</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <body id="{% block body %}readthebill{% endblock %}">
     <div id="containerWrapper">
         <div class="container">
@@ -110,7 +75,7 @@
             <div id="ltColumn">
                 {% block content %}
                 {% endblock %}
-            </div>	
+            </div>  
             <div id="rtColumn">
             
                 {% include "includes/share.html" %}
@@ -120,7 +85,7 @@
 
                 {% block blogs %}
                 {% endblock %}
-	
+    
             </div>
             <div class="clear"></div>
         </div>
@@ -167,7 +132,7 @@
                        <h6>Useful Sites</h6>
                        <ul>
                            <li><a href="http://opencongress.org/">OpenCongress.org</a></li>
-							<li><a href="http://www.transparencycorps.org">Transparency Corps</a></li>
+                            <li><a href="http://www.transparencycorps.org">Transparency Corps</a></li>
                            <li><a href="http://reporting.sunlightfoundation.com/">Reporting Group</a></li>
                            <li><a href="http://sunlightlabs.com">Sunlight Labs</a></li>
                        </ul>
@@ -182,18 +147,26 @@
                        </ul>
                    </div>
                </div>
-           </div>		
-		</div>
-	</div>	
-
-	<script type="text/javascript">
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	try {
-	var pageTracker = _gat._getTracker("UA-1265484-32");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
+           </div>       
+        </div>
+    </div>
+    
+    {% js "js/readthebill.js" %}
+	<!--[if lt IE 7]><script defer type="text/javascript" src="{% media_url "js/pngfix.js" %}"></script><![endif]-->
+    
+    {% block js %}{% endblock %}
+    
+    <script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
+    <script> 
+        var _gaq = [['_setAccount', 'UA-1265484-32'], ['_trackPageview']];
+        (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+    </script>
+    
 </body>
 </html>

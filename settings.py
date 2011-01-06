@@ -76,8 +76,10 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.flatpages',
     'django.contrib.contenttypes',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'mediasync',
@@ -91,6 +93,8 @@ INSTALLED_APPS = (
     #'callingtool',
     #'capcall', #temporary
     'readthebill.rtb',
+    'tagging',
+    'blogdor',
 )
 
 GATEKEEPER_ENABLE_AUTOMODERATION = True
@@ -112,6 +116,10 @@ MEDIASYNC = {
     'AWS_PREFIX': 'rtb/2.0',
     'DOCTYPE': 'html5',
     'CACHE_BUSTER': 201101041109,
+    'JOINED': {
+        'css/readthebill.css': ('css/screen.css','css/rtb.css'),
+        'js/readthebill.js': ('js/jquery-1.2.6.min.js','js/jquery.tablesorter.js'),
+    }
 }
 
 import re

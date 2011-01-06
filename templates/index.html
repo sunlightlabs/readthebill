@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load blog %}
 {% load failtags %}
 {% load morsel_tags %}
 {% load rtb %}
 
 {% block title %}
-Improve the legislative process by posting bills online for 72 hours before debate!
+	Improve the legislative process by posting bills online for 72 hours before debate!
 {% endblock %}
 
 {% block signupform %}
@@ -12,20 +13,36 @@ Improve the legislative process by posting bills online for 72 hours before deba
 {% endblock %}
 
 {% block content %}
-    
-    {% morsel intro %}
+
+	{% morsel intro-new %}
+	{% get_recent_posts 10 as posts %}
+	{% for post in posts %}
+		<article class="hentry">
+			<header>
+				<h1 class="entry-title">
+					<a href="{{ post.get_absolute_url }}" class="bookmark">{{ post.title }}</a>
+				</h1>
+				<time class="published" datetime="{{ post.date_published.date.isoformat }}" pubdate>{{ post.date_published|date:"F j" }}</time>
+			</header>
+			{% if post.excerpt_raw %}
+				<div class="entry-summary">
+					{{ post.excerpt }}
+					<a href="{{ post.get_absolute_url }}">Continue reading...</a>
+				</div>
+			{% else %}
+				<div class="entry-content">
+					{{ post.content }}
+				</div>
+			{% endif %}
+		</article>
+	{% endfor %}
 
 {% endblock %}
 
-
 {% block share %}
-
-{% include "includes/share.html" %}
-
-
-
+	{% include "includes/share.html" %}
 	{% summize "#readthebill" %}
-{% include "includes/endorse_carousel.html" %}
+	{% include "includes/endorse_carousel.html" %}
 {% endblock share %}
 
 
