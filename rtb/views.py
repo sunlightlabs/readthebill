@@ -37,8 +37,8 @@ def index(request):
     else:
         form = SignupForm()
         
-    entries = FeedEntry.objects.all().approved()
-    return render_to_response("index.html", {"entries": entries, "form": form, "is_thanks": is_thanks }, context_instance=RequestContext(request))
+    #entries = FeedEntry.objects.all().approved()
+    return render_to_response("index.html", {"form": form, "is_thanks": is_thanks }, context_instance=RequestContext(request))
 
 def petition(request):
     return render_to_response("petition.html")
