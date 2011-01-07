@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
+{% block opengraph %}
+	<meta property="og:title" content="{{ post.title }}">
+    <meta property="og:description" content="{{ post.excerpt|striptags }}">
+    <meta property="og:type" content="post">
+    <meta property="og:url" content="http://readthebill.org{{ post.get_absolute_url }}">
+{% endblock %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
 {% block content %}
 	<article class="hentry">
 		<header>
@@ -13,7 +22,13 @@
 			<div class="clear"></div>
 		</header>
 		<aside>
-			<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-text="{{ post.title }}" data-via="readthebill" data-related="sunfoundation" data-url="http://readthebill.org{{ post.get_absolute_url }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<span class="sm-twitter">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-text="{{ post.title }}" data-via="readthebill" data-related="sunfoundation" data-url="http://readthebill.org{{ post.get_absolute_url }}">Tweet</a>
+				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			</span>
+			<span class="sm-facebook">
+				<iframe src="http://www.facebook.com/plugins/like.php?href=http://readthebill.org{{ post.get_absolute_url|urlencode }}&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
+			</span>
 		</aside>
 		<div class="entry-content">
 			{{ post.content }}
