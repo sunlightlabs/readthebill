@@ -38,7 +38,7 @@ blockquote *:first-child:after { content: "\201D"; }
 fieldset { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
 legend { font-weight: bold; font-size:1.2em; }
 label { font-weight: bold; }
-textarea, input[type='text'], input[type='password'], select { border: 1px solid #ccc; background: #fff; }
+textarea, input[type='text'], input[type='password'], select, #signupBox input { border: 1px solid #ccc; background: #fff; }
 textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover { border-color: #aaa; }
 textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus { border-color: #888; outline: 2px solid #ffffaa; }
 input, select { cursor: pointer; }
@@ -48,14 +48,13 @@ input[type='text'] { cursor: text; }
 
 h2 { font-size: 230%; color: #393131; line-height: 30px; margin-bottom: 25px; font-weight: normal; font-family: Georgia, "Times New Roman", Times, serif;}
 h1.entry-title { font-size: 230%; color: #393131; line-height: 30px; font-weight: normal; font-family: Georgia, "Times New Roman", Times, serif; padding-top: 23px; float: left; width: 530px;}
-h3 { font-size: 180%; margin-bottom: 15px; color: #393131; font-weight: normal; font-family: Georgia, "Times New Roman", Times, serif;}
+h3 { font-size: 180%; margin-bottom: 15px; color: #393131; font-weight: normal; font-family: Georgia, "Times New Roman", Times, serif; line-height: 29px;}
 h4 { font-size: 1.3em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1em; }
 
 /* LISTS */
 
-.container ul li { margin-left: .85em; }
 /*.container ul li:before {content: "\2022\00a0\00a0"; }  REMOVED FOR FF3 */
 .container ol { list-style-position: outside; list-style-type: decimal; }
 .container dt { font-weight: bold; }
@@ -80,7 +79,7 @@ h6 { font-size: 1em; }
 .container select { padding: .1em .2em 0 .2em; }
 .container option { padding: 0 .4em; }
 .container dt { margin-top: .8em; margin-bottom: .4em; }
-.container ul { margin-left: 1.5em; }
+.hentry li { margin-left: 1.5em; }
 .container ol { margin-left: 2.35em; }
 .container ol ol, .container ul ol { margin-left: 2.5em; }
 .container form div { margin-bottom: .8em; }

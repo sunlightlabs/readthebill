@@ -24,7 +24,7 @@ h1 a:link,  h1 a:visited, h1 a:active { text-decoration: none;}
 #header { height: 175px; margin-bottom: 40px;}
 header { display: block;}
 
-#topnav { margin: -10px 0 0 -14px; width: 698px; float: left;}
+#topnav { margin: -10px 0 0 -3px; width: 685px; float: left;}
 #topnav li a { display: block; float: left; text-indent: -9999em; height: 48px;}
 #about a { background: url(../images/topnav/topnav_rtb_2.png) top left no-repeat; width: 78px;}
 #endorsements a { background: url(../images/topnav/topnav_rtb_3.png) top left no-repeat; width: 141px;}
@@ -50,12 +50,19 @@ time { display: block; float: left; width: 40px; text-align: center; padding-rig
 .hentry { margin-bottom: 45px; display: block;}
 .hentry header { padding-bottom: 10px; margin-bottom: 20px; border-bottom: 1px dotted #ccd8c4;}
 
+#signupBox { background: #fcf7dd; border: 1px solid #f7e99b; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 15px;}
+#signupBox label { display: block;}
+#signupBox input { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 170px;}
+#ltColumn li, #rtColumn li { margin-bottom: 15px;}
+
+#sendMessage { margin-left: 110px;}
+
 /*intro copy bit */
 .intro_head { border-bottom: 1px solid #dae6d1; padding-bottom:5px; }
 
 /* CONTACT FORM */	
 #contact_form_sent { text-align:center;}
-#contactus label { width: 10em;	float: left;	text-align: left; display: block; 	}
+#contactus label { width: 110px; float: left; text-align: left; display: block; }
 #contactus .submit input { margin-left:1em; } 
 #contactus textarea { width:320px; height:100px;}
 #contactus input, #contactus textarea { width: 300px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}

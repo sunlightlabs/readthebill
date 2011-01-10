@@ -3,7 +3,24 @@
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="http://readthebill.org" data-via="readthebill" data-related="sunfoundation">Tweet</a>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </div>
-<div class="module">
+<div class="module" id="signupBox">
     <h3>Sign up to get updates on Read the Bill or other legislation like this!</h3>
-
+    <form id="siteSearch" method="get" action=".">
+        <ul>
+            <li>
+                <label>Email</label>
+                <input type="search" name="email" />
+            </li>
+            <li>
+                <label>Zip Code</label>
+                <input type="search" name="zip" />
+            </li>
+            <li>
+                <button class="signupBtn" type="submit" value="Submit">
+                    <span>Sign Up</span>
+                </button>
+            </li>
+        </ul>
+    </form>
+    <div class="clear"></div>
 </div>

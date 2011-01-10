@@ -9,6 +9,8 @@ Contact Read The Bill
     <p>{% morsel contact %}</p>
     <form action="." method="post" id="contactus">
     	{{ form.as_ul }}
-    	<p class="submit"><input type="submit" value="Send Your Messsage"></p>
+    	<button id="sendMessage" type="submit" value="Send Your Messsage">
+            <span>Send Your Message</span>
+        </button>
     </form>
 {% endblock %}
