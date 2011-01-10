@@ -31,7 +31,7 @@
 			{% if post.excerpt.raw %}
 				<div class="entry-summary">
 					{{ post.excerpt }}
-					<a href="{{ post.get_absolute_url }}">Continue reading...</a>
+					<a class="moreLink" href="{{ post.get_absolute_url }}">Continue reading...</a>
 				</div>
 			{% else %}
 				<div class="entry-content">

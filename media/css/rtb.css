@@ -43,6 +43,8 @@ time { display: block; float: left; width: 40px; text-align: center; padding-rig
 .day { font-size: 300%; font-family: Georgia, "Times New Roman", Times, serif; line-height: 30px; color: #8f8080;}
 .month { color: #a79e9e;}
 
+.moreLink { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 110%;}
+
 #featureArea { background: url(../images/bg_feature.jpg) top left no-repeat; height: 281px; margin-bottom: 50px;}
 
 .hentry { margin-bottom: 45px; display: block;}
