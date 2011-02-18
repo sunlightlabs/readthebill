@@ -113,7 +113,7 @@ ul.blog_roll_new li {margin:0; border-bottom:1px solid #f4f4f4; padding:10px 0 1
 		#sf_footer_box { padding:10px; margin-top:.5em; margin-bottom:.5em; float:left; width:910px; margin-left:10px; }
 		#sf_footer_box ul { padding:0 0 1.25em 0; margin:0; }
 		#sf_footer_box li { padding:0; margin:0;}
-		#sf_footer_head { width:20%; float:left; }
+		.sf_footer_head { width:20%; float:left; }
 		#sf_footer_address { margin:0; }
 
 /* misc crap leftover */

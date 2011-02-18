@@ -4,14 +4,13 @@
 {% load media %}
 <html version="HTML+RDFa 1.1" lang="en">
 <head>
-
-    <meta charset="utf-8"> 
-    <meta name="description" content="Improve the legislative process by posting bills online for 72 hours before debate!">
-    <meta property="og:site_name" content="ReadTheBill.org">
+    <meta charset="utf-8" /> 
+    <meta name="description" content="Improve the legislative process by posting bills online for 72 hours before debate!" />
+    <meta property="og:site_name" content="ReadTheBill.org" />
 	{% block opengraph %}
-	    <meta property="og:title" content="Read The Bill">
-	    <meta property="og:description" content="Improve the legislative process by posting bills online for 72 hours before debate!">
-	    <meta property="og:type" content="cause">
+	    <meta property="og:title" content="Read The Bill" />
+	    <meta property="og:description" content="Improve the legislative process by posting bills online for 72 hours before debate!" />
+	    <meta property="og:type" content="cause" />
 	    <meta property="og:url" content="http://readthebill.org/">
 		<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
 	{% endblock %}
@@ -19,7 +18,9 @@
     {% block meta %}{% endblock %}
     
     <title>{% block title %}Read The Bill{% endblock %}</title>
-
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     {% css "css/readthebill.css" %}
     <!--[if IE]><link rel="stylesheet" href="http://media.sunlightprojects.org/readthebill/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
     <style type="text/css">
@@ -70,7 +71,7 @@
         <div class="container noicon">
             <div class="column span-24" id="sf_footer">
                <div id="sf_footer_box">
-                   <div id="sf_footer_head">
+                   <div class="sf_footer_head">
                        <h6>Contact</h6>
                        <div id="sf_footer_address">
                            <div class="vcard">
@@ -84,7 +85,7 @@
                            <ul><li><a href="http://www.sunlightfoundation.com/contact/">Send Us an Email</a></li></ul>
                        </div>
                    </div>
-                   <div id="sf_footer_head">
+                   <div class="sf_footer_head">
                        <h6>About Sunlight</h6>
                        <ul>
                            <li><a href="http://www.sunlightfoundation.com/mission/">Mission Statement</a></li>
@@ -94,7 +95,7 @@
                            <li><a href="http://www.sunlightfoundation.com/privacy/">Privacy Policy</a></li>
                        </ul>
                    </div>
-                   <div id="sf_footer_head">
+                   <div class="sf_footer_head">
                        <h6>Communications</h6>
                        <ul>
                            <li><a href="http://blog.sunlightfoundation.com">Our Blog</a></li>
@@ -104,7 +105,7 @@
                            <li><a href="http://www.sunlightfoundation.com/logos/">Logos for Print/Web</a></li>
                        </ul>
                    </div>
-                   <div id="sf_footer_head">
+                   <div class="sf_footer_head">
                        <h6>Useful Sites</h6>
                        <ul>
                            <li><a href="http://opencongress.org/">OpenCongress.org</a></li>
@@ -113,7 +114,7 @@
                            <li><a href="http://sunlightlabs.com">Sunlight Labs</a></li>
                        </ul>
                    </div>
-                   <div id="sf_footer_head">
+                   <div class="sf_footer_head">
                        <h6>We're Social</h6>
                        <ul>
                            <li><a href="http://twitter.com/sunlightnetwork">Twitter</a></li>
