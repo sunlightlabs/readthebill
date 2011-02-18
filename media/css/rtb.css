@@ -53,6 +53,9 @@ time { display: block; float: left; width: 40px; text-align: center; padding-rig
 #signupBox { background: #fcf7dd; border: 1px solid #f7e99b; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 15px;}
 #signupBox label { display: block;}
 #signupBox input { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 170px;}
+#signupBox h3 { font-size: 120%; font-style: oblique;}
+#featureLeft { background: url(../images/featureBox_text.png) 130px 30px no-repeat; text-indent: -9999em; display: block; width: 785px; height: 225px;}
+
 #ltColumn li, #rtColumn li { margin-bottom: 15px;}
 
 #sendMessage { margin-left: 110px;}
