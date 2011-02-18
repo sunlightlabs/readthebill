@@ -21,6 +21,9 @@
 			</h1>
 			<div class="clear"></div>
 		</header>
+		<div class="entry-content">
+			{{ post.content }}
+		</div>
 		<aside>
 			<span class="sm-twitter">
 				<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-text="{{ post.title }}" data-via="readthebill" data-related="sunfoundation" data-url="http://readthebill.org{{ post.get_absolute_url }}">Tweet</a>
@@ -30,8 +33,5 @@
 				<iframe src="http://www.facebook.com/plugins/like.php?href=http://readthebill.org{{ post.get_absolute_url|urlencode }}&amp;layout=box_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:65px;" allowTransparency="true"></iframe>
 			</span>
 		</aside>
-		<div class="entry-content">
-			{{ post.content }}
-		</div>
 	</article>
 {% endblock %}

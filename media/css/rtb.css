@@ -25,7 +25,8 @@ h1 a:link,  h1 a:visited, h1 a:active { text-decoration: none;}
 header { display: block;}
 
 #topnav { margin: -10px 0 0 -3px; width: 685px; float: left;}
-#topnav li a { display: block; float: left; text-indent: -9999em; height: 48px;}
+#topnav li { float: left;}
+#topnav li a { display: block; text-indent: -9999em; height: 48px;}
 #about a { background: url(../images/topnav/topnav_rtb_2.png) top left no-repeat; width: 78px;}
 #endorsements a { background: url(../images/topnav/topnav_rtb_3.png) top left no-repeat; width: 141px;}
 #rushed a { background: url(../images/topnav/topnav_rtb_4.png) top left no-repeat; width: 136px;}
@@ -54,6 +55,7 @@ time { display: block; float: left; width: 40px; text-align: center; padding-rig
 #signupBox label { display: block;}
 #signupBox input { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 170px;}
 #signupBox h3 { font-size: 120%; font-style: oblique;}
+#signupBox li { list-style-type: none;}
 #featureLeft { background: url(../images/featureBox_text.png) 130px 30px no-repeat; text-indent: -9999em; display: block; width: 785px; height: 225px;}
 
 #ltColumn li, #rtColumn li { margin-bottom: 15px;}
