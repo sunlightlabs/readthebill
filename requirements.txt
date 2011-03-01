@@ -1,10 +1,11 @@
 Django
-boto
-slimmer
 django-gatekeeper==0.3.0
 python-sunlightapi
 feedparser
--e git://github.com/sunlightlabs/django-mediasync.git#egg=mediasync
+
+slimmer
+django-mediasync=2.0.0
+
 -e git://github.com/sunlightlabs/django-uspolitics.git#egg=uspolitics
 -e git://github.com/sunlightlabs/django-feedinator.git#egg=feedinator
 -e git://github.com/sunlightlabs/django-simplesurvey.git#egg=simplesurvey

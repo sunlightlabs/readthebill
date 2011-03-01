@@ -1,19 +1,19 @@
 {% extends "base.html" %}
+{% load markup %}
 {% load morsel_tags %}
 {% load rtb %}
 
 {% block title %}
-{{ flatpage.title }}
+    {{ flatpage.title }}
 {% endblock %}
 
-
 {% block content %}
-<div class="flatpages">
-		{{ flatpage.content }}
-</div>		
+    <div class="flatpages">
+    	{{ flatpage.content|markdown }}
+    </div>
 {% endblock %}
 		
 {% block share %}
-{% include "includes/share.html" %}
+    {% include "includes/share.html" %}
 {% endblock share %}
 
