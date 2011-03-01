@@ -56,7 +56,7 @@ time { display: block; float: left; width: 40px; text-align: center; padding-rig
 #signupBox input { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 170px;}
 #signupBox h3 { font-size: 120%; font-style: oblique;}
 #signupBox li { list-style-type: none;}
-#featureLeft { background: url(../images/featureBox_text.png) 130px 30px no-repeat; text-indent: -9999em; display: block; width: 785px; height: 225px;}
+#featureLeft { background: url(../images/featureBox_text.png) 130px 30px no-repeat; text-indent: -9999em; display: block; width: 875px; height: 250px;}
 
 #ltColumn li, #rtColumn li { margin-bottom: 15px;}
 
