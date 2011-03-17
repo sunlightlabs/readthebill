@@ -54,8 +54,9 @@
                 {% endblock %}
             </div>  
             <div id="rtColumn">
-            
-                {% include "includes/share.html" %}
+                {% block sidebar %}
+                    {% include "includes/share.html" %}
+                {% endblock %}
 
                 {% block indiv %}
                 {% endblock %}

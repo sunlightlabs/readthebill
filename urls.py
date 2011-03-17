@@ -12,6 +12,7 @@ class RTBContactForm(ContactForm):
 urlpatterns = patterns('',
     url(r'^admin/gatekeeper/', include('gatekeeper.urls')),
     url(r'^admin/(.*)', admin.site.root),
+    url(r'^action/callspeakerboehner/', 'django.views.generic.simple.direct_to_template', {'template': 'action/boehner.html'}),
     url(r'^blog/', include('blogdor.urls')),
     url(r'^contact/', include('contact_form.urls'), {"form_class": RTBContactForm, "fail_silently": False}),
     url(r'^partners/', 'readthebill.rtb.views.partners', name="partners"),
