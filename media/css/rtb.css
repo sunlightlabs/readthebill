@@ -150,6 +150,6 @@ p.pages {font-size:200%; font-weight:bold; padding:0 0 20px 0; margin:0;}
 form .checkbox { width: 15px; margin-right: 10px; }
 
 #callScript { background-color: #f6f6f3; border: 1px solid #dad9d2; padding: 40px 30px 50px; }
-#actionFeature { background: url(../images/bg_feature2.jpg) bottom left no-repeat; padding: 0 20px 30px; margin-bottom: 40px;}
+#actionFeature { background: url(../images/bg_feature2.jpg) bottom left no-repeat; padding: 0 20px 20px; margin-bottom: 40px;}
 #actionFeatureText { font-size: 110%; width: 100%; float: left; }
 #actionFeatureText p { width: 585px; }
