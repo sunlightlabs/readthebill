@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'readthebill.rtb',
     'tagging',
     'blogdor',
+    'gunicorn',
 )
 
 GATEKEEPER_ENABLE_AUTOMODERATION = True

@@ -4,6 +4,7 @@
 {% load media %}
 <html version="HTML+RDFa 1.1" lang="en">
 <head>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <meta charset="utf-8" /> 
     <meta name="description" content="Improve the legislative process by posting bills online for 72 hours before debate!" />
     <meta property="og:site_name" content="ReadTheBill.org" />
@@ -135,6 +136,26 @@
     {% block js %}{% endblock %}
     
     <script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    var _sf_async_config={uid:980,domain:"readthebill.org"};
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+           "js/chartbeat.js");
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+
+    </script>
     <script> 
         var _gaq = [['_setAccount', 'UA-1265484-32'], ['_trackPageview']];
         (function(d, t) {
