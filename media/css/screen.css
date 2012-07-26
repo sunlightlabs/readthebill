@@ -1,11 +1,11 @@
 /* -----------------------------------------------------------------------
 
    BlueTripCSS Framework
-   
+
    Mike Crittenden
    mike@capsizedesigns.com
    Copyright 2008 Mike Crittenden
-   
+
    License - MIT or GPL (whichever suits you better)
 
 ----------------------------------------------------------------------- */
@@ -61,15 +61,15 @@ h6 { font-size: 1em; }
 
 /* TABLES */
 
-.container table { border-top: 1px solid #ccc;  border-left: 1px solid #ccc; }
-.container th, .container td { border-bottom: 1px solid #ddd; border-right: 1px solid #ccc; }
+.content table { border-top: 1px solid #ccc;  border-left: 1px solid #ccc; }
+.content th, .content td { border-bottom: 1px solid #ddd; border-right: 1px solid #ccc; }
 
 /* MARGINS & PADDINGS */
 
 .container blockquote *:first-child { margin: .8em 0; }
-.container hr, .container p, .container ul, .container ol, .container dl, .container pre, .container blockquote, .container address, .container table, .container form { margin-bottom: 1.6em; }
+.container hr, .container p, .container ul, .container ol, .container dl, .container pre, .container blockquote, .container address, .content table, .container form { margin-bottom: 1.6em; }
 /* NOTE: Calulate header margins: TOP: 1.6em/size, BOTTOM: 1.6em/size/2 */
-.container th, .container td { padding: .8em; }
+.content th, .content td { padding: .8em; }
 .container caption { padding-bottom: .8em; } /* padding instead of margin for IE */
 .container blockquote { padding: 0 1em; margin: 1.6em 0; }
 .container fieldset { padding: 0 1em 1em 1em; margin: 1.6em 0; } /* padding-top is margin-top for fieldsets in Opera */
@@ -91,18 +91,18 @@ h6 { font-size: 1em; }
 .clear { clear: both; }
 
 /* to create serif italic dramatic text, use this class */
-.fancy { 
-  color: #666; 
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif; 
+.fancy {
+  color: #666;
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-weight: normal;
-}  
+}
 
 /* creates small caps */
-.caps { 
-  font-variant: small-caps; 
-  letter-spacing: 1px; 
-  text-transform: lowercase; 
+.caps {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-transform: lowercase;
   font-size:1.2em;
   font-weight:bold;
   padding:0 2px;

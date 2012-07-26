@@ -120,7 +120,8 @@ MEDIASYNC = {
     'JOINED': {
         'css/readthebill.css': ('css/screen.css','css/rtb.css'),
         'js/readthebill.js': ('js/jquery-1.2.6.min.js','js/jquery.tablesorter.js'),
-    }
+    },
+    'SERVE_REMOTE': False,
 }
 
 import re

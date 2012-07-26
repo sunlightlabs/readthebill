@@ -5,7 +5,7 @@
 <html version="HTML+RDFa 1.1" lang="en">
 <head>
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
-    <meta charset="utf-8" /> 
+    <meta charset="utf-8" />
     <meta name="description" content="Improve the legislative process by posting bills online for 72 hours before debate!" />
     <meta property="og:site_name" content="ReadTheBill.org" />
 	{% block opengraph %}
@@ -13,11 +13,10 @@
 	    <meta property="og:description" content="Improve the legislative process by posting bills online for 72 hours before debate!" />
 	    <meta property="og:type" content="cause" />
 	    <meta property="og:url" content="http://readthebill.org/">
-		<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
 	{% endblock %}
     <meta property="fb:admins" content="7812952">
     {% block meta %}{% endblock %}
-    
+
     <title>{% block title %}Read The Bill{% endblock %}</title>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -50,10 +49,10 @@
             </div>
 			{% block feature %}{% endblock %}
             <div class="clear"></div>
-            <div id="ltColumn">
+            <div id="ltColumn" class="content">
                 {% block content %}
                 {% endblock %}
-            </div>  
+            </div>
             <div id="rtColumn">
                 {% block sidebar %}
                     {% include "includes/share.html" %}
@@ -64,7 +63,7 @@
 
                 {% block blogs %}
                 {% endblock %}
-    
+
             </div>
             <div class="clear"></div>
         </div>
@@ -126,16 +125,34 @@
                        </ul>
                    </div>
                </div>
-           </div>       
+           </div>
         </div>
     </div>
-    
+
     {% js "js/readthebill.js" %}
 	<!--[if lt IE 7]><script defer type="text/javascript" src="{% media_url "js/pngfix.js" %}"></script><![endif]-->
-    
+
     {% block js %}{% endblock %}
-    
-    <script src="http://services.sunlightlabs.com/brandingbar/hat_js/rtb/" type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_BLRB_2LlQJZDUW1wb9_ZOps-sOnnzA_e6xxNSwJBBGoB-SavmPAKHkaVVZPE5Kx8"></script>
+    <script>
+      $(document).ready(function() {
+        var ua = new gigya.socialize.UserAction();
+        ua.setLinkBack("http://readthebill.org/");
+        ua.setTitle("Read the Bill");
+        ua.setDescription("Improve the legislative process by posting bills online for 72 hours before debate!");
+        var params = {
+          containerID: 'shareables',
+          layout: 'horizontal',
+          noButtonBorders: true,
+          shareButtons: 'facebook,twitter',
+          shortURLs: 'never',
+          userAction: ua
+        };
+        gigya.socialize.showShareBarUI(params);
+      });
+    </script>
 
     <script type="text/javascript">
     var _sf_async_config={uid:980,domain:"readthebill.org"};
@@ -156,7 +173,7 @@
     })();
 
     </script>
-    <script> 
+    <script>
         var _gaq = [['_setAccount', 'UA-1265484-32'], ['_trackPageview']];
         (function(d, t) {
             var g = d.createElement(t),
@@ -166,6 +183,6 @@
             s.parentNode.insertBefore(g, s);
         })(document, 'script');
     </script>
-    
+
 </body>
 </html>
