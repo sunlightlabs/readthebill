@@ -5,9 +5,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    #'Tim Ball', 'timball@tux.org'),
-)
+ADMINS = ()
 
 MANAGERS = ADMINS
 
@@ -43,7 +41,7 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = 'http://assets.sunlightfoundation.com/admin/1.2.5/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '***REMOVED***'
+SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -101,7 +99,7 @@ INSTALLED_APPS = (
 GATEKEEPER_ENABLE_AUTOMODERATION = True
 GATEKEEPER_DEFAULT_STATUS = 0
 
-CONTACT_FORM_RECIPIENTS = ['jcarbaugh@sunlightfoundation.com']
+CONTACT_FORM_RECIPIENTS = ['']
 
 EMAIL_HOST = "smtp.sunlightlabs.com"
 EMAIL_PORT = "25"
@@ -110,10 +108,10 @@ EMAIL_HOST_PASSWORD = "***REMOVED***"
 EMAIL_USE_TLS = True
 
 MEDIASYNC = {
-    'BACKEND': 'mediasync.backends.s3',
-    'AWS_KEY': '***REMOVED***',
-    'AWS_SECRET': '***REMOVED***',
-    'AWS_BUCKET': 'assets.sunlightfoundation.com',
+    'BACKEND': '',
+    'AWS_KEY': '',
+    'AWS_SECRET': '',
+    'AWS_BUCKET': '',
     'AWS_PREFIX': 'rtb/2.0',
     'DOCTYPE': 'html5',
     'CACHE_BUSTER': 201103181119,
